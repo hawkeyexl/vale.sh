@@ -1,21 +1,21 @@
 {
 	"generated": "2026-09-28",
 	"actionDependents": 4192,
-	"teams": 150,
-	"checked": 128,
+	"teams": 159,
+	"checked": 137,
 	"unchecked": 22,
-	"ci": 92,
-	"preCommit": 5,
-	"stars": 836514,
-	"active30": 110,
-	"active90": 115,
-	"touched90": 29,
-	"touchable": 114,
+	"ci": 98,
+	"preCommit": 7,
+	"stars": 841259,
+	"active30": 118,
+	"active90": 124,
+	"touched90": 31,
+	"touchable": 123,
 	"configs": {
-		"sampled": 106,
-		"house": 88,
-		"registryOnly": 13,
-		"vocab": 59
+		"sampled": 115,
+		"house": 93,
+		"registryOnly": 16,
+		"vocab": 62
 	},
 	"bySector": {
 		"Data & observability": {
@@ -23,7 +23,7 @@
 			"checked": 25,
 			"ci": 17,
 			"house": 15,
-			"stars": 113234,
+			"stars": 113235,
 			"active30": 20
 		},
 		"Web3 & blockchain": {
@@ -55,7 +55,7 @@
 			"checked": 28,
 			"ci": 18,
 			"house": 19,
-			"stars": 298455,
+			"stars": 298456,
 			"active30": 27
 		},
 		"Enterprise software": {
@@ -71,23 +71,23 @@
 			"checked": 19,
 			"ci": 15,
 			"house": 10,
-			"stars": 187907,
+			"stars": 187908,
+			"active30": 14
+		},
+		"Academia & public sector": {
+			"teams": 17,
+			"checked": 15,
+			"ci": 12,
+			"house": 10,
+			"stars": 7175,
 			"active30": 14
 		},
 		"AI & machine learning": {
-			"teams": 7,
-			"checked": 6,
+			"teams": 8,
+			"checked": 7,
 			"ci": 4,
 			"house": 6,
-			"stars": 102111,
-			"active30": 6
-		},
-		"Academia & public sector": {
-			"teams": 9,
-			"checked": 7,
-			"ci": 6,
-			"house": 5,
-			"stars": 3022,
+			"stars": 102700,
 			"active30": 7
 		}
 	},
@@ -114,7 +114,7 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 22142,
+			"stars": 22143,
 			"pushed": "2026-09-28",
 			"touched": null,
 			"house": null
@@ -566,6 +566,33 @@
 			"touched": "2022-10-04",
 			"house": false
 		},
+		"CMU Software Engineering Institute": {
+			"proof": "config",
+			"styles": ["crucible"],
+			"formats": ["md"],
+			"vocab": true,
+			"level": "suggestion",
+			"repo": "cmu-sei/crucible",
+			"integrations": {
+				"actions": [".github/workflows/lint.yml"],
+				"valeAction": false,
+				"reviewdog": false,
+				"gitlab": null,
+				"circle": null,
+				"buildkite": null,
+				"precommit": null,
+				"agents": ["CLAUDE.md"],
+				"tasks": [],
+				"vscode": null,
+				"contributing": []
+			},
+			"ci": true,
+			"preCommit": false,
+			"stars": 55,
+			"pushed": "2026-09-16",
+			"touched": "2026-07-13",
+			"house": true
+		},
 		"CockroachDB": {
 			"proof": "config",
 			"styles": ["CockroachDB"],
@@ -676,6 +703,33 @@
 			"pushed": null,
 			"touched": null,
 			"house": null
+		},
+		"Cornell EmPRISE Lab": {
+			"proof": "config",
+			"styles": ["proselint"],
+			"formats": ["md"],
+			"vocab": false,
+			"level": "error",
+			"repo": "empriselab/mote",
+			"integrations": {
+				"actions": [".github/workflows/grammar-spelling.yaml"],
+				"valeAction": false,
+				"reviewdog": false,
+				"gitlab": null,
+				"circle": null,
+				"buildkite": null,
+				"precommit": null,
+				"agents": [],
+				"tasks": ["Taskfile.yml"],
+				"vscode": null,
+				"contributing": []
+			},
+			"ci": true,
+			"preCommit": false,
+			"stars": 5,
+			"pushed": "2026-09-14",
+			"touched": "2026-07-07",
+			"house": false
 		},
 		"Couchbase": {
 			"proof": "package",
@@ -1053,7 +1107,7 @@
 			},
 			"ci": false,
 			"preCommit": true,
-			"stars": 8827,
+			"stars": 8828,
 			"pushed": "2026-09-26",
 			"touched": "2026-06-05",
 			"house": true
@@ -1568,6 +1622,33 @@
 			"touched": null,
 			"house": null
 		},
+		"Innovations for Poverty Action": {
+			"proof": "config",
+			"styles": ["IPA", "Microsoft"],
+			"formats": ["md", "qmd"],
+			"vocab": false,
+			"level": "suggestion",
+			"repo": "PovertyAction/ipa-research-data-science-hub",
+			"integrations": {
+				"actions": [".github/workflows/checks.yml"],
+				"valeAction": true,
+				"reviewdog": false,
+				"gitlab": null,
+				"circle": null,
+				"buildkite": null,
+				"precommit": null,
+				"agents": ["CLAUDE.md"],
+				"tasks": [],
+				"vscode": null,
+				"contributing": ["CONTRIBUTING.md"]
+			},
+			"ci": true,
+			"preCommit": false,
+			"stars": 3,
+			"pushed": "2026-09-24",
+			"touched": "2025-06-30",
+			"house": true
+		},
 		"InSpec": {
 			"proof": "package",
 			"styles": null,
@@ -1991,6 +2072,33 @@
 			"touched": "2026-06-08",
 			"house": true
 		},
+		"Mesa": {
+			"proof": "config",
+			"styles": ["Google", "Mesa"],
+			"formats": ["md", "rst"],
+			"vocab": false,
+			"level": "suggestion",
+			"repo": "mesa/mesa",
+			"integrations": {
+				"actions": [".github/workflows/vale.yml"],
+				"valeAction": true,
+				"reviewdog": false,
+				"gitlab": null,
+				"circle": null,
+				"buildkite": null,
+				"precommit": ".pre-commit-config.yaml",
+				"agents": [],
+				"tasks": [],
+				"vscode": null,
+				"contributing": []
+			},
+			"ci": true,
+			"preCommit": true,
+			"stars": 3859,
+			"pushed": "2026-09-23",
+			"touched": "2026-01-07",
+			"house": true
+		},
 		"MetaMask": {
 			"proof": "repository",
 			"styles": null,
@@ -2163,7 +2271,7 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 99100,
+			"stars": 99101,
 			"pushed": "2026-09-27",
 			"touched": "2026-04-29",
 			"house": true
@@ -2434,6 +2542,33 @@
 			"pushed": "2026-09-25",
 			"touched": "2025-06-24",
 			"house": true
+		},
+		"Northwestern Yang Lab": {
+			"proof": "config",
+			"styles": ["proselint", "write-good", "alex", "Readability", "Joblint"],
+			"formats": [],
+			"vocab": false,
+			"level": "suggestion",
+			"repo": "ylab-hi/DeepChopper",
+			"integrations": {
+				"actions": [],
+				"valeAction": false,
+				"reviewdog": false,
+				"gitlab": null,
+				"circle": null,
+				"buildkite": null,
+				"precommit": null,
+				"agents": [],
+				"tasks": [],
+				"vscode": null,
+				"contributing": []
+			},
+			"ci": false,
+			"preCommit": false,
+			"stars": 11,
+			"pushed": "2026-09-21",
+			"touched": "2024-02-13",
+			"house": false
 		},
 		"Novu": {
 			"proof": "config",
@@ -2870,6 +3005,33 @@
 			"touched": "2025-07-31",
 			"house": true
 		},
+		"Princeton Logion Project": {
+			"proof": "config",
+			"styles": ["logionDoc"],
+			"formats": ["md"],
+			"vocab": false,
+			"level": "suggestion",
+			"repo": "princeton-logion/logion-app",
+			"integrations": {
+				"actions": [".github/workflows/publish-docs.yml"],
+				"valeAction": true,
+				"reviewdog": false,
+				"gitlab": null,
+				"circle": null,
+				"buildkite": null,
+				"precommit": null,
+				"agents": [],
+				"tasks": [],
+				"vscode": null,
+				"contributing": []
+			},
+			"ci": true,
+			"preCommit": false,
+			"stars": 6,
+			"pushed": "2026-08-11",
+			"touched": "2025-07-09",
+			"house": true
+		},
 		"Progress Chef": {
 			"proof": "package",
 			"styles": null,
@@ -2945,6 +3107,33 @@
 			"stars": 179,
 			"pushed": "2026-09-28",
 			"touched": "2026-09-17",
+			"house": true
+		},
+		"pyOpenSci": {
+			"proof": "config",
+			"styles": ["package-guide-test"],
+			"formats": ["md"],
+			"vocab": true,
+			"level": null,
+			"repo": "pyOpenSci/python-package-guide",
+			"integrations": {
+				"actions": [],
+				"valeAction": false,
+				"reviewdog": false,
+				"gitlab": null,
+				"circle": null,
+				"buildkite": null,
+				"precommit": ".pre-commit-config.yaml",
+				"agents": [],
+				"tasks": [],
+				"vscode": null,
+				"contributing": []
+			},
+			"ci": false,
+			"preCommit": true,
+			"stars": 152,
+			"pushed": "2026-09-26",
+			"touched": "2024-05-23",
 			"house": true
 		},
 		"Qiskit": {
@@ -3592,6 +3781,33 @@
 			"touched": "2026-09-09",
 			"house": true
 		},
+		"Thousand Brains Project": {
+			"proof": "config",
+			"styles": [],
+			"formats": ["md"],
+			"vocab": true,
+			"level": "error",
+			"repo": "thousandbrainsproject/tbp.monty",
+			"integrations": {
+				"actions": [],
+				"valeAction": false,
+				"reviewdog": false,
+				"gitlab": null,
+				"circle": null,
+				"buildkite": null,
+				"precommit": null,
+				"agents": [],
+				"tasks": [],
+				"vscode": null,
+				"contributing": []
+			},
+			"ci": false,
+			"preCommit": false,
+			"stars": 589,
+			"pushed": "2026-09-25",
+			"touched": "2025-08-18",
+			"house": false
+		},
 		"Tigera": {
 			"proof": "config",
 			"styles": ["CalicoStyle"],
@@ -3699,6 +3915,33 @@
 			"pushed": "2026-09-25",
 			"touched": "2024-11-02",
 			"house": true
+		},
+		"UCL Advanced Research Computing": {
+			"proof": "config",
+			"styles": ["proselint", "write-good", "Readability"],
+			"formats": ["md"],
+			"vocab": false,
+			"level": null,
+			"repo": "UCL-ARC/python-tooling",
+			"integrations": {
+				"actions": [".github/workflows/linting.yml"],
+				"valeAction": true,
+				"reviewdog": false,
+				"gitlab": null,
+				"circle": null,
+				"buildkite": null,
+				"precommit": null,
+				"agents": [],
+				"tasks": [],
+				"vscode": null,
+				"contributing": []
+			},
+			"ci": true,
+			"preCommit": false,
+			"stars": 62,
+			"pushed": "2026-09-16",
+			"touched": "2025-07-14",
+			"house": false
 		},
 		"Umbraco": {
 			"proof": "config",

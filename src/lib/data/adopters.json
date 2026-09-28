@@ -140,6 +140,14 @@
 		"avatar": "/users/avatars/cloudquery.png"
 	},
 	{
+		"name": "CMU Software Engineering Institute",
+		"category": "Academia & public sector",
+		"context": "Lints the docs for Crucible, its cyber-range framework, with a crucible style and vocabulary.",
+		"url": "https://github.com/cmu-sei/crucible/blob/HEAD/.vale.ini",
+		"github": "cmu-sei",
+		"avatar": "/users/avatars/cmu-sei.png"
+	},
+	{
 		"name": "CockroachDB",
 		"category": "Data & observability",
 		"context": "Style enforcement for CockroachDB user documentation.",
@@ -176,6 +184,14 @@
 		"url": "https://engineering.contentsquare.com/2023/using-vale-to-help-engineers-become-better-writers/",
 		"github": "contentsquare",
 		"avatar": "/users/avatars/contentsquare.png"
+	},
+	{
+		"name": "Cornell EmPRISE Lab",
+		"category": "Academia & public sector",
+		"context": "Fails on proselint errors in the docs for MoTE, its low-cost education robot.",
+		"url": "https://github.com/empriselab/mote/blob/HEAD/.vale.ini",
+		"github": "empriselab",
+		"avatar": "/users/avatars/empriselab.png"
 	},
 	{
 		"name": "Couchbase",
@@ -455,6 +471,14 @@
 		"avatar": "/users/avatars/ing-bank.png"
 	},
 	{
+		"name": "Innovations for Poverty Action",
+		"category": "Academia & public sector",
+		"context": "Lints its research and data-science hub with Microsoft's style and an IPA style.",
+		"url": "https://github.com/PovertyAction/ipa-research-data-science-hub/blob/HEAD/.vale.ini",
+		"github": "PovertyAction",
+		"avatar": "/users/avatars/PovertyAction.png"
+	},
+	{
 		"name": "InSpec",
 		"category": "Developer tools",
 		"context": "Auditing and testing framework documentation.",
@@ -575,6 +599,14 @@
 		"url": "https://github.com/mendix/docs/blob/HEAD/.vale.ini",
 		"github": "mendix",
 		"avatar": "/users/avatars/mendix.png"
+	},
+	{
+		"name": "Mesa",
+		"category": "Academia & public sector",
+		"context": "Lints its agent-based modeling docs with Google's style and a Mesa style.",
+		"url": "https://github.com/mesa/mesa/blob/HEAD/.vale.ini",
+		"github": "mesa",
+		"avatar": "/users/avatars/mesa.png"
 	},
 	{
 		"name": "MetaMask",
@@ -702,6 +734,14 @@
 		"context": "Fails the nRF Connect SDK docs on errors from a Nordic style, across four repos.",
 		"url": "https://github.com/nrfconnect/sdk-nrf/blob/HEAD/.vale.ini",
 		"icon": "nordicsemiconductor"
+	},
+	{
+		"name": "Northwestern Yang Lab",
+		"category": "Academia & public sector",
+		"context": "Runs proselint, write-good, alex, Readability, and Joblint over its genomics tools.",
+		"url": "https://github.com/ylab-hi/DeepChopper/blob/HEAD/.vale.ini",
+		"github": "ylab-hi",
+		"avatar": "/users/avatars/ylab-hi.png"
 	},
 	{
 		"name": "Novu",
@@ -834,6 +874,14 @@
 		"avatar": "/users/avatars/PrefectHQ.png"
 	},
 	{
+		"name": "Princeton Logion Project",
+		"category": "Academia & public sector",
+		"context": "Lints the docs for its machine-learning tools for Greek philology with a logionDoc style.",
+		"url": "https://github.com/princeton-logion/logion-app/blob/HEAD/.vale.ini",
+		"github": "princeton-logion",
+		"avatar": "/users/avatars/princeton-logion.png"
+	},
+	{
 		"name": "Progress Chef",
 		"category": "Developer tools",
 		"context": "The source for docs published on docs.chef.io.",
@@ -847,6 +895,14 @@
 		"url": "https://github.com/pulumi/docs/blob/HEAD/.vale.ini",
 		"github": "pulumi",
 		"avatar": "/users/avatars/pulumi.png"
+	},
+	{
+		"name": "pyOpenSci",
+		"category": "Academia & public sector",
+		"context": "Lints its Python packaging guide and its handbook with a package-guide style.",
+		"url": "https://github.com/pyOpenSci/python-package-guide/blob/HEAD/.vale.ini",
+		"github": "pyOpenSci",
+		"avatar": "/users/avatars/pyOpenSci.png"
 	},
 	{
 		"name": "Qiskit",
@@ -1056,6 +1112,14 @@
 		"logo": "/users/Texas Instruments.svg"
 	},
 	{
+		"name": "Thousand Brains Project",
+		"category": "AI & machine learning",
+		"context": "Fails on errors from Vale's built-in rules, with a TBP vocabulary, across its Monty framework.",
+		"url": "https://github.com/thousandbrainsproject/tbp.monty/blob/HEAD/.vale.ini",
+		"github": "thousandbrainsproject",
+		"avatar": "/users/avatars/thousandbrainsproject.png"
+	},
+	{
 		"name": "Tigera",
 		"category": "Cloud & infrastructure",
 		"context": "Lints the Calico docs with a CalicoStyle and five project vocabularies.",
@@ -1085,6 +1149,14 @@
 		"url": "https://github.com/TykTechnologies/tyk/blob/HEAD/.vale.ini",
 		"github": "TykTechnologies",
 		"avatar": "/users/avatars/TykTechnologies.png"
+	},
+	{
+		"name": "UCL Advanced Research Computing",
+		"category": "Academia & public sector",
+		"context": "Runs proselint over its template for new research-software Python packages.",
+		"url": "https://github.com/UCL-ARC/python-tooling/blob/HEAD/.vale.ini",
+		"github": "UCL-ARC",
+		"avatar": "/users/avatars/UCL-ARC.png"
 	},
 	{
 		"name": "Umbraco",

@@ -1,15 +1,16 @@
 {
-	"sampleSize": 106,
-	"adopterCount": 150,
+	"sampleSize": 115,
+	"adopterCount": 159,
 	"styles": {
-		"write-good": 16,
-		"Google": 14,
-		"Microsoft": 14,
-		"proselint": 9,
-		"alex": 3,
+		"write-good": 18,
+		"Google": 15,
+		"Microsoft": 15,
+		"proselint": 12,
+		"alex": 4,
 		"docs": 3,
 		"ai-tells": 2,
 		"base": 2,
+		"Readability": 2,
 		"RedHat": 2,
 		"3rd-party-products": 1,
 		"ADI": 1,
@@ -28,6 +29,7 @@
 		"commercetools": 1,
 		"common": 1,
 		"CrateDB": 1,
+		"crucible": 1,
 		"custom": 1,
 		"CustomStyles": 1,
 		"Dagster": 1,
@@ -50,17 +52,21 @@
 		"Infisical": 1,
 		"InfluxDataDocs": 1,
 		"Infrahub": 1,
+		"IPA": 1,
+		"Joblint": 1,
 		"Kedro": 1,
 		"KubeRay": 1,
 		"LangChain": 1,
 		"Lean": 1,
 		"Linode": 1,
 		"local": 1,
+		"logionDoc": 1,
 		"Lore": 1,
 		"Mastra": 1,
 		"Mattermost": 1,
 		"Mautic": 1,
 		"Mendix": 1,
+		"Mesa": 1,
 		"messaging": 1,
 		"Metalbear": 1,
 		"Mistral": 1,
@@ -78,6 +84,7 @@
 		"Openverse": 1,
 		"OutSystems": 1,
 		"PaaC": 1,
+		"package-guide-test": 1,
 		"PingCAP": 1,
 		"Platform": 1,
 		"Polkadot": 1,
@@ -112,20 +119,22 @@
 		"Yugabyte": 1
 	},
 	"packages": {
-		"Google": 12,
-		"write-good": 12,
-		"Microsoft": 10,
-		"proselint": 6,
-		"alex": 3,
+		"write-good": 14,
+		"Google": 13,
+		"Microsoft": 11,
+		"proselint": 9,
+		"alex": 4,
 		"RedHat": 3,
 		"ai-tells": 2,
 		"MDX": 2,
+		"Readability": 2,
 		"ApifyStyleGuide": 1,
 		"AsciiDoc": 1,
 		"config": 1,
 		"Docker": 1,
 		"Espressif-latest": 1,
 		"Hugo": 1,
+		"Joblint": 1,
 		"nf-core": 1,
 		"PowerShell-Docs": 1,
 		"riscv": 1,
@@ -134,9 +143,9 @@
 		"vale": 1
 	},
 	"formats": {
-		"md": 82,
+		"md": 90,
 		"mdx": 25,
-		"rst": 13,
+		"rst": 14,
 		"adoc": 5,
 		"docs": 2,
 		"html": 2,
@@ -151,25 +160,26 @@
 		"ja": 1,
 		"jl": 1,
 		"org": 1,
+		"qmd": 1,
 		"rb": 1,
 		"rs": 1,
 		"zh": 1
 	},
 	"minAlertLevels": {
-		"suggestion": 59,
+		"suggestion": 64,
 		"warning": 28,
-		"error": 10,
+		"error": 12,
 		"suggestions": 1
 	},
 	"keys": {
-		"BasedOnStyles": 104,
-		"StylesPath": 103,
-		"MinAlertLevel": 98,
-		"Vocab": 59,
+		"BasedOnStyles": 113,
+		"StylesPath": 112,
+		"MinAlertLevel": 105,
+		"Vocab": 62,
+		"Packages": 43,
 		"TokenIgnores": 39,
-		"Packages": 38,
 		"IgnoredScopes": 25,
-		"BlockIgnores": 22,
+		"BlockIgnores": 24,
 		"SkippedScopes": 19,
 		"CommentDelimiters": 6,
 		"IgnoredClasses": 3,
@@ -183,7 +193,7 @@
 		"Vale": 1,
 		"View": 1
 	},
-	"pathScoped": 33,
+	"pathScoped": 37,
 	"pairedWith": {
 		"Aiven": {},
 		"SmartWallets": {},
@@ -199,6 +209,7 @@
 			"InfluxDataDocs": 1,
 			"KubeRay": 1,
 			"Mautic": 1,
+			"Mesa": 1,
 			"Metalbear": 1,
 			"Novu": 1,
 			"Polkadot": 1,
@@ -219,11 +230,12 @@
 		},
 		"write-good": {
 			"Google": 6,
+			"proselint": 6,
 			"Microsoft": 5,
-			"proselint": 4,
 			"ai-tells": 2,
+			"alex": 2,
+			"Readability": 2,
 			"ai-tells-overrides": 1,
-			"alex": 1,
 			"Apify": 1,
 			"ApifyDocs": 1,
 			"commercetools": 1,
@@ -231,6 +243,7 @@
 			"docs": 1,
 			"Fly": 1,
 			"InfluxDataDocs": 1,
+			"Joblint": 1,
 			"LangChain": 1,
 			"Mastra": 1,
 			"Metalbear": 1,
@@ -248,6 +261,7 @@
 			"Apify": 1,
 			"ApifyDocs": 1,
 			"Graphile": 1,
+			"IPA": 1,
 			"Mendix": 1,
 			"Mistral": 1,
 			"Rackspace": 1,
@@ -255,11 +269,13 @@
 		},
 		"Atlantis": {},
 		"proselint": {
-			"write-good": 4,
-			"alex": 2,
+			"write-good": 6,
+			"alex": 3,
 			"Microsoft": 2,
+			"Readability": 2,
 			"Fly": 1,
 			"Google": 1,
+			"Joblint": 1,
 			"LangChain": 1,
 			"Lean": 1,
 			"Openverse": 1,
@@ -268,10 +284,12 @@
 			"vale": 1
 		},
 		"alex": {
-			"proselint": 2,
+			"proselint": 3,
+			"write-good": 2,
+			"Joblint": 1,
 			"Microsoft": 1,
 			"OutSystems": 1,
-			"write-good": 1
+			"Readability": 1
 		},
 		"ai-tells": {
 			"write-good": 2,
@@ -287,6 +305,7 @@
 		"Buildkite": {},
 		"all": {},
 		"ClickHouse": {},
+		"crucible": {},
 		"CockroachDB": {},
 		"Coder": {},
 		"commercetools": {
@@ -331,6 +350,9 @@
 			"write-good": 1
 		},
 		"Infrahub": {},
+		"IPA": {
+			"Microsoft": 1
+		},
 		"docs": {
 			"base": 1,
 			"write-good": 1
@@ -380,6 +402,9 @@
 		"Mendix": {
 			"Microsoft": 1
 		},
+		"Mesa": {
+			"Google": 1
+		},
 		"Metalbear": {
 			"Google": 1,
 			"write-good": 1
@@ -414,6 +439,18 @@
 		"StyleRules": {},
 		"Style": {},
 		"Nordic": {},
+		"Readability": {
+			"proselint": 2,
+			"write-good": 2,
+			"alex": 1,
+			"Joblint": 1
+		},
+		"Joblint": {
+			"alex": 1,
+			"proselint": 1,
+			"Readability": 1,
+			"write-good": 1
+		},
 		"Novu": {
 			"Google": 1,
 			"write-good": 1
@@ -440,10 +477,12 @@
 		"CustomStyles": {
 			"Google": 1
 		},
+		"logionDoc": {},
 		"Pulumi": {
 			"Google": 1,
 			"write-good": 1
 		},
+		"package-guide-test": {},
 		"IBMQuantum": {},
 		"Quarkus": {},
 		"Rackspace": {
@@ -643,6 +682,14 @@
 			"minAlertLevel": "suggestion"
 		},
 		{
+			"name": "CMU Software Engineering Institute",
+			"url": "https://github.com/cmu-sei/crucible/blob/HEAD/.vale.ini",
+			"styles": ["crucible"],
+			"formats": ["md"],
+			"keys": ["StylesPath", "Vocab", "MinAlertLevel", "BasedOnStyles"],
+			"minAlertLevel": "suggestion"
+		},
+		{
 			"name": "CockroachDB",
 			"url": "https://github.com/cockroachdb/docs/blob/master/.vale.ini",
 			"styles": ["CockroachDB"],
@@ -673,6 +720,14 @@
 			"formats": ["md", "mdx"],
 			"keys": ["StylesPath", "MinAlertLevel", "BasedOnStyles", "TokenIgnores"],
 			"minAlertLevel": "warning"
+		},
+		{
+			"name": "Cornell EmPRISE Lab",
+			"url": "https://github.com/empriselab/mote/blob/HEAD/.vale.ini",
+			"styles": ["proselint"],
+			"formats": ["md"],
+			"keys": ["StylesPath", "MinAlertLevel", "Packages", "BasedOnStyles"],
+			"minAlertLevel": "error"
 		},
 		{
 			"name": "CrateDB",
@@ -916,6 +971,14 @@
 			"minAlertLevel": "warning"
 		},
 		{
+			"name": "Innovations for Poverty Action",
+			"url": "https://github.com/PovertyAction/ipa-research-data-science-hub/blob/HEAD/.vale.ini",
+			"styles": ["IPA", "Microsoft"],
+			"formats": ["md", "qmd"],
+			"keys": ["StylesPath", "MinAlertLevel", "Packages", "BasedOnStyles"],
+			"minAlertLevel": "suggestion"
+		},
+		{
 			"name": "IPFS",
 			"url": "https://github.com/ipfs/ipfs-docs/blob/HEAD/.vale.ini",
 			"styles": ["docs"],
@@ -1051,6 +1114,14 @@
 			"minAlertLevel": "suggestion"
 		},
 		{
+			"name": "Mesa",
+			"url": "https://github.com/mesa/mesa/blob/HEAD/.vale.ini",
+			"styles": ["Google", "Mesa"],
+			"formats": ["md", "rst"],
+			"keys": ["StylesPath", "MinAlertLevel", "Packages", "BasedOnStyles"],
+			"minAlertLevel": "suggestion"
+		},
+		{
 			"name": "mirrord",
 			"url": "https://github.com/metalbear-co/mirrord/blob/HEAD/.vale.ini",
 			"styles": ["write-good", "Google", "Metalbear"],
@@ -1170,6 +1241,14 @@
 				"TokenIgnores"
 			],
 			"minAlertLevel": "error"
+		},
+		{
+			"name": "Northwestern Yang Lab",
+			"url": "https://github.com/ylab-hi/DeepChopper/blob/HEAD/.vale.ini",
+			"styles": ["proselint", "write-good", "alex", "Readability", "Joblint"],
+			"formats": [],
+			"keys": ["StylesPath", "MinAlertLevel", "Packages", "BasedOnStyles"],
+			"minAlertLevel": "suggestion"
 		},
 		{
 			"name": "Novu",
@@ -1339,6 +1418,14 @@
 			"minAlertLevel": "warning"
 		},
 		{
+			"name": "Princeton Logion Project",
+			"url": "https://github.com/princeton-logion/logion-app/blob/HEAD/.vale.ini",
+			"styles": ["logionDoc"],
+			"formats": ["md"],
+			"keys": ["StylesPath", "MinAlertLevel", "BasedOnStyles"],
+			"minAlertLevel": "suggestion"
+		},
+		{
 			"name": "Pulumi",
 			"url": "https://github.com/pulumi/docs/blob/HEAD/.vale.ini",
 			"styles": ["Pulumi", "Google", "write-good"],
@@ -1352,6 +1439,14 @@
 				"TokenIgnores"
 			],
 			"minAlertLevel": "warning"
+		},
+		{
+			"name": "pyOpenSci",
+			"url": "https://github.com/pyOpenSci/python-package-guide/blob/HEAD/.vale.ini",
+			"styles": ["package-guide-test"],
+			"formats": ["md"],
+			"keys": ["StylesPath", "Vocab", "BasedOnStyles"],
+			"minAlertLevel": null
 		},
 		{
 			"name": "Qiskit",
@@ -1530,6 +1625,14 @@
 			"minAlertLevel": "suggestion"
 		},
 		{
+			"name": "Thousand Brains Project",
+			"url": "https://github.com/thousandbrainsproject/tbp.monty/blob/HEAD/.vale.ini",
+			"styles": [],
+			"formats": ["md"],
+			"keys": ["MinAlertLevel", "StylesPath", "Vocab", "BasedOnStyles", "BlockIgnores"],
+			"minAlertLevel": "error"
+		},
+		{
 			"name": "Tigera",
 			"url": "https://github.com/tigera/docs/blob/HEAD/.vale.ini",
 			"styles": ["CalicoStyle"],
@@ -1560,6 +1663,14 @@
 			"formats": ["md"],
 			"keys": ["StylesPath", "MinAlertLevel", "Vocab", "BasedOnStyles"],
 			"minAlertLevel": "error"
+		},
+		{
+			"name": "UCL Advanced Research Computing",
+			"url": "https://github.com/UCL-ARC/python-tooling/blob/HEAD/.vale.ini",
+			"styles": ["proselint", "write-good", "Readability"],
+			"formats": ["md"],
+			"keys": ["StylesPath", "Packages", "BasedOnStyles", "BlockIgnores"],
+			"minAlertLevel": null
 		},
 		{
 			"name": "Umbraco",
