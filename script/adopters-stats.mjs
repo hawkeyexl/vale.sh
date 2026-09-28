@@ -6,12 +6,22 @@
  *                Buildkite) mentions Vale, so it runs on pull requests
  *   - preCommit: .pre-commit-config.yaml mentions Vale
  *   - stars:     the repo's stargazer count
+ *   - actionDependents: repositories depending on vale-cli/vale-action,
+ *                from GitHub's dependents page (a total, not per adopter)
  *   - pushed:    when the repo last received a push
  *   - touched:   when the linked config file itself last changed, for an
  *                entry whose URL points at one
  *   - house:     the sampled .vale.ini bases itself on a style that is not a
  *                registry package -- rules the team wrote itself
  *   - vocab:     the sampled .vale.ini sets Vocab
+ *   - styles, formats, level: what the sampled .vale.ini declares
+ *   - proof:     what the entry's URL is -- a config file, a style package,
+ *                a plain repository, or a write-up
+ *   - integrations: the files in the repo that mention Vale, by surface --
+ *                workflows (and whether they use the official Action),
+ *                GitLab CI, CircleCI, Buildkite, pre-commit, agent
+ *                instructions, task runners, VS Code settings, and the
+ *                contributing guide -- so the directory can link to each
  *
  * Only adopters whose URL points into a GitHub repo can be checked; the rest
  * are counted in `unchecked`. Every repo's CI files are read in one GraphQL
@@ -57,12 +67,18 @@ function repoOf(url) {
 	return m ? { owner: m[1], name: m[2].replace(/\.git$/, '') } : null;
 }
 
-async function graphql(query) {
+async function graphql(query, attempt = 1) {
 	const res = await fetch('https://api.github.com/graphql', {
 		method: 'POST',
 		headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
 		body: JSON.stringify({ query })
 	});
+	// A batch this wide can draw a 502 from the API on a slow day; back off
+	// and ask again before giving up.
+	if (res.status >= 500 && attempt < 4) {
+		await new Promise((r) => setTimeout(r, 2000 * attempt));
+		return graphql(query, attempt + 1);
+	}
 	if (!res.ok) throw new Error(`graphql -> ${res.status}`);
 	const body = await res.json();
 	if (body.errors && !body.data) throw new Error(JSON.stringify(body.errors).slice(0, 300));
@@ -75,8 +91,43 @@ const FILES = {
 	gitlab: 'HEAD:.gitlab-ci.yml',
 	circle: 'HEAD:.circleci/config.yml',
 	buildkite: 'HEAD:.buildkite/pipeline.yml',
-	preCommit: 'HEAD:.pre-commit-config.yaml'
+	preCommit: 'HEAD:.pre-commit-config.yaml',
+	// The surfaces a newcomer copies from: agent instructions, task runners,
+	// editor settings, and the contributing guide.
+	agents: 'HEAD:AGENTS.md',
+	docsAgents: 'HEAD:docs/AGENTS.md',
+	claude: 'HEAD:CLAUDE.md',
+	cursor: 'HEAD:.cursorrules',
+	copilot: 'HEAD:.github/copilot-instructions.md',
+	makefile: 'HEAD:Makefile',
+	pkg: 'HEAD:package.json',
+	justfile: 'HEAD:justfile',
+	taskfile: 'HEAD:Taskfile.yml',
+	vscode: 'HEAD:.vscode/settings.json',
+	contributing: 'HEAD:CONTRIBUTING.md',
+	docsContributing: 'HEAD:docs/CONTRIBUTING.md',
+	ghContributing: 'HEAD:.github/CONTRIBUTING.md'
 };
+
+// Where each key lives in the repo, for the links the directory shows.
+const PATHS = Object.fromEntries(
+	Object.entries(FILES).map(([k, e]) => [k, e.slice('HEAD:'.length)])
+);
+
+/*
+	What a reader lands on. A blob ending in vale.ini is a config. A GitHub
+	repository or tree whose path says vale or style is a package of rules.
+	Any other GitHub link is a repository, and everything else is a page the
+	team wrote.
+*/
+function proofOf(url) {
+	if (/^https:\/\/github\.com\/.+\/blob\/.+vale\.ini$/.test(url)) return 'config';
+	if (/^https:\/\/github\.com\//.test(url)) {
+		const path = url.replace(/^https:\/\/github\.com\//, '');
+		return /vale|style/i.test(path) && !/\/blob\//.test(path) ? 'package' : 'repository';
+	}
+	return 'writeup';
+}
 
 function pathOf(url) {
 	const m = url.match(/^https:\/\/github\.com\/[^/]+\/[^/]+\/blob\/[^/]+\/(.+)$/);
@@ -84,14 +135,14 @@ function pathOf(url) {
 }
 
 // One query slot per adopter, since two entries can share a repo but point
-// at different files. Twenty per round.
+// at different files. Ten per round: each slot reads a dozen or more blobs.
 const targets = adopters
 	.map((a) => ({ name: a.name, repo: repoOf(a.url), path: pathOf(a.url) }))
 	.filter((t) => t.repo);
 
 const results = {};
-for (let i = 0; i < targets.length; i += 20) {
-	const chunk = targets.slice(i, i + 20);
+for (let i = 0; i < targets.length; i += 10) {
+	const chunk = targets.slice(i, i + 10);
 	const parts = chunk.map((t, j) => {
 		const { owner, name } = t.repo;
 		const files = Object.entries(FILES)
@@ -119,8 +170,23 @@ for (let i = 0; i < targets.length; i += 20) {
 		}
 		const mentions = (text) => Boolean(text && /\bvale\b/i.test(text));
 		const workflows = (d.workflows?.entries ?? []).filter((e) => mentions(e.object?.text));
+		const workflowText = workflows.map((e) => e.object.text).join('\n');
+		const found = (keys) => keys.filter((k) => mentions(d[k]?.text)).map((k) => PATHS[k]);
 		results[t.name] = {
 			repo: `${t.repo.owner}/${t.repo.name}`,
+			integrations: {
+				actions: workflows.map((e) => `.github/workflows/${e.name}`),
+				valeAction: /(errata-ai|vale-cli)\/vale-action/.test(workflowText),
+				reviewdog: /vale-action@reviewdog/.test(workflowText),
+				gitlab: found(['gitlab'])[0] ?? null,
+				circle: found(['circle'])[0] ?? null,
+				buildkite: found(['buildkite'])[0] ?? null,
+				precommit: found(['preCommit'])[0] ?? null,
+				agents: found(['agents', 'docsAgents', 'claude', 'cursor', 'copilot']),
+				tasks: found(['makefile', 'pkg', 'justfile', 'taskfile']),
+				vscode: found(['vscode'])[0] ?? null,
+				contributing: found(['contributing', 'docsContributing', 'ghContributing'])
+			},
 			stars: d.stargazerCount,
 			pushed: d.pushedAt?.slice(0, 10) ?? null,
 			touched: d.defaultBranchRef?.target?.history?.nodes?.[0]?.committedDate?.slice(0, 10) ?? null,
@@ -133,8 +199,37 @@ for (let i = 0; i < targets.length; i += 20) {
 			preCommit: mentions(d.preCommit?.text)
 		};
 	});
-	console.log(`  checked ${Math.min(i + 20, targets.length)}/${targets.length}`);
+	console.log(`  checked ${Math.min(i + 10, targets.length)}/${targets.length}`);
 }
+
+/*
+	How many repositories depend on the official Action, from GitHub's own
+	dependents page: the one adoption figure that reaches past this list. There
+	is no API for it, so the page is read for its count, and if the markup
+	ever changes the previous figure is kept rather than written as zero.
+*/
+async function actionDependents(previous) {
+	try {
+		const res = await fetch('https://github.com/vale-cli/vale-action/network/dependents', {
+			headers: { 'User-Agent': 'vale.sh adopters-stats' }
+		});
+		const html = (await res.text()).replace(/\s+/g, ' ');
+		const m = html.match(/([0-9][0-9,]*) Repositories/);
+		if (m) return Number(m[1].replace(/,/g, ''));
+		console.warn('  dependents: count not found on the page, keeping the previous figure');
+	} catch (err) {
+		console.warn(`  dependents: ${err.message}, keeping the previous figure`);
+	}
+	return previous ?? null;
+}
+
+let previousDependents = null;
+try {
+	previousDependents = JSON.parse(await readFile(OUT, 'utf8')).actionDependents ?? null;
+} catch {
+	// First run: nothing to fall back to.
+}
+const dependents = await actionDependents(previousDependents);
 
 // Per adopter, then the totals the page shows.
 const sampledByName = new Map(configs.sampled.map((s) => [s.name, s]));
@@ -160,7 +255,13 @@ for (const a of adopters) {
 	const hit = r && !r.missing ? r : null;
 	const sampled = sampledByName.get(a.name);
 	perAdopter[a.name] = {
+		proof: proofOf(a.url),
+		styles: sampled ? sampled.styles : null,
+		formats: sampled ? (sampled.formats ?? []) : null,
+		vocab: sampled ? (sampled.keys ?? []).includes('Vocab') : null,
+		level: sampled ? (sampled.minAlertLevel ?? null) : null,
 		repo: hit ? hit.repo : null,
+		integrations: hit ? hit.integrations : null,
 		ci: hit ? hit.ci : null,
 		preCommit: hit ? hit.preCommit : null,
 		stars: hit ? hit.stars : null,
@@ -217,6 +318,7 @@ await writeFile(
 	JSON.stringify(
 		{
 			generated: new Date().toISOString().slice(0, 10),
+			actionDependents: dependents,
 			...totals,
 			configs: { sampled, house, registryOnly, vocab },
 			bySector,

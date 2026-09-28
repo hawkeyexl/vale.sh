@@ -1,6 +1,7 @@
 <script lang="ts">
 	import adopters from '$lib/data/adopters.json';
 	import stats from '$lib/data/adopter-stats.json';
+	import stories from '$lib/data/stories.json';
 	import { sectors } from '$lib/data/sectors';
 	import BrandIcon from './BrandIcon.svelte';
 	import Section from './Section.svelte';
@@ -48,9 +49,9 @@
 	/*
 		The biggest names, gated by proof: each mark has to land on a real
 		config or a CI job, since a visitor who clicks and finds a thin page
-		stops believing the rest. That gate is why GitLab (a required pipeline
-		check) and MetaMask (CI that fails on errors) are here and Discord
-		(built-in rules only, no CI) is not. Twelve fills six columns twice.
+		stops believing the rest. A team with a story card above is skipped
+		here, so no name appears twice; the list runs longer than twelve so
+		the row stays full whichever teams the cards take.
 	*/
 	const FEATURED = [
 		'Amazon Web Services',
@@ -64,31 +65,51 @@
 		'Datadog',
 		'MongoDB',
 		'MetaMask',
-		'GOV.UK'
+		'GOV.UK',
+		'Discord',
+		'SAP',
+		'Spotify',
+		'Grafana Labs',
+		'Texas Instruments'
 	];
 
 	const byName = new Map(all.map((a) => [a.name, a]));
 
-	const marks = FEATURED.flatMap((name) => {
-		const adopter = byName.get(name);
-		if (!adopter) return [];
-		return [
-			{
-				...adopter,
-				receipt: receipt(adopter.url),
-				// BrandIcon resolves a Simple Icons glyph, then the avatar, then a
-				// monogram. Most entries name their glyph; fall back to the key the
-				// name implies for the ones that don't.
-				slug: adopter.icon ?? name.toLowerCase().replace(/[^a-z0-9]/g, '')
-			}
-		];
+	/*
+		Four teams, one figure each, read from the team's own page: the number
+		leads, the way a customer page leads with "350 million daily users"
+		rather than a logo. Resolved against the data so the mark and sector
+		come from the adopter entry, and validated in script/adopters.mjs.
+	*/
+	const featuredStories = stories.flatMap((st) => {
+		const adopter = byName.get(st.name);
+		return adopter ? [{ ...st, adopter }] : [];
 	});
 
+	const storied = new Set(stories.map((st) => st.name));
+	const marks = FEATURED.filter((name) => !storied.has(name))
+		.slice(0, 12)
+		.flatMap((name) => {
+			const adopter = byName.get(name);
+			if (!adopter) return [];
+			return [
+				{
+					...adopter,
+					receipt: receipt(adopter.url),
+					// BrandIcon resolves a Simple Icons glyph, then the avatar, then a
+					// monogram. Most entries name their glyph; fall back to the key the
+					// name implies for the ones that don't.
+					slug: adopter.icon ?? name.toLowerCase().replace(/[^a-z0-9]/g, '')
+				}
+			];
+		});
+
 	/*
-		Three counted figures under the marks, from script/adopters-stats.mjs.
-		Each names its denominator, because they differ: every team, the repos
-		on GitHub, and the configs that could be opened.
+		Three counted figures under the marks, from script/adopters-stats.mjs:
+		the list, the repos on it that run Vale in CI, and the one figure that
+		reaches past the list -- how many repositories depend on the Action.
 	*/
+	const compactCount = new Intl.NumberFormat('en-US');
 	const figures = [
 		{ value: String(all.length), label: 'teams', gloss: `across ${sectors.length} sectors` },
 		{
@@ -97,9 +118,9 @@
 			gloss: 'of the repos checked'
 		},
 		{
-			value: `${stats.configs.house} / ${stats.configs.sampled}`,
-			label: 'wrote their own rules',
-			gloss: 'of the public configs'
+			value: compactCount.format(stats.actionDependents ?? 0),
+			label: 'repos using the Vale Action',
+			gloss: "GitHub's dependents count"
 		}
 	];
 
@@ -127,12 +148,47 @@
 	lede={configsLede}
 >
 	<!--
-		Twelve bare marks, large, named beneath. The tooltip is the receipt:
+		Four stories with a figure each, then twelve bare marks, large, named
+		beneath. The mark's tooltip is the receipt:
 		the repository and path, or the host, plus the team's own line. Nothing
 		scrolls; these are links and a moving row makes them a moving target.
 	-->
+	<ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+		{#each featuredStories as story (story.name)}
+			<li>
+				<a
+					href={story.url}
+					target="_blank"
+					rel="noreferrer"
+					class="group flex h-full flex-col rounded-xl border border-border bg-card p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-lime-500/40 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-500"
+				>
+					<span class="flex items-center gap-2.5">
+						<BrandIcon
+							name={story.adopter.name}
+							slug={story.adopter.icon}
+							avatar={story.adopter.avatar}
+							size="h-6 w-6"
+						/>
+						<span class="text-sm font-medium text-foreground">{story.adopter.name}</span>
+					</span>
+					<span class="mt-5 text-4xl font-semibold tracking-tight text-foreground"
+						>{story.figure}</span
+					>
+					<span class="mt-1 text-sm font-medium text-foreground">{story.label}</span>
+					<span class="mt-2 grow text-sm leading-6 text-muted-foreground">{story.detail}</span>
+					<span
+						class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-lime-600 dark:text-lime-400"
+					>
+						Read the source
+						<ArrowRight class="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+					</span>
+				</a>
+			</li>
+		{/each}
+	</ul>
+
 	<Tooltip.Provider delayDuration={150}>
-		<ul class="grid grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-4 lg:grid-cols-6">
+		<ul class="mt-12 grid grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-4 lg:grid-cols-6">
 			{#each marks as mark (mark.name)}
 				<li>
 					<Tooltip.Root>

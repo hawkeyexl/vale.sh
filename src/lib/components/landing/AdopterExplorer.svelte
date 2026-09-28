@@ -1,6 +1,7 @@
 <script lang="ts">
 	import adopters from '$lib/data/adopters.json';
 	import { sectors } from '$lib/data/sectors';
+	import { usageGroups, usageOf, facetLabel, linksOf } from '$lib/data/usage';
 	import BrandIcon from './BrandIcon.svelte';
 	import ArrowUpRight from 'lucide-svelte/icons/arrow-up-right';
 	import Search from 'lucide-svelte/icons/search';
@@ -34,13 +35,29 @@
 	let query = $state('');
 	let input: HTMLInputElement | undefined = $state();
 
+	/*
+		The second axis: how a team uses Vale, from the data behind each entry
+		rather than a hand-written tag. Facets combine with AND, so "Runs in CI"
+		plus "Google style" means both, and each chip's count says how many of
+		the teams already in view it would leave.
+	*/
+	let facets = $state<string[]>([]);
+	const toggleFacet = (id: string) => {
+		facets = facets.includes(id) ? facets.filter((f) => f !== id) : [...facets, id];
+	};
+	const matchesFacets = (name: string, ids: string[]) => {
+		const has = usageOf(name);
+		return ids.every((id) => has.has(id));
+	};
+
 	// The order sectors.ts gives them, so the chips match the overview tiles.
 	const categories = $derived(['All', ...sectors.map((s) => s.name)]);
 
 	const countFor = (category: string) =>
 		category === 'All' ? all.length : all.filter((a) => a.category === category).length;
 
-	const results = $derived(
+	// Sector and search, before the facets: what the facet counts are taken over.
+	const inView = $derived(
 		all
 			.filter((a) => activeCategory === 'All' || a.category === activeCategory)
 			.filter((a) => {
@@ -49,11 +66,41 @@
 				return (
 					a.name.toLowerCase().includes(q) ||
 					a.context.toLowerCase().includes(q) ||
-					a.category.toLowerCase().includes(q)
+					a.category.toLowerCase().includes(q) ||
+					Array.from(usageOf(a.name)).some((id) => facetLabel.get(id)?.toLowerCase().includes(q))
 				);
 			})
-			.sort((a, b) => a.name.localeCompare(b.name))
 	);
+
+	const results = $derived(
+		inView.filter((a) => matchesFacets(a.name, facets)).sort((a, b) => a.name.localeCompare(b.name))
+	);
+
+	// How many teams a chip would leave, given the other chips already on.
+	const facetCount = (id: string) =>
+		inView.filter((a) => matchesFacets(a.name, [...facets.filter((f) => f !== id), id])).length;
+
+	// The first few facets a card wears, so the "how" shows without a filter.
+	const TAGS = [
+		'valeaction',
+		'action',
+		'gitlabci',
+		'precommit',
+		'agents',
+		'house',
+		'google',
+		'microsoft',
+		'redhat',
+		'mdx',
+		'rst',
+		'adoc'
+	];
+	const tagsFor = (name: string) => {
+		const has = usageOf(name);
+		return TAGS.filter((id) => has.has(id))
+			.slice(0, 3)
+			.map((id) => facetLabel.get(id) ?? id);
+	};
 
 	/*
 		A hundred and fifty cards in one alphabetical run is a wall. Grouping
@@ -71,7 +118,9 @@
 
 	let expanded = $state(false);
 
-	const previewing = $derived(!expanded && activeCategory === 'All' && !query.trim());
+	const previewing = $derived(
+		!expanded && activeCategory === 'All' && !query.trim() && facets.length === 0
+	);
 
 	const rows = $derived.by(() => {
 		const shown = activeCategory === 'All' ? categories.slice(1) : [activeCategory];
@@ -172,6 +221,40 @@
 		{/each}
 	</div>
 
+	<!--
+		How it's used: one row per group, chips toggle and combine. A chip that
+		would leave no teams is not shown at all, rather than shown greyed, and
+		a group with nothing to offer goes with it -- a chip still on stays, so
+		it can be turned off.
+	-->
+	<div class="mx-auto mt-5 flex max-w-3xl flex-col gap-2">
+		{#each usageGroups as group (group.name)}
+			{@const visible = group.facets.filter((f) => facets.includes(f.id) || facetCount(f.id) > 0)}
+			{#if visible.length}
+				<div class="flex flex-wrap items-center justify-center gap-1.5">
+					<span class="mr-1 font-mono text-[10px] uppercase tracking-[0.12em] text-muted-foreground"
+						>{group.name}</span
+					>
+					{#each visible as facet (facet.id)}
+						{@const on = facets.includes(facet.id)}
+						{@const n = facetCount(facet.id)}
+						<button
+							type="button"
+							onclick={() => toggleFacet(facet.id)}
+							aria-pressed={on}
+							class="inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-500 {on
+								? 'border-lime-500/50 bg-lime-500/10 font-medium text-foreground'
+								: 'border-border text-muted-foreground hover:bg-muted/60 hover:text-foreground'}"
+						>
+							{facet.label}
+							<span class="font-mono text-[10px] text-muted-foreground">{n}</span>
+						</button>
+					{/each}
+				</div>
+			{/if}
+		{/each}
+	</div>
+
 	<p class="sr-only" aria-live="polite">
 		{results.length}
 		{results.length === 1 ? 'team' : 'teams'} shown
@@ -196,13 +279,21 @@
 						</h3>
 					{:else}
 						{@const user = row.adopter}
-						<a
-							href={user.url}
-							target="_blank"
-							rel="noreferrer"
-							class="group flex h-full flex-col rounded-xl border border-border bg-card p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-lime-500/40 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-500"
+						{@const links = linksOf(user.name)}
+						<!--
+							The card is a box, not one big link, because it holds several:
+							the title goes to the entry's proof, and the footer goes to the
+							files in the repo a newcomer would copy from.
+						-->
+						<div
+							class="group flex h-full flex-col rounded-xl border border-border bg-card p-5 transition-all duration-200 hover:border-lime-500/40 hover:shadow-md"
 						>
-							<div class="flex items-start justify-between gap-3">
+							<a
+								href={user.url}
+								target="_blank"
+								rel="noreferrer"
+								class="flex items-start justify-between gap-3 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-500"
+							>
 								<span class="flex items-center gap-2.5">
 									<BrandIcon
 										name={user.name}
@@ -215,9 +306,33 @@
 								<ArrowUpRight
 									class="h-4 w-4 shrink-0 text-muted-foreground transition-colors group-hover:text-lime-600 dark:group-hover:text-lime-400"
 								/>
-							</div>
+							</a>
 							<p class="mt-2 grow text-sm leading-6 text-muted-foreground">{user.context}</p>
-						</a>
+							{#if tagsFor(user.name).length}
+								<p
+									class="mt-3 font-mono text-[10px] uppercase tracking-[0.12em] text-muted-foreground"
+								>
+									{tagsFor(user.name).join(' · ')}
+								</p>
+							{/if}
+							{#if links.length}
+								<ul class="mt-3 flex flex-wrap gap-1.5" aria-label="Files in the repo">
+									{#each links as link (link.url)}
+										<li>
+											<a
+												href={link.url}
+												target="_blank"
+												rel="noreferrer"
+												class="inline-flex items-center gap-1 rounded-md border border-border px-2 py-0.5 font-mono text-[11px] text-muted-foreground transition-colors hover:border-lime-500/50 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-500"
+											>
+												{link.label}
+												<ArrowUpRight class="h-3 w-3" />
+											</a>
+										</li>
+									{/each}
+								</ul>
+							{/if}
+						</div>
 					{/if}
 				</li>
 			{/each}
@@ -238,13 +353,16 @@
 	{:else}
 		<div class="mt-10 rounded-xl border border-dashed border-border py-12 text-center">
 			<p class="text-sm text-muted-foreground">
-				No teams match <span class="font-medium text-foreground">"{query}"</span>.
+				No teams match{#if query}
+					<span class="font-medium text-foreground">"{query}"</span>{:else}
+					those filters{/if}.
 			</p>
 			<button
 				type="button"
 				onclick={() => {
 					query = '';
 					activeCategory = 'All';
+					facets = [];
 				}}
 				class="mt-3 text-sm font-medium text-lime-600 hover:text-lime-600 dark:text-lime-400 dark:hover:text-lime-400"
 			>

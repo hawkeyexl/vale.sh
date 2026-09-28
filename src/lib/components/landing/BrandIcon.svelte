@@ -42,6 +42,11 @@
 		<path d={path} />
 	</svg>
 {:else if avatar}
+	<!--
+		Org avatars are drawn for GitHub's white page: a black wordmark or a
+		dark globe vanishes on a dark card without one. A white plate under the
+		image keeps every avatar legible in both themes, as GitHub renders them.
+	-->
 	<img
 		src={avatar}
 		alt=""
@@ -49,7 +54,7 @@
 		loading="lazy"
 		width="20"
 		height="20"
-		class="{size} shrink-0 rounded-sm object-contain {klass}"
+		class="{size} shrink-0 rounded-md bg-white object-contain p-px {klass}"
 	/>
 {:else}
 	<span

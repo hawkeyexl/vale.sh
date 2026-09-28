@@ -163,7 +163,15 @@ for (const target of targets) {
 			for (const b of parsed.styles) if (a !== b) bump(pairs.get(a), b);
 		}
 
-		sampled.push({ name: target.name, url: target.url, styles: parsed.styles });
+		// Everything parse() found, so a per-adopter view can read it too.
+		sampled.push({
+			name: target.name,
+			url: target.url,
+			styles: parsed.styles,
+			formats: parsed.formats,
+			keys: parsed.keys,
+			minAlertLevel: parsed.minAlertLevel
+		});
 		console.log(`  ${target.name}: ${parsed.styles.join(', ') || '(Vale only)'}`);
 	} catch (err) {
 		failures.push(`${target.name}: ${err.message}`);

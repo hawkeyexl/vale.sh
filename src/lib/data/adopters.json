@@ -419,7 +419,7 @@
 		"name": "Homebrew",
 		"category": "Open source & communities",
 		"context": "The missing package manager for macOS (and Linux).",
-		"url": "https://github.com/Homebrew/brew/blob/master/.vale.ini",
+		"url": "https://github.com/Homebrew/brew/blob/HEAD/.vale.ini",
 		"icon": "homebrew"
 	},
 	{
@@ -994,8 +994,8 @@
 	{
 		"name": "Spotify",
 		"category": "Developer tools",
-		"context": "Lints Backstage, the open platform for developer portals.",
-		"url": "https://github.com/spotify/backstage/blob/master/.vale.ini",
+		"context": "Lints Backstage, the developer-portal platform it created and now a CNCF project.",
+		"url": "https://github.com/backstage/backstage/blob/master/.vale.ini",
 		"icon": "spotify"
 	},
 	{

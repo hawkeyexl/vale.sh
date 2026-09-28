@@ -67,31 +67,3 @@ export const sectors: Sector[] = [
 		icon: Blocks
 	}
 ];
-
-/**
- * Names a visitor is likely to know on sight, for the grid under the
- * directory's header. Ordered by recognition, then to alternate sectors so
- * two neighbors rarely share one. Twenty fills four rows of five.
- */
-export const recognizable = [
-	'Amazon Web Services',
-	'Microsoft',
-	'NVIDIA',
-	'Epic Games',
-	'GitHub',
-	'Red Hat',
-	'Docker',
-	'Discord',
-	'MongoDB',
-	'Spotify',
-	'Datadog',
-	'Shopify',
-	'SAP',
-	'McKinsey',
-	'GOV.UK',
-	'WordPress',
-	'MetaMask',
-	'Optimism',
-	'Polkadot',
-	'Texas Instruments'
-];

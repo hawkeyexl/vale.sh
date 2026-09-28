@@ -2,7 +2,7 @@
 	import { MetaTags } from 'svelte-meta-tags';
 	import adopters from '$lib/data/adopters.json';
 	import stats from '$lib/data/adopter-stats.json';
-	import { sectors, recognizable } from '$lib/data/sectors';
+	import { sectors } from '$lib/data/sectors';
 	import AdopterExplorer from '$lib/components/landing/AdopterExplorer.svelte';
 	import BrandIcon from '$lib/components/landing/BrandIcon.svelte';
 	import Section from '$lib/components/landing/Section.svelte';
@@ -32,10 +32,6 @@
 	).length;
 
 	const countFor = (sector: string) => all.filter((a) => a.category === sector).length;
-
-	// Resolved against the data, so a renamed or removed team drops out here
-	// rather than rendering a monogram with nothing behind it.
-	const known = recognizable.flatMap((name) => byName.get(name) ?? []);
 
 	// One band per sector, with its whole roster in alphabetical order and
 	// the sector's own counts from script/adopters-stats.mjs.
@@ -75,10 +71,9 @@
 			gloss: `of ${stats.configs.sampled} public configs: based on a style that is not a registry package`
 		},
 		{
-			value: stats.configs.vocab,
-			of: stats.configs.sampled,
-			label: 'keep a project vocabulary',
-			gloss: `of ${stats.configs.sampled} public configs: a Vocab of their own product and term names`
+			value: stats.actionDependents ?? 0,
+			label: 'repos using the Vale Action',
+			gloss: `GitHub's dependents count for vale-cli/vale-action, as of ${stats.generated}, most of them not on this list`
 		},
 		{
 			value: stats.stars,
@@ -154,64 +149,14 @@
 				{/each}
 			</dl>
 		</div>
-
-		<!--
-		Names first, sectors second. This grid is the fastest answer to "does
-		anyone I know use this": twenty marks big enough to recognize on sight,
-		each one the team's own proof. It sits wider than the copy above it so
-		the marks get room.
-	-->
-		<div class="mx-auto max-w-5xl px-6 pb-16 lg:px-8">
-			<ul
-				class="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-5"
-				aria-label="Recognizable adopters"
-			>
-				{#each known as team (team.name)}
-					<li>
-						<Tooltip.Root>
-							<Tooltip.Trigger>
-								{#snippet child({ props })}
-									<a
-										{...props}
-										href={team.url}
-										target="_blank"
-										rel="noreferrer"
-										class="group flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 transition-all duration-200 hover:-translate-y-0.5 hover:border-lime-500/40 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-500"
-									>
-										<BrandIcon
-											name={team.name}
-											slug={team.icon}
-											avatar={team.avatar}
-											size="h-8 w-8"
-										/>
-										<span class="min-w-0">
-											<span
-												class="block truncate text-sm font-semibold tracking-tight text-foreground"
-												>{team.name}</span
-											>
-											<span class="block truncate text-xs text-muted-foreground"
-												>{team.category}</span
-											>
-										</span>
-									</a>
-								{/snippet}
-							</Tooltip.Trigger>
-							<Tooltip.Content side="bottom" class="max-w-xs text-pretty"
-								>{team.context}</Tooltip.Content
-							>
-						</Tooltip.Root>
-					</li>
-				{/each}
-			</ul>
-		</div>
 	</section>
 
 	<Section id="sectors" eyebrow="Sectors" title="Where the writing gets checked" lede={sectorsLede}>
 		<!--
 		Four figures before the bands. A stat tile each: value, label, and the
-		line that says how it was counted. The first three are ratios, so each
-		carries a meter against its own denominator; the star total stands
-		alone.
+		line that says how it was counted. Two are ratios, so each carries a
+		meter against its own denominator; the Action's dependents and the star
+		total stand alone.
 	-->
 		<dl class="mb-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
 			{#each kpis as kpi (kpi.label)}
