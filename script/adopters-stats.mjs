@@ -168,7 +168,13 @@ for (let i = 0; i < targets.length; i += 10) {
 			results[t.name] = { missing: true };
 			return;
 		}
-		const mentions = (text) => Boolean(text && /\bvale\b/i.test(text));
+		// A mention counts when it is not just a path: Epic's pre-commit config
+		// names Vale only inside an `exclude:` pattern for another hook.
+		const mentions = (text) =>
+			Boolean(
+				text &&
+					text.split('\n').some((line) => /\bvale\b/i.test(line) && !/^\s*exclude:/.test(line))
+			);
 		const workflows = (d.workflows?.entries ?? []).filter((e) => mentions(e.object?.text));
 		const workflowText = workflows.map((e) => e.object.text).join('\n');
 		const found = (keys) => keys.filter((k) => mentions(d[k]?.text)).map((k) => PATHS[k]);

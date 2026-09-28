@@ -11,7 +11,7 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
 		"validate": "node script/adopters.mjs",
-		"posts": "node script/lint-posts.mjs && node script/build-og.mjs",
+		"posts": "node script/lint-posts.mjs && node script/build-og.mjs && node script/build-og-brand.mjs",
 		"og:adopters": "node script/build-og-adopters.mjs"
 	},
 	"devDependencies": {

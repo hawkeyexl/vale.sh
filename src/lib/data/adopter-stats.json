@@ -1,21 +1,21 @@
 {
 	"generated": "2026-09-28",
-	"actionDependents": 4193,
-	"teams": 162,
-	"checked": 140,
-	"unchecked": 22,
-	"ci": 100,
-	"preCommit": 6,
-	"stars": 842249,
-	"active30": 120,
-	"active90": 126,
-	"touched90": 32,
-	"touchable": 126,
+	"actionDependents": 4194,
+	"teams": 168,
+	"checked": 145,
+	"unchecked": 23,
+	"ci": 104,
+	"preCommit": 5,
+	"stars": 842443,
+	"active30": 125,
+	"active90": 131,
+	"touched90": 34,
+	"touchable": 131,
 	"configs": {
-		"sampled": 118,
-		"house": 94,
-		"registryOnly": 17,
-		"vocab": 66
+		"sampled": 122,
+		"house": 96,
+		"registryOnly": 19,
+		"vocab": 69
 	},
 	"bySector": {
 		"Data & observability": {
@@ -23,7 +23,7 @@
 			"checked": 25,
 			"ci": 17,
 			"house": 15,
-			"stars": 113237,
+			"stars": 113252,
 			"active30": 20
 		},
 		"Web3 & blockchain": {
@@ -31,7 +31,7 @@
 			"checked": 7,
 			"ci": 5,
 			"house": 3,
-			"stars": 8723,
+			"stars": 8725,
 			"active30": 7
 		},
 		"Cloud & infrastructure": {
@@ -39,7 +39,7 @@
 			"checked": 21,
 			"ci": 17,
 			"house": 18,
-			"stars": 101447,
+			"stars": 101464,
 			"active30": 17
 		},
 		"Hardware & semiconductors": {
@@ -47,39 +47,39 @@
 			"checked": 8,
 			"ci": 6,
 			"house": 5,
-			"stars": 21876,
+			"stars": 21879,
 			"active30": 7
 		},
 		"Developer tools": {
-			"teams": 34,
-			"checked": 29,
-			"ci": 19,
+			"teams": 36,
+			"checked": 31,
+			"ci": 20,
 			"house": 19,
-			"stars": 298509,
-			"active30": 27
+			"stars": 298593,
+			"active30": 29
 		},
 		"Enterprise software": {
-			"teams": 10,
-			"checked": 8,
-			"ci": 5,
-			"house": 7,
-			"stars": 646,
-			"active30": 6
+			"teams": 12,
+			"checked": 10,
+			"ci": 7,
+			"house": 8,
+			"stars": 664,
+			"active30": 8
 		},
 		"Open source & communities": {
-			"teams": 23,
-			"checked": 19,
-			"ci": 15,
-			"house": 10,
-			"stars": 187910,
-			"active30": 14
+			"teams": 25,
+			"checked": 20,
+			"ci": 16,
+			"house": 11,
+			"stars": 187950,
+			"active30": 15
 		},
 		"Academia & public sector": {
 			"teams": 18,
 			"checked": 16,
 			"ci": 12,
 			"house": 11,
-			"stars": 7199,
+			"stars": 7201,
 			"active30": 15
 		},
 		"AI & machine learning": {
@@ -87,7 +87,7 @@
 			"checked": 7,
 			"ci": 4,
 			"house": 6,
-			"stars": 102702,
+			"stars": 102715,
 			"active30": 7
 		}
 	},
@@ -114,7 +114,7 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 22143,
+			"stars": 22145,
 			"pushed": "2026-09-28",
 			"touched": null,
 			"house": null
@@ -238,7 +238,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 638,
-			"pushed": "2026-09-25",
+			"pushed": "2026-09-28",
 			"touched": "2026-06-03",
 			"house": true
 		},
@@ -272,7 +272,7 @@
 		"Apify": {
 			"proof": "config",
 			"styles": ["Apify", "ApifyDocs", "write-good", "Microsoft"],
-			"formats": ["md"],
+			"formats": ["md", "mdx"],
 			"vocab": true,
 			"level": "warning",
 			"repo": "apify/apify-docs",
@@ -292,8 +292,8 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 80,
-			"pushed": "2026-09-26",
-			"touched": "2026-09-15",
+			"pushed": "2026-09-28",
+			"touched": "2026-09-28",
 			"house": true
 		},
 		"Atlantis": {
@@ -345,8 +345,8 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 31830,
-			"pushed": "2026-09-27",
+			"stars": 31838,
+			"pushed": "2026-09-28",
 			"touched": "2026-07-27",
 			"house": false
 		},
@@ -373,7 +373,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 26,
-			"pushed": "2026-09-25",
+			"pushed": "2026-09-28",
 			"touched": null,
 			"house": null
 		},
@@ -508,8 +508,8 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 851,
-			"pushed": "2026-09-27",
-			"touched": "2026-09-25",
+			"pushed": "2026-09-28",
+			"touched": "2026-09-28",
 			"house": null
 		},
 		"ClickHouse": {
@@ -561,7 +561,7 @@
 			},
 			"ci": false,
 			"preCommit": false,
-			"stars": 6528,
+			"stars": 6529,
 			"pushed": "2026-09-28",
 			"touched": "2022-10-04",
 			"house": false
@@ -620,6 +620,33 @@
 			"touched": "2023-07-12",
 			"house": true
 		},
+		"Codacy": {
+			"proof": "config",
+			"styles": ["Microsoft", "alex"],
+			"formats": ["readme"],
+			"vocab": true,
+			"level": "warning",
+			"repo": "codacy/docs",
+			"integrations": {
+				"actions": [".github/workflows/vale.yml"],
+				"valeAction": true,
+				"reviewdog": false,
+				"gitlab": null,
+				"circle": null,
+				"buildkite": null,
+				"precommit": null,
+				"agents": [],
+				"tasks": [],
+				"vscode": null,
+				"contributing": []
+			},
+			"ci": true,
+			"preCommit": false,
+			"stars": 29,
+			"pushed": "2026-09-28",
+			"touched": "2026-08-12",
+			"house": false
+		},
 		"Coder": {
 			"proof": "config",
 			"styles": ["Coder"],
@@ -642,7 +669,7 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 16731,
+			"stars": 16739,
 			"pushed": "2026-09-28",
 			"touched": "2026-08-31",
 			"house": true
@@ -781,7 +808,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 4441,
-			"pushed": "2026-09-27",
+			"pushed": "2026-09-28",
 			"touched": "2023-12-08",
 			"house": true
 		},
@@ -834,7 +861,7 @@
 			},
 			"ci": false,
 			"preCommit": false,
-			"stars": 16207,
+			"stars": 16211,
 			"pushed": "2026-09-25",
 			"touched": "2024-09-04",
 			"house": true
@@ -877,7 +904,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 217,
-			"pushed": "2026-09-26",
+			"pushed": "2026-09-28",
 			"touched": "2026-09-08",
 			"house": true
 		},
@@ -903,7 +930,7 @@
 			},
 			"ci": false,
 			"preCommit": false,
-			"stars": 1286,
+			"stars": 1287,
 			"pushed": "2026-09-18",
 			"touched": "2024-07-26",
 			"house": true
@@ -985,7 +1012,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 4661,
-			"pushed": "2026-09-27",
+			"pushed": "2026-09-28",
 			"touched": "2026-09-11",
 			"house": true
 		},
@@ -1012,7 +1039,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 18294,
-			"pushed": "2026-09-27",
+			"pushed": "2026-09-28",
 			"touched": "2026-04-11",
 			"house": true
 		},
@@ -1038,7 +1065,7 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 302,
+			"stars": 303,
 			"pushed": "2026-09-28",
 			"touched": "2025-12-15",
 			"house": false
@@ -1099,15 +1126,15 @@
 				"gitlab": null,
 				"circle": null,
 				"buildkite": null,
-				"precommit": ".pre-commit-config.yaml",
+				"precommit": null,
 				"agents": [],
 				"tasks": [],
 				"vscode": null,
 				"contributing": ["CONTRIBUTING.md"]
 			},
 			"ci": false,
-			"preCommit": true,
-			"stars": 8830,
+			"preCommit": false,
+			"stars": 8834,
 			"pushed": "2026-09-28",
 			"touched": "2026-06-05",
 			"house": true
@@ -1134,7 +1161,7 @@
 			},
 			"ci": false,
 			"preCommit": false,
-			"stars": 19105,
+			"stars": 19109,
 			"pushed": "2026-09-25",
 			"touched": "2023-10-10",
 			"house": true
@@ -1161,7 +1188,7 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 52468,
+			"stars": 52479,
 			"pushed": "2026-09-28",
 			"touched": "2026-09-25",
 			"house": true
@@ -1219,7 +1246,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 150,
-			"pushed": "2026-09-27",
+			"pushed": "2026-09-28",
 			"touched": "2026-02-27",
 			"house": true
 		},
@@ -1277,6 +1304,33 @@
 			"touched": "2025-07-03",
 			"house": null
 		},
+		"Foreman": {
+			"proof": "config",
+			"styles": ["RedHat", "AsciiDoc", "foreman-documentation"],
+			"formats": ["adoc", "ini"],
+			"vocab": true,
+			"level": "suggestion",
+			"repo": "theforeman/foreman-documentation",
+			"integrations": {
+				"actions": [".github/workflows/unused.yml", ".github/workflows/vale.yml"],
+				"valeAction": true,
+				"reviewdog": false,
+				"gitlab": null,
+				"circle": null,
+				"buildkite": null,
+				"precommit": null,
+				"agents": [],
+				"tasks": [],
+				"vscode": null,
+				"contributing": ["CONTRIBUTING.md"]
+			},
+			"ci": true,
+			"preCommit": false,
+			"stars": 26,
+			"pushed": "2026-09-28",
+			"touched": "2025-11-13",
+			"house": true
+		},
 		"Foundries.io": {
 			"proof": "config",
 			"styles": null,
@@ -1327,7 +1381,7 @@
 			"ci": false,
 			"preCommit": false,
 			"stars": 387,
-			"pushed": "2026-09-27",
+			"pushed": "2026-09-28",
 			"touched": "2023-08-01",
 			"house": true
 		},
@@ -1353,8 +1407,8 @@
 			},
 			"ci": false,
 			"preCommit": false,
-			"stars": 10133,
-			"pushed": "2026-09-25",
+			"stars": 10134,
+			"pushed": "2026-09-28",
 			"touched": "2020-11-12",
 			"house": true
 		},
@@ -1423,7 +1477,7 @@
 			"ci": false,
 			"preCommit": false,
 			"stars": 16,
-			"pushed": "2026-09-25",
+			"pushed": "2026-09-28",
 			"touched": "2024-02-29",
 			"house": true
 		},
@@ -1464,7 +1518,7 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 12936,
+			"stars": 12935,
 			"pushed": "2026-09-25",
 			"touched": "2026-05-03",
 			"house": true
@@ -1518,7 +1572,7 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 49797,
+			"stars": 49803,
 			"pushed": "2026-09-28",
 			"touched": "2026-07-20",
 			"house": true
@@ -1545,7 +1599,7 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 29470,
+			"stars": 29477,
 			"pushed": "2026-09-28",
 			"touched": "2026-08-20",
 			"house": true
@@ -1576,7 +1630,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 82,
-			"pushed": "2026-09-26",
+			"pushed": "2026-09-28",
 			"touched": "2026-05-22",
 			"house": true
 		},
@@ -1603,7 +1657,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 526,
-			"pushed": "2026-09-27",
+			"pushed": "2026-09-28",
 			"touched": "2026-09-07",
 			"house": true
 		},
@@ -1672,7 +1726,7 @@
 			"ci": false,
 			"preCommit": false,
 			"stars": 3093,
-			"pushed": "2026-09-24",
+			"pushed": "2026-09-28",
 			"touched": null,
 			"house": null
 		},
@@ -1725,7 +1779,7 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 2480,
+			"stars": 2481,
 			"pushed": "2026-09-27",
 			"touched": "2026-08-18",
 			"house": false
@@ -1755,8 +1809,8 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 11010,
-			"pushed": "2026-09-25",
+			"stars": 11012,
+			"pushed": "2026-09-28",
 			"touched": "2026-04-29",
 			"house": true
 		},
@@ -1944,7 +1998,7 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 28378,
+			"stars": 28387,
 			"pushed": "2026-09-28",
 			"touched": "2026-09-09",
 			"house": true
@@ -1971,7 +2025,7 @@
 			},
 			"ci": false,
 			"preCommit": false,
-			"stars": 39204,
+			"stars": 39210,
 			"pushed": "2026-09-28",
 			"touched": "2026-07-02",
 			"house": true
@@ -2026,7 +2080,7 @@
 			"ci": false,
 			"preCommit": false,
 			"stars": 3798,
-			"pushed": "2026-09-27",
+			"pushed": "2026-09-28",
 			"touched": "2024-04-16",
 			"house": false
 		},
@@ -2052,8 +2106,8 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 36497,
-			"pushed": "2026-09-25",
+			"stars": 36507,
+			"pushed": "2026-09-28",
 			"touched": "2024-03-18",
 			"house": true
 		},
@@ -2095,7 +2149,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 184,
-			"pushed": "2026-09-25",
+			"pushed": "2026-09-28",
 			"touched": "2026-06-08",
 			"house": true
 		},
@@ -2121,7 +2175,7 @@
 			},
 			"ci": true,
 			"preCommit": true,
-			"stars": 3859,
+			"stars": 3860,
 			"pushed": "2026-09-23",
 			"touched": "2026-01-07",
 			"house": true
@@ -2148,7 +2202,7 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 864,
+			"stars": 865,
 			"pushed": "2026-09-24",
 			"touched": "2026-07-02",
 			"house": null
@@ -2245,7 +2299,7 @@
 			"ci": false,
 			"preCommit": false,
 			"stars": 73,
-			"pushed": "2026-09-24",
+			"pushed": "2026-09-28",
 			"touched": "2026-04-17",
 			"house": true
 		},
@@ -2272,7 +2326,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 777,
-			"pushed": "2026-09-25",
+			"pushed": "2026-09-28",
 			"touched": "2026-05-11",
 			"house": null
 		},
@@ -2298,8 +2352,8 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 99103,
-			"pushed": "2026-09-27",
+			"stars": 99108,
+			"pushed": "2026-09-28",
 			"touched": "2026-04-29",
 			"house": true
 		},
@@ -2325,8 +2379,8 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 1798,
-			"pushed": "2026-09-25",
+			"stars": 1799,
+			"pushed": "2026-09-28",
 			"touched": "2026-09-24",
 			"house": true
 		},
@@ -2383,8 +2437,8 @@
 			},
 			"ci": false,
 			"preCommit": false,
-			"stars": 324,
-			"pushed": "2026-09-27",
+			"stars": 325,
+			"pushed": "2026-09-28",
 			"touched": "2026-05-09",
 			"house": true
 		},
@@ -2497,7 +2551,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 163,
-			"pushed": "2026-09-27",
+			"pushed": "2026-09-28",
 			"touched": "2026-06-24",
 			"house": true
 		},
@@ -2565,7 +2619,7 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 1431,
+			"stars": 1430,
 			"pushed": "2026-09-28",
 			"touched": "2025-06-24",
 			"house": true
@@ -2662,7 +2716,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 12281,
-			"pushed": "2026-09-26",
+			"pushed": "2026-09-28",
 			"touched": "2026-07-16",
 			"house": true
 		},
@@ -2689,7 +2743,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 48,
-			"pushed": "2026-09-25",
+			"pushed": "2026-09-28",
 			"touched": "2023-08-10",
 			"house": true
 		},
@@ -2715,8 +2769,8 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 114,
-			"pushed": "2026-09-25",
+			"stars": 113,
+			"pushed": "2026-09-28",
 			"touched": "2026-07-16",
 			"house": true
 		},
@@ -2824,9 +2878,36 @@
 			"ci": false,
 			"preCommit": false,
 			"stars": 54,
-			"pushed": "2026-09-27",
+			"pushed": "2026-09-28",
 			"touched": "2026-06-22",
 			"house": true
+		},
+		"Palo Alto Networks": {
+			"proof": "config",
+			"styles": ["Google"],
+			"formats": ["md"],
+			"vocab": false,
+			"level": "error",
+			"repo": "PaloAltoNetworks/shifter",
+			"integrations": {
+				"actions": [".github/workflows/vale.yml"],
+				"valeAction": false,
+				"reviewdog": false,
+				"gitlab": null,
+				"circle": null,
+				"buildkite": null,
+				"precommit": null,
+				"agents": [],
+				"tasks": ["Makefile"],
+				"vscode": null,
+				"contributing": []
+			},
+			"ci": true,
+			"preCommit": false,
+			"stars": 6,
+			"pushed": "2026-09-21",
+			"touched": "2026-07-20",
+			"house": false
 		},
 		"Pelican": {
 			"proof": "config",
@@ -2850,7 +2931,7 @@
 			},
 			"ci": false,
 			"preCommit": false,
-			"stars": 13340,
+			"stars": 13343,
 			"pushed": "2026-04-20",
 			"touched": "2024-07-30",
 			"house": false
@@ -2958,7 +3039,7 @@
 			},
 			"ci": false,
 			"preCommit": false,
-			"stars": 435,
+			"stars": 436,
 			"pushed": "2026-09-15",
 			"touched": "2025-10-07",
 			"house": true
@@ -2976,6 +3057,33 @@
 			"stars": null,
 			"pushed": null,
 			"touched": null,
+			"house": null
+		},
+		"Postman": {
+			"proof": "config",
+			"styles": null,
+			"formats": null,
+			"vocab": null,
+			"level": null,
+			"repo": "postmanlabs/collection-format-docs",
+			"integrations": {
+				"actions": [],
+				"valeAction": false,
+				"reviewdog": false,
+				"gitlab": null,
+				"circle": null,
+				"buildkite": null,
+				"precommit": null,
+				"agents": [],
+				"tasks": [],
+				"vscode": null,
+				"contributing": ["CONTRIBUTING.md"]
+			},
+			"ci": false,
+			"preCommit": false,
+			"stars": 5,
+			"pushed": "2026-09-18",
+			"touched": "2023-02-13",
 			"house": null
 		},
 		"PowerShell Docs": {
@@ -3000,7 +3108,7 @@
 			},
 			"ci": false,
 			"preCommit": false,
-			"stars": 2555,
+			"stars": 2556,
 			"pushed": "2026-09-24",
 			"touched": "2023-03-21",
 			"house": true
@@ -3027,7 +3135,7 @@
 			},
 			"ci": false,
 			"preCommit": false,
-			"stars": 23937,
+			"stars": 23942,
 			"pushed": "2026-09-27",
 			"touched": "2025-07-31",
 			"house": true
@@ -3186,7 +3294,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 237,
-			"pushed": "2026-09-25",
+			"pushed": "2026-09-28",
 			"touched": "2023-10-27",
 			"house": true
 		},
@@ -3308,7 +3416,7 @@
 			},
 			"ci": false,
 			"preCommit": true,
-			"stars": 43938,
+			"stars": 43939,
 			"pushed": "2026-09-28",
 			"touched": "2026-09-18",
 			"house": true
@@ -3335,7 +3443,7 @@
 			},
 			"ci": false,
 			"preCommit": false,
-			"stars": 8391,
+			"stars": 8392,
 			"pushed": "2026-09-28",
 			"touched": "2025-06-23",
 			"house": false
@@ -3447,7 +3555,7 @@
 			"ci": false,
 			"preCommit": false,
 			"stars": 24,
-			"pushed": "2026-09-27",
+			"pushed": "2026-09-28",
 			"touched": "2026-06-24",
 			"house": true
 		},
@@ -3543,7 +3651,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 185,
-			"pushed": "2026-09-25",
+			"pushed": "2026-09-28",
 			"touched": "2024-07-03",
 			"house": true
 		},
@@ -3665,10 +3773,37 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 34512,
-			"pushed": "2026-09-26",
+			"stars": 34519,
+			"pushed": "2026-09-28",
 			"touched": "2022-12-22",
 			"house": false
+		},
+		"Spryker": {
+			"proof": "config",
+			"styles": ["Google", "Spryker", "terms"],
+			"formats": ["md"],
+			"vocab": true,
+			"level": "suggestion",
+			"repo": "spryker/spryker-docs",
+			"integrations": {
+				"actions": [".github/workflows/vale.yml"],
+				"valeAction": false,
+				"reviewdog": false,
+				"gitlab": null,
+				"circle": null,
+				"buildkite": null,
+				"precommit": null,
+				"agents": ["CLAUDE.md"],
+				"tasks": [],
+				"vscode": ".vscode/settings.json",
+				"contributing": []
+			},
+			"ci": true,
+			"preCommit": false,
+			"stars": 12,
+			"pushed": "2026-09-28",
+			"touched": "2026-01-12",
+			"house": true
 		},
 		"StarRocks": {
 			"proof": "config",
@@ -3692,7 +3827,7 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 12148,
+			"stars": 12149,
 			"pushed": "2026-09-28",
 			"touched": "2026-07-17",
 			"house": true
@@ -3776,7 +3911,7 @@
 			},
 			"ci": false,
 			"preCommit": false,
-			"stars": 7309,
+			"stars": 7311,
 			"pushed": "2026-09-27",
 			"touched": "2026-07-11",
 			"house": true
@@ -3804,7 +3939,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 174,
-			"pushed": "2026-09-24",
+			"pushed": "2026-09-28",
 			"touched": "2026-09-10",
 			"house": true
 		},
@@ -3857,7 +3992,7 @@
 			},
 			"ci": false,
 			"preCommit": false,
-			"stars": 589,
+			"stars": 590,
 			"pushed": "2026-09-25",
 			"touched": "2025-08-18",
 			"house": false
@@ -3966,7 +4101,7 @@
 			"ci": false,
 			"preCommit": false,
 			"stars": 10838,
-			"pushed": "2026-09-25",
+			"pushed": "2026-09-28",
 			"touched": "2024-11-02",
 			"house": true
 		},
@@ -4020,7 +4155,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 292,
-			"pushed": "2026-09-25",
+			"pushed": "2026-09-28",
 			"touched": "2026-04-14",
 			"house": true
 		},
@@ -4105,6 +4240,21 @@
 			"touched": "2026-02-25",
 			"house": true
 		},
+		"Wikimedia": {
+			"proof": "writeup",
+			"styles": null,
+			"formats": null,
+			"vocab": null,
+			"level": null,
+			"repo": null,
+			"integrations": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
 		"WordPress": {
 			"proof": "config",
 			"styles": ["proselint", "Openverse"],
@@ -4131,7 +4281,7 @@
 			"ci": true,
 			"preCommit": true,
 			"stars": 379,
-			"pushed": "2026-09-25",
+			"pushed": "2026-09-28",
 			"touched": "2024-09-09",
 			"house": true
 		},
@@ -4158,7 +4308,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 1368,
-			"pushed": "2026-09-26",
+			"pushed": "2026-09-28",
 			"touched": "2024-05-14",
 			"house": null
 		},
@@ -4185,7 +4335,7 @@
 			"ci": true,
 			"preCommit": false,
 			"stars": 81,
-			"pushed": "2026-09-27",
+			"pushed": "2026-09-28",
 			"touched": "2026-02-18",
 			"house": true
 		},
@@ -4238,7 +4388,7 @@
 			},
 			"ci": true,
 			"preCommit": false,
-			"stars": 10564,
+			"stars": 10565,
 			"pushed": "2026-09-28",
 			"touched": "2021-11-17",
 			"house": true

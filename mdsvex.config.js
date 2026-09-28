@@ -186,6 +186,9 @@ const highlighter = await createHighlighter({
 		// Data and configuration
 		'json',
 		'yaml',
+		'toml',
+		'makefile',
+		'kotlin', // Gradle build scripts
 		valeIni,
 
 		// Markup

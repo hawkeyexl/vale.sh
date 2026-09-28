@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { MetaTags } from 'svelte-meta-tags';
+	import type { PageData } from './$types';
 	import adopters from '$lib/data/adopters.json';
 	import { sectors } from '$lib/data/sectors';
 	import Section from '$lib/components/landing/Section.svelte';
@@ -8,6 +9,8 @@
 	import Figures from '$lib/components/adopters/Figures.svelte';
 	import SectorBands from '$lib/components/adopters/SectorBands.svelte';
 	import AddYourTeam from '$lib/components/adopters/AddYourTeam.svelte';
+
+	let { data }: { data: PageData } = $props();
 
 	const total = adopters.length;
 
@@ -50,7 +53,7 @@
 	src/lib/components/adopters, and only the sector filter is shared, so the
 	bands' "Browse" links and the directory's chips move together.
 -->
-<Header {total} sectors={sectors.length} {configs} />
+<Header {total} sectors={sectors.length} {configs} posts={data.posts} />
 
 <Section id="sectors" eyebrow="Sectors" title="Where the writing gets checked" lede={sectorsLede}>
 	<Figures />

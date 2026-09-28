@@ -2,19 +2,33 @@
 	"vale": "master",
 	"generated": "2026-09-28",
 	"posts": {
-		"agents-run-vale": {
+		"case-study-epic-lore": {
 			"errors": 0,
 			"warnings": 0,
 			"suggestions": 0,
-			"words": 889,
-			"sentences": 43,
-			"paragraphs": 15,
-			"grade": 9.3,
-			"ease": 65.1,
-			"smog": 10.9,
+			"words": 1062,
+			"sentences": 57,
+			"paragraphs": 22,
+			"grade": 8.6,
+			"ease": 66.4,
+			"smog": 10.6,
 			"complex": 8,
-			"minutes": 4,
-			"ms": 145
+			"minutes": 5,
+			"ms": 139
+		},
+		"case-study-gov-uk": {
+			"errors": 0,
+			"warnings": 0,
+			"suggestions": 0,
+			"words": 944,
+			"sentences": 51,
+			"paragraphs": 20,
+			"grade": 8.5,
+			"ease": 66.8,
+			"smog": 10.4,
+			"complex": 8,
+			"minutes": 5,
+			"ms": 129
 		},
 		"commits": {
 			"errors": 0,
@@ -28,7 +42,7 @@
 			"smog": 9.5,
 			"complex": 5,
 			"minutes": 6,
-			"ms": 259
+			"ms": 136
 		},
 		"diataxis": {
 			"errors": 0,
@@ -42,7 +56,7 @@
 			"smog": 11,
 			"complex": 8,
 			"minutes": 6,
-			"ms": 137
+			"ms": 146
 		},
 		"journals": {
 			"errors": 0,
@@ -56,7 +70,7 @@
 			"smog": 11.1,
 			"complex": 10,
 			"minutes": 7,
-			"ms": 128
+			"ms": 126
 		},
 		"openapi": {
 			"errors": 0,
@@ -70,7 +84,7 @@
 			"smog": 12.1,
 			"complex": 11,
 			"minutes": 3,
-			"ms": 124
+			"ms": 131
 		},
 		"spelling": {
 			"errors": 0,
@@ -84,7 +98,7 @@
 			"smog": 10.1,
 			"complex": 7,
 			"minutes": 11,
-			"ms": 133
+			"ms": 135
 		},
 		"std": {
 			"errors": 0,
@@ -98,21 +112,7 @@
 			"smog": 9.7,
 			"complex": 6,
 			"minutes": 5,
-			"ms": 138
-		},
-		"unexpected-places": {
-			"errors": 0,
-			"warnings": 0,
-			"suggestions": 0,
-			"words": 1303,
-			"sentences": 69,
-			"paragraphs": 31,
-			"grade": 8.6,
-			"ease": 67.3,
-			"smog": 10.5,
-			"complex": 8,
-			"minutes": 7,
-			"ms": 128
+			"ms": 142
 		},
 		"voices": {
 			"errors": 0,
@@ -126,21 +126,7 @@
 			"smog": 9.3,
 			"complex": 7,
 			"minutes": 9,
-			"ms": 129
-		},
-		"web3-docs": {
-			"errors": 0,
-			"warnings": 0,
-			"suggestions": 0,
-			"words": 716,
-			"sentences": 38,
-			"paragraphs": 20,
-			"grade": 8.4,
-			"ease": 68.6,
-			"smog": 10.4,
-			"complex": 8,
-			"minutes": 4,
-			"ms": 124
+			"ms": 144
 		}
 	}
 }

@@ -1,18 +1,18 @@
 {
-	"sampleSize": 118,
-	"adopterCount": 162,
+	"sampleSize": 122,
+	"adopterCount": 168,
 	"styles": {
 		"write-good": 19,
-		"Google": 16,
-		"Microsoft": 15,
+		"Google": 18,
+		"Microsoft": 16,
 		"proselint": 13,
-		"alex": 5,
+		"alex": 6,
+		"AsciiDoc": 3,
 		"docs": 3,
+		"RedHat": 3,
 		"ai-tells": 2,
-		"AsciiDoc": 2,
 		"base": 2,
 		"Readability": 2,
-		"RedHat": 2,
 		"3rd-party-products": 1,
 		"ADI": 1,
 		"ai-tells-overrides": 1,
@@ -43,6 +43,7 @@
 		"expo-docs": 1,
 		"FluentBit": 1,
 		"Fly": 1,
+		"foreman-documentation": 1,
 		"FreeBSD": 1,
 		"from-microsoft": 1,
 		"from-write-good": 1,
@@ -104,6 +105,7 @@
 		"smart-marks": 1,
 		"SmartWallets": 1,
 		"Speciesism": 1,
+		"Spryker": 1,
 		"Std": 1,
 		"Style": 1,
 		"StyleRules": 1,
@@ -111,6 +113,7 @@
 		"tech-writing-style-guide": 1,
 		"Telepresence": 1,
 		"Temporal": 1,
+		"terms": 1,
 		"Terms": 1,
 		"ttd-light": 1,
 		"Tyk": 1,
@@ -120,14 +123,14 @@
 		"Yugabyte": 1
 	},
 	"packages": {
+		"Google": 15,
 		"write-good": 15,
-		"Google": 13,
 		"Microsoft": 11,
 		"proselint": 10,
 		"alex": 5,
-		"RedHat": 3,
+		"RedHat": 4,
+		"AsciiDoc": 3,
 		"ai-tells": 2,
-		"AsciiDoc": 2,
 		"MDX": 2,
 		"Readability": 2,
 		"ApifyStyleGuide": 1,
@@ -141,17 +144,19 @@
 		"OpenShiftAsciiDoc": 1,
 		"PowerShell-Docs": 1,
 		"riscv": 1,
+		"Spryker": 1,
 		"Std": 1,
 		"tech-writing-style-guide": 1,
 		"vale": 1
 	},
 	"formats": {
-		"md": 92,
-		"mdx": 25,
+		"md": 94,
+		"mdx": 26,
 		"rst": 14,
-		"adoc": 6,
+		"adoc": 7,
 		"docs": 2,
 		"html": 2,
+		"ini": 2,
 		"qmd": 2,
 		"txt": 2,
 		"csv": 1,
@@ -160,44 +165,46 @@
 		"guides": 1,
 		"howto8": 1,
 		"howto9": 1,
-		"ini": 1,
 		"ja": 1,
 		"jl": 1,
 		"org": 1,
 		"rb": 1,
+		"readme": 1,
 		"rmd": 1,
 		"rs": 1,
 		"zh": 1
 	},
 	"minAlertLevels": {
-		"suggestion": 68,
-		"warning": 28,
-		"error": 11,
+		"suggestion": 70,
+		"warning": 29,
+		"error": 12,
 		"suggestions": 1
 	},
 	"keys": {
-		"BasedOnStyles": 116,
-		"StylesPath": 115,
-		"MinAlertLevel": 108,
-		"Vocab": 66,
-		"Packages": 44,
-		"TokenIgnores": 39,
-		"BlockIgnores": 25,
-		"IgnoredScopes": 24,
-		"SkippedScopes": 18,
+		"BasedOnStyles": 120,
+		"StylesPath": 119,
+		"MinAlertLevel": 112,
+		"Vocab": 69,
+		"Packages": 47,
+		"TokenIgnores": 41,
+		"BlockIgnores": 27,
+		"IgnoredScopes": 26,
+		"SkippedScopes": 20,
 		"CommentDelimiters": 6,
-		"IgnoredClasses": 3,
+		"IgnoredClasses": 4,
 		"WordTemplate": 3,
 		"Checks": 1,
 		"experimental": 1,
 		"Formats": 1,
+		"ignored": 1,
+		"Ignored": 1,
 		"IgnorePatterns": 1,
 		"mdx": 1,
 		"spelling": 1,
 		"Vale": 1,
 		"View": 1
 	},
-	"pathScoped": 38,
+	"pathScoped": 40,
 	"pairedWith": {
 		"Aiven": {},
 		"SmartWallets": {},
@@ -220,7 +227,9 @@
 			"proselint": 1,
 			"Pulumi": 1,
 			"Ray": 1,
-			"RLlib": 1
+			"RLlib": 1,
+			"Spryker": 1,
+			"terms": 1
 		},
 		"Apify": {
 			"ApifyDocs": 1,
@@ -261,8 +270,8 @@
 		},
 		"Microsoft": {
 			"write-good": 5,
+			"alex": 2,
 			"proselint": 2,
-			"alex": 1,
 			"Apify": 1,
 			"ApifyDocs": 1,
 			"Graphile": 1,
@@ -292,8 +301,8 @@
 		"alex": {
 			"proselint": 4,
 			"write-good": 3,
+			"Microsoft": 2,
 			"Joblint": 1,
-			"Microsoft": 1,
 			"OutSystems": 1,
 			"Readability": 1,
 			"rOpenSci": 1
@@ -343,6 +352,22 @@
 			"Google": 1,
 			"proselint": 1,
 			"write-good": 1
+		},
+		"RedHat": {
+			"AsciiDoc": 2,
+			"foreman-documentation": 1,
+			"OpenShiftAsciiDoc": 1,
+			"PSDK": 1
+		},
+		"AsciiDoc": {
+			"RedHat": 2,
+			"foreman-documentation": 1,
+			"OpenShiftAsciiDoc": 1,
+			"riscv": 1
+		},
+		"foreman-documentation": {
+			"AsciiDoc": 1,
+			"RedHat": 1
 		},
 		"FreeBSD": {},
 		"Semmle": {},
@@ -465,16 +490,6 @@
 		"OPA": {},
 		"OpenSAFELY": {},
 		"OpenSearch": {},
-		"RedHat": {
-			"AsciiDoc": 1,
-			"OpenShiftAsciiDoc": 1,
-			"PSDK": 1
-		},
-		"AsciiDoc": {
-			"OpenShiftAsciiDoc": 1,
-			"RedHat": 1,
-			"riscv": 1
-		},
 		"OpenShiftAsciiDoc": {
 			"AsciiDoc": 1,
 			"RedHat": 1
@@ -529,6 +544,14 @@
 		},
 		"SAP": {},
 		"DevDocs": {},
+		"Spryker": {
+			"Google": 1,
+			"terms": 1
+		},
+		"terms": {
+			"Google": 1,
+			"Spryker": 1
+		},
 		"local": {},
 		"messaging": {
 			"3rd-party-products": 1,
@@ -629,7 +652,7 @@
 			"name": "Apify",
 			"url": "https://github.com/apify/apify-docs/blob/HEAD/.vale.ini",
 			"styles": ["Apify", "ApifyDocs", "write-good", "Microsoft"],
-			"formats": ["md"],
+			"formats": ["md", "mdx"],
 			"keys": [
 				"StylesPath",
 				"MinAlertLevel",
@@ -720,6 +743,24 @@
 				"TokenIgnores"
 			],
 			"minAlertLevel": "suggestion"
+		},
+		{
+			"name": "Codacy",
+			"url": "https://github.com/codacy/docs/blob/HEAD/.vale.ini",
+			"styles": ["Microsoft", "alex"],
+			"formats": ["readme"],
+			"keys": [
+				"StylesPath",
+				"MinAlertLevel",
+				"SkippedScopes",
+				"IgnoredScopes",
+				"IgnoredClasses",
+				"Vocab",
+				"TokenIgnores",
+				"BlockIgnores",
+				"BasedOnStyles"
+			],
+			"minAlertLevel": "warning"
 		},
 		{
 			"name": "Coder",
@@ -895,6 +936,23 @@
 				"SkippedScopes",
 				"Packages",
 				"BasedOnStyles"
+			],
+			"minAlertLevel": "suggestion"
+		},
+		{
+			"name": "Foreman",
+			"url": "https://github.com/theforeman/foreman-documentation/blob/HEAD/.vale.ini",
+			"styles": ["RedHat", "AsciiDoc", "foreman-documentation"],
+			"formats": ["adoc", "ini"],
+			"keys": [
+				"StylesPath",
+				"MinAlertLevel",
+				"IgnoredScopes",
+				"SkippedScopes",
+				"Packages",
+				"Vocab",
+				"BasedOnStyles",
+				"TokenIgnores"
 			],
 			"minAlertLevel": "suggestion"
 		},
@@ -1357,6 +1415,14 @@
 			"minAlertLevel": "suggestion"
 		},
 		{
+			"name": "Palo Alto Networks",
+			"url": "https://github.com/PaloAltoNetworks/shifter/blob/HEAD/.vale.ini",
+			"styles": ["Google"],
+			"formats": ["md"],
+			"keys": ["StylesPath", "MinAlertLevel", "Packages", "BasedOnStyles"],
+			"minAlertLevel": "error"
+		},
+		{
 			"name": "Pelican",
 			"url": "https://github.com/getpelican/pelican/blob/HEAD/.vale.ini",
 			"styles": ["proselint", "alex"],
@@ -1607,6 +1673,23 @@
 			"formats": ["md"],
 			"keys": ["StylesPath", "Vocab", "BasedOnStyles"],
 			"minAlertLevel": null
+		},
+		{
+			"name": "Spryker",
+			"url": "https://github.com/spryker/spryker-docs/blob/HEAD/.vale.ini",
+			"styles": ["Google", "Spryker", "terms"],
+			"formats": ["md"],
+			"keys": [
+				"StylesPath",
+				"MinAlertLevel",
+				"Vocab",
+				"Packages",
+				"ignored",
+				"BasedOnStyles",
+				"BlockIgnores",
+				"Ignored"
+			],
+			"minAlertLevel": "suggestion"
 		},
 		{
 			"name": "StarRocks",

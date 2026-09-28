@@ -155,6 +155,14 @@
 		"icon": "cockroachlabs"
 	},
 	{
+		"name": "Codacy",
+		"category": "Developer tools",
+		"context": "Lints its docs with Microsoft's style and alex, with a Codacy vocabulary.",
+		"url": "https://github.com/codacy/docs/blob/HEAD/.vale.ini",
+		"github": "codacy",
+		"avatar": "/users/avatars/codacy.png"
+	},
+	{
 		"name": "Coder",
 		"category": "Cloud & infrastructure",
 		"context": "Lints its docs with a Coder style and vocabulary.",
@@ -359,6 +367,14 @@
 		"context": "Lints the Flyway docs with Microsoft's style, proselint, and a flyway style.",
 		"url": "https://github.com/flyway/flyway/blob/HEAD/documentation/_vale_config/_vale.ini",
 		"icon": "flyway"
+	},
+	{
+		"name": "Foreman",
+		"category": "Open source & communities",
+		"context": "Lints its docs with the RedHat and AsciiDoc packages and a foreman-documentation style.",
+		"url": "https://github.com/theforeman/foreman-documentation/blob/HEAD/.vale.ini",
+		"github": "theforeman",
+		"avatar": "/users/avatars/theforeman.png"
 	},
 	{
 		"name": "Foundries.io",
@@ -822,6 +838,14 @@
 		"avatar": "/users/avatars/OutSystems.png"
 	},
 	{
+		"name": "Palo Alto Networks",
+		"category": "Enterprise software",
+		"context": "Fails the build on Google-style errors in the docs for Shifter, its multi-user training-range platform.",
+		"url": "https://github.com/PaloAltoNetworks/shifter/blob/HEAD/.vale.ini",
+		"github": "PaloAltoNetworks",
+		"avatar": "/users/avatars/PaloAltoNetworks.png"
+	},
+	{
 		"name": "Pelican",
 		"category": "Open source & communities",
 		"context": "Runs proselint and alex over its static-site generator docs.",
@@ -864,6 +888,13 @@
 		"context": "Documents Vale and prose linting in the public company handbook.",
 		"url": "https://posthog.com/handbook/wizard-and-docs/vale",
 		"icon": "posthog"
+	},
+	{
+		"name": "Postman",
+		"category": "Developer tools",
+		"context": "Lints the Postman Collection format specification with a Postman style, Microsoft's, and write-good.",
+		"url": "https://github.com/postmanlabs/collection-format-docs/blob/HEAD/_vale.ini",
+		"icon": "postman"
 	},
 	{
 		"name": "PowerShell Docs",
@@ -1071,6 +1102,14 @@
 		"icon": "spotify"
 	},
 	{
+		"name": "Spryker",
+		"category": "Enterprise software",
+		"context": "Publishes a Spryker package and runs it with Google's style over the source of docs.spryker.com.",
+		"url": "https://github.com/spryker/spryker-docs/blob/HEAD/.vale.ini",
+		"github": "spryker",
+		"avatar": "/users/avatars/spryker.png"
+	},
+	{
 		"name": "StarRocks",
 		"category": "Data & observability",
 		"context": "Fails on errors from a local style over its docs.",
@@ -1203,6 +1242,14 @@
 		"context": "Lints the official webpack documentation site.",
 		"url": "https://github.com/webpack/webpack.js.org/blob/master/.vale.ini",
 		"icon": "webpack"
+	},
+	{
+		"name": "Wikimedia",
+		"category": "Open source & communities",
+		"context": "Runs three tools on one rule set: a local linter, a GitLab CI template, and a Toolforge app that lints live wiki pages.",
+		"url": "https://www.mediawiki.org/wiki/Documentation/Tools/Linting",
+		"github": "wikimedia",
+		"avatar": "/users/avatars/wikimedia.png"
 	},
 	{
 		"name": "WordPress",

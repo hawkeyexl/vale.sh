@@ -23,6 +23,9 @@ export type PostMeta = {
 	// A named banner illustration (see PostBanner) for posts whose subject
 	// has a better picture than a meter.
 	motif?: string;
+	// An adopter's name, for a case study: script/build-og-brand.mjs renders
+	// a card with that team's mark, and `image` points at it.
+	brand?: string;
 	// An AUTHORS key. Posts without one belong to the site's author.
 	author?: string;
 	// TAGS keys. A tag the vocabulary doesn't know fails the build.
@@ -72,6 +75,12 @@ export const TAGS: Record<string, Tag> = {
 		slug: 'adopters',
 		label: 'Adopters',
 		description: 'How teams run Vale, read from their own configs.'
+	},
+	'case-studies': {
+		slug: 'case-studies',
+		label: 'Case studies',
+		description:
+			"One team's Vale setup, read end to end: what it lints, the rules it wrote, and how it runs."
 	}
 };
 

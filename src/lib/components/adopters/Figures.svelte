@@ -4,11 +4,17 @@
 	/*
 		What the repos do, counted by script/adopters-stats.mjs rather than
 		claimed: CI configs read for the word "vale", configs read for the
-		styles they base on, the Action's dependents from GitHub. Each figure
-		names its denominator, because they differ -- repos on GitHub, configs
-		that could be opened, and all the repos checked.
+		styles they base on, agent instruction files read for the name. Each
+		figure names its denominator, because they differ -- repos on GitHub,
+		configs that could be opened, and all the repos checked.
 	*/
 	const compact = new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 0 });
+
+	// Repos whose agent instructions name Vale, read from the per-adopter
+	// integrations the stats script records.
+	const agents = Object.values(stats.perAdopter).filter(
+		(a) => (a as { integrations?: { agents?: string[] } | null }).integrations?.agents?.length
+	).length;
 
 	const kpis = [
 		{
@@ -24,9 +30,10 @@
 			gloss: `of ${stats.configs.sampled} public configs: based on a style that is not a registry package`
 		},
 		{
-			value: stats.actionDependents ?? 0,
-			label: 'repos using the Vale Action',
-			gloss: `GitHub's dependents count for vale-cli/vale-action, as of ${stats.generated}, most of them not on this list`
+			value: agents,
+			of: stats.checked,
+			label: 'tell their AI agents to run Vale',
+			gloss: `of ${stats.checked} repos checked: an AGENTS.md, CLAUDE.md, Cursor rules, or Copilot instructions file that names Vale`
 		},
 		{
 			value: stats.stars,
@@ -38,8 +45,8 @@
 
 <!--
 	A stat tile each: value, label, and the line that says how it was counted.
-	Two are ratios, so each carries a meter against its own denominator; the
-	Action's dependents and the star total stand alone.
+	Three are ratios, so each carries a meter against its own denominator;
+	the star total stands alone.
 -->
 <dl class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
 	{#each kpis as kpi (kpi.label)}
