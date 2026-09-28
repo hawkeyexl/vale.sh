@@ -1,12 +1,12 @@
 <script lang="ts">
 	import adopters from '$lib/data/adopters.json';
+	import stats from '$lib/data/adopter-stats.json';
+	import { sectors } from '$lib/data/sectors';
 	import BrandIcon from './BrandIcon.svelte';
 	import Section from './Section.svelte';
 	import InlineCode from '$lib/components/features/InlineCode.svelte';
+	import * as Tooltip from '$lib/components/ui/tooltip';
 	import ArrowRight from 'lucide-svelte/icons/arrow-right';
-	import BookOpen from 'lucide-svelte/icons/book-open';
-	import FileText from 'lucide-svelte/icons/file-text';
-	import GitBranch from 'lucide-svelte/icons/git-branch';
 
 	let { editorial = false }: { editorial?: boolean } = $props();
 
@@ -21,9 +21,11 @@
 		icon?: string;
 	};
 
+	const all = adopters as Adopter[];
+
 	/*
 		A logo wall asserts that a company uses the tool; this band shows where to
-		go and check. Two kinds of evidence sit side by side:
+		go and check. Each mark's tooltip names the evidence:
 
 		  - a .vale.ini in a public repo  -> the path and the repository
 		  - a page the team wrote about   -> the host
@@ -35,88 +37,45 @@
 
 	const REPO = /^https:\/\/github\.com\/([^/]+\/[^/]+)\/?$/;
 
-	/*
-		The card shows where the evidence lives; the href goes to the exact page.
-		Printing the full path is useless once it truncates -- Datadog's is a
-		sixty-character slug -- so a page shows only its host.
-	*/
-	// Named, so that `kind` stays one of the three the icon map answers to
-	// rather than widening to `string` -- which is what it does when the
-	// literals are only inferred, leaving the lookup below unindexable.
-	type Kind = 'Public config' | 'Repository' | 'Writeup';
-
-	function receipt(url: string): { primary: string; secondary: string; kind: Kind } {
+	function receipt(url: string): string {
 		const config = CONFIG.exec(url);
-		if (config) return { primary: config[2], secondary: config[1], kind: 'Public config' };
-
-		// A bare repository link: the repo is the identity, the host is context.
+		if (config) return `${config[1]} · ${config[2]}`;
 		const repo = REPO.exec(url);
-		if (repo) return { primary: repo[1], secondary: 'github.com', kind: 'Repository' };
-
-		return {
-			primary: new URL(url).hostname.replace(/^www\./, ''),
-			secondary: '',
-			kind: 'Writeup'
-		};
+		if (repo) return repo[1];
+		return new URL(url).hostname.replace(/^www\./, '');
 	}
 
-	const kindIcon: Record<Kind, typeof FileText> = {
-		'Public config': FileText,
-		Repository: GitBranch,
-		Writeup: BookOpen
-	};
-
 	/*
-		Picked for recognition and for how much each team has published: AWS,
-		GitLab, Grafana, NVIDIA and Red Hat all maintain a page about running Vale,
-		while Microsoft, Discord and Docker ship a config you can read.
+		The biggest names, gated by proof: each mark has to land on a real
+		config or a CI job, since a visitor who clicks and finds a thin page
+		stops believing the rest. That gate is why GitLab (a required pipeline
+		check) and MetaMask (CI that fails on errors) are here and Discord
+		(built-in rules only, no CI) is not. Twelve fills six columns twice.
 	*/
 	const FEATURED = [
 		'Amazon Web Services',
 		'Microsoft',
-		'Discord',
-		'GitLab',
-		'Grafana Labs',
 		'NVIDIA',
+		'Epic Games',
+		'GitHub',
 		'Docker',
 		'Red Hat',
-		'Datadog'
+		'GitLab',
+		'Datadog',
+		'MongoDB',
+		'MetaMask',
+		'GOV.UK'
 	];
 
-	/*
-		Each card is tinted with its own brand color, the way Thanks.svelte tints
-		its providers.
+	const byName = new Map(all.map((a) => [a.name, a]));
 
-		Values are read out of the wordmark in static/users/ wherever one carries a
-		hex. NVIDIA's and Discord's do not, so those two come from `simple-icons`.
-		Microsoft's mark is four squares with no single color; the red is the one
-		its own SVG leads with.
-	*/
-	const BRAND: Record<string, string> = {
-		'Amazon Web Services': '#FF9900', // logo
-		Microsoft: '#F1511B', // logo
-		Discord: '#5865F2', // simple-icons
-		GitLab: '#FC6D26', // logo
-		'Grafana Labs': '#FF671D', // logo
-		NVIDIA: '#76B900', // simple-icons
-		Docker: '#1D63ED', // logo
-		'Red Hat': '#EE0000', // logo
-		Datadog: '#632CA6' // logo
-	};
-
-	const byName = new Map((adopters as Adopter[]).map((a) => [a.name, a]));
-
-	const cards = FEATURED.flatMap((name) => {
+	const marks = FEATURED.flatMap((name) => {
 		const adopter = byName.get(name);
 		if (!adopter) return [];
 		return [
 			{
 				...adopter,
-				...receipt(adopter.url),
-				// Every card carries two lines, so a host-only one does not leave a
-				// hole where the second would be. The category is authored data.
-				secondary: receipt(adopter.url).secondary || adopter.category,
-				brand: BRAND[name] ?? 'hsl(var(--foreground))',
+				receipt: receipt(adopter.url),
 				// BrandIcon resolves a Simple Icons glyph, then the avatar, then a
 				// monogram. Most entries name their glyph; fall back to the key the
 				// name implies for the ones that don't.
@@ -125,14 +84,38 @@
 		];
 	});
 
-	// Laid out rather than looped, so every card is real and reachable by tab.
-	const track = cards;
-	const total = adopters.length;
+	/*
+		Three counted figures under the marks, from script/adopters-stats.mjs.
+		Each names its denominator, because they differ: every team, the repos
+		on GitHub, and the configs that could be opened.
+	*/
+	const figures = [
+		{ value: String(all.length), label: 'teams', gloss: `across ${sectors.length} sectors` },
+		{
+			value: `${stats.ci} / ${stats.checked}`,
+			label: 'run Vale in CI',
+			gloss: 'of the repos checked'
+		},
+		{
+			value: `${stats.configs.house} / ${stats.configs.sampled}`,
+			label: 'wrote their own rules',
+			gloss: 'of the public configs'
+		}
+	];
+
+	// The nine sectors, each a jump to its band on /adopters.
+	const chips = sectors.map((s) => ({
+		name: s.name,
+		count: all.filter((a) => a.category === s.name).length,
+		href: `/adopters#sector-${s.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`
+	}));
+
+	const total = all.length;
 </script>
 
 {#snippet configsLede()}
 	Every team here publishes something you can open — the <InlineCode>.vale.ini</InlineCode> they run,
-	or the page they wrote about running it.
+	or the page they wrote about running it. Hover a mark for where.
 {/snippet}
 
 <Section
@@ -144,63 +127,65 @@
 	lede={configsLede}
 >
 	<!--
-		Three static rows rather than one scrolling one.
-
-		These are links: the section asks you to go and read someone's config,
-		and a moving row makes that a moving target -- which is why the marquee
-		had to pause on hover. Nine cards at three columns is the same evidence
-		with nothing to chase, and nothing is dropped from the card to get it.
+		Twelve bare marks, large, named beneath. The tooltip is the receipt:
+		the repository and path, or the host, plus the team's own line. Nothing
+		scrolls; these are links and a moving row makes them a moving target.
 	-->
-	<ul class="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
-		{#each track as card (card.name)}
-			{@const KindIcon = kindIcon[card.kind]}
+	<Tooltip.Provider delayDuration={150}>
+		<ul class="grid grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-4 lg:grid-cols-6">
+			{#each marks as mark (mark.name)}
+				<li>
+					<Tooltip.Root>
+						<Tooltip.Trigger>
+							{#snippet child({ props })}
+								<a
+									{...props}
+									href={mark.url}
+									target="_blank"
+									rel="noreferrer"
+									class="group flex flex-col items-center gap-3 rounded-lg px-2 py-3 text-center transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-500"
+								>
+									<BrandIcon
+										name={mark.name}
+										slug={mark.slug}
+										avatar={mark.avatar}
+										size="h-12 w-12"
+									/>
+									<span class="text-sm font-medium tracking-tight text-foreground">{mark.name}</span
+									>
+								</a>
+							{/snippet}
+						</Tooltip.Trigger>
+						<Tooltip.Content side="top" class="max-w-xs text-pretty">
+							<span class="block font-mono text-[11px] opacity-80">{mark.receipt}</span>
+							<span class="mt-1 block">{mark.context}</span>
+						</Tooltip.Content>
+					</Tooltip.Root>
+				</li>
+			{/each}
+		</ul>
+	</Tooltip.Provider>
+
+	<dl class="mt-12 grid gap-3 sm:grid-cols-3">
+		{#each figures as f (f.label)}
+			<div class="rounded-xl border border-border bg-card px-5 py-4">
+				<dd class="text-2xl font-semibold tracking-tight text-foreground">{f.value}</dd>
+				<dt class="mt-0.5 text-sm font-medium text-foreground">{f.label}</dt>
+				<p class="mt-0.5 text-xs text-muted-foreground">{f.gloss}</p>
+			</div>
+		{/each}
+	</dl>
+
+	<!-- The split by sector, each chip landing on that sector's roster. -->
+	<ul class="mt-6 flex flex-wrap gap-2" aria-label="Adopters by sector">
+		{#each chips as chip (chip.name)}
 			<li>
 				<a
-					href={card.url}
-					target="_blank"
-					rel="noreferrer"
-					style="--brand: {card.brand};"
-					class="group/card relative flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card p-4 transition-colors hover:border-[--brand] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--brand]"
+					href={chip.href}
+					class="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:border-lime-500/50 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-500"
 				>
-					<!-- A faint brand wash on hover, so each card keeps a little identity. -->
-					<span
-						aria-hidden="true"
-						class="pointer-events-none absolute inset-0 bg-[--brand] opacity-0 transition-opacity duration-200 group-hover/card:opacity-[0.08]"
-					></span>
-
-					<span class="relative flex items-center gap-3">
-						<span
-							class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-muted text-[--brand] ring-1 ring-border"
-						>
-							<BrandIcon name={card.name} slug={card.slug} avatar={card.avatar} size="h-4 w-4" />
-						</span>
-						<span class="min-w-0 flex-1">
-							<span class="block truncate text-sm font-medium text-foreground">{card.name}</span>
-							<span
-								class="block truncate font-mono text-[11px] text-muted-foreground"
-								title={card.primary}>{card.primary}</span
-							>
-						</span>
-						<ArrowRight
-							class="h-4 w-4 shrink-0 text-muted-foreground/50 transition-transform group-hover/card:translate-x-0.5 group-hover/card:text-foreground"
-						/>
-					</span>
-
-					<!-- The adopter's own one-liner, clamped so the cards stay level. -->
-					<p class="relative mt-3 line-clamp-2 text-xs leading-5 text-foreground/80">
-						{card.context}
-					</p>
-
-					<span
-						class="relative mt-3 flex min-w-0 items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.12em] text-muted-foreground"
-					>
-						<KindIcon class="h-3 w-3 shrink-0" />
-						<span class="shrink-0">{card.kind}</span>
-						<span class="text-border">·</span>
-						<span class="truncate normal-case tracking-normal" title={card.secondary}
-							>{card.secondary}</span
-						>
-					</span>
+					{chip.name}
+					<span class="font-mono text-xs">{chip.count}</span>
 				</a>
 			</li>
 		{/each}

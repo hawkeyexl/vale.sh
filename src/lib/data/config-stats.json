@@ -1,178 +1,297 @@
 {
-	"sampleSize": 55,
-	"adopterCount": 90,
+	"sampleSize": 105,
+	"adopterCount": 150,
 	"styles": {
-		"Google": 8,
-		"write-good": 8,
-		"Microsoft": 6,
-		"proselint": 4,
-		"docs": 2,
+		"write-good": 16,
+		"Google": 14,
+		"Microsoft": 14,
+		"proselint": 9,
+		"alex": 3,
+		"docs": 3,
+		"ai-tells": 2,
+		"base": 2,
 		"RedHat": 2,
-		"ai-tells": 1,
+		"3rd-party-products": 1,
+		"ADI": 1,
+		"ai-tells-overrides": 1,
 		"Aiven": 1,
-		"alex": 1,
 		"all": 1,
+		"Apify": 1,
+		"ApifyDocs": 1,
+		"AsciiDoc": 1,
+		"Atlantis": 1,
+		"Buildkite": 1,
+		"CalicoStyle": 1,
 		"ClickHouse": 1,
 		"CockroachDB": 1,
+		"Coder": 1,
 		"commercetools": 1,
+		"common": 1,
+		"CrateDB": 1,
 		"custom": 1,
 		"CustomStyles": 1,
 		"Dagster": 1,
 		"DeadlineSamples": 1,
 		"DetSys": 1,
+		"DevDocs": 1,
 		"Docker": 1,
 		"DocsGPT": 1,
 		"Espressif-latest": 1,
+		"examples": 1,
 		"expo-docs": 1,
+		"FluentBit": 1,
+		"Fly": 1,
 		"FreeBSD": 1,
 		"from-microsoft": 1,
 		"from-write-good": 1,
 		"Graphile": 1,
-		"Homebrew": 1,
 		"IBMQuantum": 1,
+		"Infisical": 1,
 		"InfluxDataDocs": 1,
 		"Infrahub": 1,
-		"kong": 1,
+		"Kedro": 1,
+		"KubeRay": 1,
 		"LangChain": 1,
+		"Lean": 1,
 		"Linode": 1,
+		"local": 1,
+		"Lore": 1,
+		"Mastra": 1,
+		"Mattermost": 1,
 		"Mautic": 1,
+		"Mendix": 1,
+		"messaging": 1,
+		"Metalbear": 1,
+		"Mistral": 1,
 		"MUI": 1,
 		"n8n-styles": 1,
+		"Neo4j": 1,
+		"Neon": 1,
+		"netlify-terms": 1,
+		"nf-core": 1,
+		"Nordic": 1,
 		"Novu": 1,
 		"OPA": 1,
+		"OpenSAFELY": 1,
 		"OpenSearch": 1,
+		"Openverse": 1,
+		"OutSystems": 1,
 		"PaaC": 1,
 		"PingCAP": 1,
 		"Platform": 1,
+		"Polkadot": 1,
 		"PowerShell-Docs": 1,
 		"PSDK": 1,
 		"Pulumi": 1,
 		"Quarkus": 1,
 		"Rackspace": 1,
+		"Ray": 1,
+		"riscv": 1,
+		"RLlib": 1,
+		"Rules": 1,
 		"SAP": 1,
 		"Semmle": 1,
+		"signs-of-ai-writing": 1,
+		"smart-marks": 1,
+		"SmartWallets": 1,
 		"Speciesism": 1,
+		"Std": 1,
 		"Style": 1,
+		"StyleRules": 1,
 		"Styles": 1,
+		"tech-writing-style-guide": 1,
+		"Telepresence": 1,
 		"Temporal": 1,
 		"Terms": 1,
 		"ttd-light": 1,
+		"Tyk": 1,
 		"UmbracoDocs": 1,
 		"vale": 1,
+		"WSO2-IAM": 1,
 		"Yugabyte": 1
 	},
 	"packages": {
-		"Google": 7,
-		"write-good": 5,
-		"Microsoft": 3,
+		"Google": 12,
+		"write-good": 12,
+		"Microsoft": 10,
+		"proselint": 6,
+		"alex": 3,
 		"RedHat": 3,
-		"ai-tells": 1,
-		"alex": 1,
+		"ai-tells": 2,
+		"MDX": 2,
+		"ApifyStyleGuide": 1,
+		"AsciiDoc": 1,
+		"config": 1,
+		"Docker": 1,
 		"Espressif-latest": 1,
 		"Hugo": 1,
-		"MDX": 1,
+		"nf-core": 1,
 		"PowerShell-Docs": 1,
-		"proselint": 1,
+		"riscv": 1,
+		"Std": 1,
+		"tech-writing-style-guide": 1,
 		"vale": 1
 	},
 	"formats": {
-		"md": 46,
-		"mdx": 12,
-		"rst": 7,
-		"adoc": 3,
+		"md": 81,
+		"mdx": 25,
+		"rst": 13,
+		"adoc": 5,
+		"docs": 2,
+		"html": 2,
+		"txt": 2,
 		"csv": 1,
-		"docs": 1,
-		"html": 1,
-		"learn": 1,
-		"rb": 1,
-		"txt": 1
+		"en": 1,
+		"erb": 1,
+		"guides": 1,
+		"howto8": 1,
+		"howto9": 1,
+		"ini": 1,
+		"ja": 1,
+		"jl": 1,
+		"org": 1,
+		"rs": 1,
+		"zh": 1
 	},
 	"minAlertLevels": {
-		"suggestion": 28,
-		"warning": 16,
-		"error": 4,
+		"suggestion": 59,
+		"warning": 28,
+		"error": 10,
 		"suggestions": 1
 	},
 	"keys": {
-		"BasedOnStyles": 54,
-		"StylesPath": 54,
-		"MinAlertLevel": 49,
-		"Vocab": 27,
-		"TokenIgnores": 19,
-		"BlockIgnores": 15,
-		"Packages": 14,
-		"IgnoredScopes": 8,
-		"SkippedScopes": 7,
+		"BasedOnStyles": 103,
+		"StylesPath": 102,
+		"MinAlertLevel": 98,
+		"Vocab": 59,
+		"TokenIgnores": 39,
+		"Packages": 38,
+		"IgnoredScopes": 25,
+		"BlockIgnores": 22,
+		"SkippedScopes": 19,
+		"CommentDelimiters": 6,
 		"IgnoredClasses": 3,
-		"CommentDelimiters": 2,
-		"WordTemplate": 2,
+		"WordTemplate": 3,
+		"Checks": 1,
 		"experimental": 1,
+		"Formats": 1,
 		"IgnorePatterns": 1,
-		"Vale": 1
+		"mdx": 1,
+		"spelling": 1,
+		"Vale": 1,
+		"View": 1
 	},
-	"pathScoped": 13,
+	"pathScoped": 32,
 	"pairedWith": {
 		"Aiven": {},
+		"SmartWallets": {},
+		"ADI": {
+			"Google": 1
+		},
+		"Google": {
+			"write-good": 6,
+			"ADI": 1,
+			"commercetools": 1,
+			"CustomStyles": 1,
+			"Fly": 1,
+			"InfluxDataDocs": 1,
+			"KubeRay": 1,
+			"Mautic": 1,
+			"Metalbear": 1,
+			"Novu": 1,
+			"Polkadot": 1,
+			"proselint": 1,
+			"Pulumi": 1,
+			"Ray": 1,
+			"RLlib": 1
+		},
+		"Apify": {
+			"ApifyDocs": 1,
+			"Microsoft": 1,
+			"write-good": 1
+		},
+		"ApifyDocs": {
+			"Apify": 1,
+			"Microsoft": 1,
+			"write-good": 1
+		},
 		"write-good": {
-			"Google": 4,
-			"proselint": 2,
-			"ai-tells": 1,
+			"Google": 6,
+			"Microsoft": 5,
+			"proselint": 4,
+			"ai-tells": 2,
+			"ai-tells-overrides": 1,
+			"alex": 1,
+			"Apify": 1,
+			"ApifyDocs": 1,
 			"commercetools": 1,
 			"DeadlineSamples": 1,
 			"docs": 1,
+			"Fly": 1,
 			"InfluxDataDocs": 1,
 			"LangChain": 1,
-			"Microsoft": 1,
+			"Mastra": 1,
+			"Metalbear": 1,
 			"Novu": 1,
 			"Pulumi": 1,
+			"signs-of-ai-writing": 1,
+			"ttd-light": 1,
+			"Tyk": 1,
+			"vale": 1
+		},
+		"Microsoft": {
+			"write-good": 5,
+			"proselint": 2,
+			"alex": 1,
+			"Apify": 1,
+			"ApifyDocs": 1,
+			"Graphile": 1,
+			"Mendix": 1,
+			"Mistral": 1,
+			"Rackspace": 1,
+			"ttd-light": 1
+		},
+		"Atlantis": {},
+		"proselint": {
+			"write-good": 4,
+			"alex": 2,
+			"Microsoft": 2,
+			"Fly": 1,
+			"Google": 1,
+			"LangChain": 1,
+			"Lean": 1,
+			"Openverse": 1,
+			"Speciesism": 1,
 			"ttd-light": 1,
 			"vale": 1
 		},
-		"ai-tells": {
-			"DeadlineSamples": 1,
+		"alex": {
+			"proselint": 2,
+			"Microsoft": 1,
+			"OutSystems": 1,
 			"write-good": 1
+		},
+		"ai-tells": {
+			"write-good": 2,
+			"ai-tells-overrides": 1,
+			"DeadlineSamples": 1,
+			"Mastra": 1,
+			"signs-of-ai-writing": 1
 		},
 		"DeadlineSamples": {
 			"ai-tells": 1,
 			"write-good": 1
 		},
+		"Buildkite": {},
 		"all": {},
 		"ClickHouse": {},
-		"proselint": {
-			"write-good": 2,
-			"LangChain": 1,
-			"Microsoft": 1,
-			"Speciesism": 1,
-			"ttd-light": 1,
-			"vale": 1
-		},
 		"CockroachDB": {},
-		"Google": {
-			"write-good": 4,
-			"alex": 1,
-			"commercetools": 1,
-			"CustomStyles": 1,
-			"InfluxDataDocs": 1,
-			"Mautic": 1,
-			"Microsoft": 1,
-			"Novu": 1,
-			"Pulumi": 1,
-			"Temporal": 1
-		},
+		"Coder": {},
 		"commercetools": {
 			"Google": 1,
 			"write-good": 1
 		},
-		"Microsoft": {
-			"alex": 1,
-			"Google": 1,
-			"Graphile": 1,
-			"proselint": 1,
-			"Rackspace": 1,
-			"Temporal": 1,
-			"ttd-light": 1,
-			"write-good": 1
-		},
+		"CrateDB": {},
 		"ttd-light": {
 			"Microsoft": 1,
 			"proselint": 1,
@@ -188,23 +307,37 @@
 		"DetSys": {},
 		"Docker": {},
 		"DocsGPT": {},
+		"Lore": {},
 		"Espressif-latest": {},
 		"expo-docs": {},
+		"FluentBit": {},
+		"Fly": {
+			"Google": 1,
+			"proselint": 1,
+			"write-good": 1
+		},
 		"FreeBSD": {},
 		"Semmle": {},
+		"tech-writing-style-guide": {},
 		"Graphile": {
 			"Microsoft": 1
 		},
-		"Homebrew": {},
+		"Infisical": {},
 		"InfluxDataDocs": {
 			"Google": 1,
 			"write-good": 1
 		},
 		"Infrahub": {},
 		"docs": {
+			"base": 1,
 			"write-good": 1
 		},
-		"kong": {},
+		"Kedro": {},
+		"base": {
+			"docs": 1,
+			"netlify-terms": 1,
+			"smart-marks": 1
+		},
 		"LangChain": {
 			"proselint": 1,
 			"vale": 1,
@@ -215,9 +348,41 @@
 			"proselint": 1,
 			"write-good": 1
 		},
+		"Lean": {
+			"proselint": 1
+		},
 		"Linode": {},
+		"Mastra": {
+			"ai-tells": 1,
+			"ai-tells-overrides": 1,
+			"signs-of-ai-writing": 1,
+			"write-good": 1
+		},
+		"signs-of-ai-writing": {
+			"ai-tells": 1,
+			"ai-tells-overrides": 1,
+			"Mastra": 1,
+			"write-good": 1
+		},
+		"ai-tells-overrides": {
+			"ai-tells": 1,
+			"Mastra": 1,
+			"signs-of-ai-writing": 1,
+			"write-good": 1
+		},
+		"Mattermost": {},
 		"Mautic": {
 			"Google": 1
+		},
+		"Mendix": {
+			"Microsoft": 1
+		},
+		"Metalbear": {
+			"Google": 1,
+			"write-good": 1
+		},
+		"Mistral": {
+			"Microsoft": 1
 		},
 		"MUI": {},
 		"from-write-good": {
@@ -232,12 +397,26 @@
 			"from-write-good": 1,
 			"n8n-styles": 1
 		},
+		"Neo4j": {},
+		"Neon": {},
+		"netlify-terms": {
+			"base": 1,
+			"smart-marks": 1
+		},
+		"smart-marks": {
+			"base": 1,
+			"netlify-terms": 1
+		},
+		"nf-core": {},
+		"StyleRules": {},
 		"Style": {},
+		"Nordic": {},
 		"Novu": {
 			"Google": 1,
 			"write-good": 1
 		},
 		"OPA": {},
+		"OpenSAFELY": {},
 		"OpenSearch": {},
 		"RedHat": {
 			"PaaC": 1,
@@ -246,8 +425,14 @@
 		"PaaC": {
 			"RedHat": 1
 		},
+		"OutSystems": {
+			"alex": 1
+		},
 		"PingCAP": {},
 		"Platform": {},
+		"Polkadot": {
+			"Google": 1
+		},
 		"PowerShell-Docs": {},
 		"CustomStyles": {
 			"Google": 1
@@ -261,25 +446,67 @@
 		"Rackspace": {
 			"Microsoft": 1
 		},
-		"SAP": {},
-		"alex": {
+		"common": {},
+		"KubeRay": {
 			"Google": 1,
-			"Microsoft": 1,
+			"Ray": 1,
+			"RLlib": 1
+		},
+		"Ray": {
+			"Google": 1,
+			"KubeRay": 1,
+			"RLlib": 1
+		},
+		"RLlib": {
+			"Google": 1,
+			"KubeRay": 1,
+			"Ray": 1
+		},
+		"Rules": {},
+		"riscv": {
+			"AsciiDoc": 1
+		},
+		"AsciiDoc": {
+			"riscv": 1
+		},
+		"SAP": {},
+		"DevDocs": {},
+		"local": {},
+		"messaging": {
+			"3rd-party-products": 1,
+			"examples": 1
+		},
+		"examples": {
+			"3rd-party-products": 1,
+			"messaging": 1
+		},
+		"3rd-party-products": {
+			"examples": 1,
+			"messaging": 1
+		},
+		"Telepresence": {},
+		"Std": {
 			"Temporal": 1
 		},
 		"Temporal": {
-			"alex": 1,
-			"Google": 1,
-			"Microsoft": 1
+			"Std": 1
 		},
 		"PSDK": {
 			"RedHat": 1
 		},
+		"CalicoStyle": {},
 		"Styles": {},
+		"Tyk": {
+			"write-good": 1
+		},
 		"UmbracoDocs": {},
 		"Speciesism": {
 			"proselint": 1
 		},
+		"Openverse": {
+			"proselint": 1
+		},
+		"WSO2-IAM": {},
 		"Yugabyte": {}
 	},
 	"sampled": [
@@ -289,9 +516,44 @@
 			"styles": ["Aiven"]
 		},
 		{
+			"name": "Alchemy",
+			"url": "https://github.com/alchemyplatform/aa-sdk/blob/HEAD/.vale.ini",
+			"styles": ["SmartWallets"]
+		},
+		{
+			"name": "Analog Devices",
+			"url": "https://github.com/analogdevicesinc/libiio/blob/HEAD/.vale.ini",
+			"styles": ["ADI", "Google"]
+		},
+		{
+			"name": "Ansys",
+			"url": "https://github.com/ansys/pymapdl/blob/HEAD/doc/.vale.ini",
+			"styles": ["Google"]
+		},
+		{
+			"name": "Apify",
+			"url": "https://github.com/apify/apify-docs/blob/HEAD/.vale.ini",
+			"styles": ["Apify", "ApifyDocs", "write-good", "Microsoft"]
+		},
+		{
+			"name": "Atlantis",
+			"url": "https://github.com/runatlantis/atlantis/blob/HEAD/.vale.ini",
+			"styles": ["Atlantis"]
+		},
+		{
+			"name": "Atuin",
+			"url": "https://github.com/atuinsh/atuin/blob/HEAD/.vale.ini",
+			"styles": ["Microsoft", "proselint", "alex", "write-good"]
+		},
+		{
 			"name": "AWS Deadline Cloud",
 			"url": "https://github.com/aws-deadline/deadline-cloud-samples/blob/mainline/.vale.ini",
 			"styles": ["write-good", "ai-tells", "DeadlineSamples"]
+		},
+		{
+			"name": "Buildkite",
+			"url": "https://github.com/buildkite/docs/blob/HEAD/vale/.vale.ini",
+			"styles": ["Buildkite"]
 		},
 		{
 			"name": "Camunda",
@@ -314,9 +576,19 @@
 			"styles": ["CockroachDB"]
 		},
 		{
+			"name": "Coder",
+			"url": "https://github.com/coder/coder/blob/HEAD/.vale.ini",
+			"styles": ["Coder"]
+		},
+		{
 			"name": "commercetools",
 			"url": "https://github.com/commercetools/commercetools-docs-kit/blob/main/packages/writing-style/.vale.ini",
 			"styles": ["write-good", "Google", "commercetools"]
+		},
+		{
+			"name": "CrateDB",
+			"url": "https://github.com/crate/crate/blob/HEAD/.vale.ini",
+			"styles": ["CrateDB"]
 		},
 		{
 			"name": "D2iQ",
@@ -359,6 +631,11 @@
 			"styles": []
 		},
 		{
+			"name": "Epic Games",
+			"url": "https://github.com/EpicGames/lore/blob/HEAD/.vale.ini",
+			"styles": ["Lore"]
+		},
+		{
 			"name": "Espressif",
 			"url": "https://github.com/espressif/esp-idf/blob/HEAD/.vale.ini",
 			"styles": ["Espressif-latest"]
@@ -367,6 +644,16 @@
 			"name": "Expo",
 			"url": "https://github.com/expo/expo/blob/HEAD/docs/.vale.ini",
 			"styles": ["expo-docs"]
+		},
+		{
+			"name": "Fluent Bit",
+			"url": "https://github.com/fluent/fluent-bit-docs/blob/HEAD/.vale.ini",
+			"styles": ["FluentBit"]
+		},
+		{
+			"name": "Fly.io",
+			"url": "https://github.com/superfly/docs/blob/HEAD/.vale.ini",
+			"styles": ["Fly", "Google", "proselint", "write-good"]
 		},
 		{
 			"name": "FreeBSD",
@@ -379,14 +666,24 @@
 			"styles": ["Semmle"]
 		},
 		{
+			"name": "GOV.UK One Login",
+			"url": "https://github.com/govuk-one-login/tech-docs/blob/HEAD/.vale.ini",
+			"styles": ["tech-writing-style-guide"]
+		},
+		{
 			"name": "Graphile",
 			"url": "https://github.com/graphile/crystal/blob/main/.vale.ini",
 			"styles": ["Microsoft", "Graphile"]
 		},
 		{
-			"name": "Homebrew",
-			"url": "https://github.com/Homebrew/brew/blob/master/.vale.ini",
-			"styles": ["Homebrew"]
+			"name": "Harness",
+			"url": "https://github.com/harness/developer-hub/blob/HEAD/.vale.ini",
+			"styles": ["Microsoft", "write-good"]
+		},
+		{
+			"name": "Infisical",
+			"url": "https://github.com/Infisical/infisical/blob/HEAD/docs/.vale.ini",
+			"styles": ["Infisical"]
 		},
 		{
 			"name": "InfluxData",
@@ -404,9 +701,19 @@
 			"styles": ["docs"]
 		},
 		{
+			"name": "JuMP",
+			"url": "https://github.com/jump-dev/JuMP.jl/blob/HEAD/.vale.ini",
+			"styles": ["Google"]
+		},
+		{
+			"name": "Kedro",
+			"url": "https://github.com/kedro-org/kedro/blob/HEAD/.vale.ini",
+			"styles": ["Kedro"]
+		},
+		{
 			"name": "Kong",
-			"url": "https://github.com/Kong/docs.konghq.com/blob/main/.vale.ini",
-			"styles": ["kong"]
+			"url": "https://github.com/Kong/developer.konghq.com/blob/HEAD/.vale.ini",
+			"styles": ["base", "docs"]
 		},
 		{
 			"name": "LangChain",
@@ -414,9 +721,29 @@
 			"styles": ["LangChain", "proselint", "vale", "write-good"]
 		},
 		{
+			"name": "Lean",
+			"url": "https://github.com/leanprover/reference-manual/blob/HEAD/.vale.ini",
+			"styles": ["Lean", "proselint"]
+		},
+		{
 			"name": "Linode",
 			"url": "https://github.com/linode/docs/blob/develop/.vale.ini",
 			"styles": ["Linode"]
+		},
+		{
+			"name": "Linux Foundation",
+			"url": "https://github.com/linuxfoundation/lfx-architecture-decisions/blob/HEAD/.vale.ini",
+			"styles": ["Microsoft"]
+		},
+		{
+			"name": "Mastra",
+			"url": "https://github.com/mastra-ai/mastra/blob/HEAD/docs/.vale.ini",
+			"styles": ["write-good", "Mastra", "signs-of-ai-writing", "ai-tells", "ai-tells-overrides"]
+		},
+		{
+			"name": "Mattermost",
+			"url": "https://github.com/mattermost/mattermost/blob/HEAD/docs/.vale.ini",
+			"styles": ["Mattermost"]
 		},
 		{
 			"name": "Mautic",
@@ -424,9 +751,29 @@
 			"styles": ["Google", "Mautic"]
 		},
 		{
+			"name": "McKinsey",
+			"url": "https://github.com/mckinsey/vizro/blob/HEAD/.vale/.vale.ini",
+			"styles": ["Microsoft"]
+		},
+		{
 			"name": "Medusa",
 			"url": "https://github.com/medusajs/medusa/blob/HEAD/.vale.ini",
 			"styles": ["write-good", "docs"]
+		},
+		{
+			"name": "Mendix",
+			"url": "https://github.com/mendix/docs/blob/HEAD/.vale.ini",
+			"styles": ["Microsoft", "Mendix"]
+		},
+		{
+			"name": "mirrord",
+			"url": "https://github.com/metalbear-co/mirrord/blob/HEAD/.vale.ini",
+			"styles": ["write-good", "Google", "Metalbear"]
+		},
+		{
+			"name": "Mistral AI",
+			"url": "https://github.com/mistralai/platform-docs-public/blob/HEAD/.vale.ini",
+			"styles": ["Microsoft", "Mistral"]
 		},
 		{
 			"name": "MUI",
@@ -439,9 +786,39 @@
 			"styles": ["from-write-good", "n8n-styles", "from-microsoft"]
 		},
 		{
+			"name": "Neo4j",
+			"url": "https://github.com/neo4j/docs-tools/blob/HEAD/.vale.ini",
+			"styles": ["Neo4j"]
+		},
+		{
+			"name": "Neon",
+			"url": "https://github.com/neondatabase/website/blob/HEAD/.vale.ini",
+			"styles": ["Neon"]
+		},
+		{
+			"name": "Netlify",
+			"url": "https://github.com/netlify/cli/blob/HEAD/.vale.ini",
+			"styles": ["base", "netlify-terms", "smart-marks"]
+		},
+		{
+			"name": "nf-core",
+			"url": "https://github.com/nf-core/website/blob/HEAD/.vale.ini",
+			"styles": ["nf-core"]
+		},
+		{
+			"name": "ngrok",
+			"url": "https://github.com/ngrok/ngrok-docs/blob/HEAD/.vale.ini",
+			"styles": ["StyleRules"]
+		},
+		{
 			"name": "Nix",
 			"url": "https://github.com/nixos/nix.dev/blob/HEAD/.vale.ini",
 			"styles": ["Style"]
+		},
+		{
+			"name": "Nordic Semiconductor",
+			"url": "https://github.com/nrfconnect/sdk-nrf/blob/HEAD/.vale.ini",
+			"styles": ["Nordic"]
 		},
 		{
 			"name": "Novu",
@@ -454,6 +831,11 @@
 			"styles": ["OPA"]
 		},
 		{
+			"name": "OpenSAFELY",
+			"url": "https://github.com/opensafely/documentation/blob/HEAD/.vale.ini",
+			"styles": ["OpenSAFELY"]
+		},
+		{
 			"name": "OpenSearch",
 			"url": "https://github.com/opensearch-project/documentation-website/blob/HEAD/.vale.ini",
 			"styles": ["OpenSearch"]
@@ -464,6 +846,21 @@
 			"styles": ["RedHat", "PaaC"]
 		},
 		{
+			"name": "Optimism",
+			"url": "https://github.com/ethereum-optimism/optimism/blob/HEAD/docs/public-docs/.vale.ini",
+			"styles": []
+		},
+		{
+			"name": "OutSystems",
+			"url": "https://github.com/OutSystems/docs-product/blob/HEAD/.vale.ini",
+			"styles": ["OutSystems", "alex"]
+		},
+		{
+			"name": "Pelican",
+			"url": "https://github.com/getpelican/pelican/blob/HEAD/.vale.ini",
+			"styles": ["proselint", "alex"]
+		},
+		{
 			"name": "PingCAP",
 			"url": "https://github.com/pingcap/docs/blob/master/.vale.ini",
 			"styles": ["PingCAP"]
@@ -472,6 +869,16 @@
 			"name": "Platform.sh",
 			"url": "https://github.com/platformsh/platformsh-docs/blob/main/.vale.ini",
 			"styles": ["Platform"]
+		},
+		{
+			"name": "Plone",
+			"url": "https://github.com/plone/volto/blob/HEAD/.vale.ini",
+			"styles": ["Microsoft"]
+		},
+		{
+			"name": "Polkadot",
+			"url": "https://github.com/w3f/polkadot-wiki/blob/HEAD/.vale.ini",
+			"styles": ["Google", "Polkadot"]
 		},
 		{
 			"name": "PowerShell Docs",
@@ -504,9 +911,44 @@
 			"styles": ["Rackspace", "Microsoft"]
 		},
 		{
+			"name": "Rancher",
+			"url": "https://github.com/rancher/rancher-docs/blob/HEAD/.vale.ini",
+			"styles": ["common"]
+		},
+		{
+			"name": "Ray",
+			"url": "https://github.com/ray-project/ray/blob/HEAD/.vale.ini",
+			"styles": ["Google", "KubeRay", "Ray", "RLlib"]
+		},
+		{
+			"name": "Read the Docs",
+			"url": "https://github.com/readthedocs/readthedocs.org/blob/HEAD/.vale.ini",
+			"styles": []
+		},
+		{
+			"name": "Redocly",
+			"url": "https://github.com/Redocly/redoc/blob/HEAD/.vale.ini",
+			"styles": ["Rules"]
+		},
+		{
+			"name": "RISC-V",
+			"url": "https://github.com/riscv/docs-dev-guide/blob/HEAD/.vale.ini",
+			"styles": ["riscv", "AsciiDoc"]
+		},
+		{
+			"name": "Safe",
+			"url": "https://github.com/safe-global/safe-docs/blob/HEAD/.vale.ini",
+			"styles": ["Microsoft", "write-good"]
+		},
+		{
 			"name": "SAP",
 			"url": "https://github.com/SAP/cloud-sdk/blob/main/.vale.ini",
 			"styles": ["SAP"]
+		},
+		{
+			"name": "Semrush",
+			"url": "https://github.com/semrush/intergalactic/blob/HEAD/.vale.ini",
+			"styles": ["DevDocs"]
 		},
 		{
 			"name": "Spotify",
@@ -514,14 +956,34 @@
 			"styles": []
 		},
 		{
+			"name": "StarRocks",
+			"url": "https://github.com/StarRocks/starrocks/blob/HEAD/docs/.vale.ini",
+			"styles": ["local"]
+		},
+		{
+			"name": "Teleport",
+			"url": "https://github.com/gravitational/teleport/blob/HEAD/docs/.vale.ini",
+			"styles": ["messaging", "examples", "3rd-party-products"]
+		},
+		{
+			"name": "Telepresence",
+			"url": "https://github.com/telepresenceio/telepresence/blob/HEAD/.vale.ini",
+			"styles": ["Telepresence"]
+		},
+		{
 			"name": "Temporal",
 			"url": "https://github.com/temporalio/documentation/blob/HEAD/.vale.ini",
-			"styles": ["Google", "Microsoft", "alex", "Temporal"]
+			"styles": ["Std", "Temporal"]
 		},
 		{
 			"name": "Texas Instruments",
 			"url": "https://github.com/TexasInstruments/processor-sdk-doc/blob/master/.vale.ini",
 			"styles": ["RedHat", "PSDK"]
+		},
+		{
+			"name": "Tigera",
+			"url": "https://github.com/tigera/docs/blob/HEAD/.vale.ini",
+			"styles": ["CalicoStyle"]
 		},
 		{
 			"name": "Timescale",
@@ -532,6 +994,11 @@
 			"name": "TrussWorks",
 			"url": "https://github.com/trussworks/Engineering-Playbook/blob/main/.vale.ini",
 			"styles": ["Styles"]
+		},
+		{
+			"name": "Tyk",
+			"url": "https://github.com/TykTechnologies/tyk/blob/HEAD/.vale.ini",
+			"styles": ["Tyk", "write-good"]
 		},
 		{
 			"name": "Umbraco",
@@ -547,6 +1014,16 @@
 			"name": "webpack",
 			"url": "https://github.com/webpack/webpack.js.org/blob/master/.vale.ini",
 			"styles": ["proselint", "Speciesism"]
+		},
+		{
+			"name": "WordPress",
+			"url": "https://github.com/WordPress/openverse/blob/HEAD/.vale/.vale.ini",
+			"styles": ["proselint", "Openverse"]
+		},
+		{
+			"name": "WSO2",
+			"url": "https://github.com/wso2/docs-is/blob/HEAD/.vale.ini",
+			"styles": ["WSO2-IAM"]
 		},
 		{
 			"name": "Yii",

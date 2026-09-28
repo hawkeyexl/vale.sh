@@ -37,6 +37,12 @@ media:
 configs:
 	node script/configs/main.mjs
 
+# Count what the adopters' repos do with Vale -- CI, pre-commit, house rules,
+# stars -- for the figures on /adopters. Needs GITHUB_TOKEN; run it after
+# `configs`, since it reads the sampled configs.
+stats:
+	GITHUB_TOKEN=$${GITHUB_TOKEN:-$$(gh auth token)} node script/adopters-stats.mjs
+
 # Rebuild /explorer alone, without the rest of a build. `build` runs this too,
 # so the page follows the package library on its own; this is for checking that
 # step by itself.

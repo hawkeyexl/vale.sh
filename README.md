@@ -28,13 +28,15 @@ pnpm install
 pnpm run dev -- --open
 ```
 
-| Command             | What it does                                           |
-| ------------------- | ------------------------------------------------------ |
-| `pnpm run dev`      | Development server                                     |
-| `pnpm run build`    | Production build                                       |
-| `pnpm run validate` | Check `adopters.json`, `press.json`, and `events.json` |
-| `pnpm run check`    | Type-check with `svelte-check`                         |
-| `pnpm run lint`     | Prettier and ESLint                                    |
+| Command             | What it does                                                   |
+| ------------------- | -------------------------------------------------------------- |
+| `pnpm run dev`      | Development server                                             |
+| `pnpm run build`    | Production build                                               |
+| `pnpm run validate` | Check `adopters.json`, `press.json`, and `events.json`         |
+| `make configs`      | Re-read the adopters' public configs into `config-stats.json`  |
+| `make stats`        | Count CI use, house rules, and stars into `adopter-stats.json` |
+| `pnpm run check`    | Type-check with `svelte-check`                                 |
+| `pnpm run lint`     | Prettier and ESLint                                            |
 
 Home page numbers — downloads, stars, backers — are read from the GitHub, Docker
 Hub, PyPI, conda-forge, Homebrew, Chocolatey, and Open Collective APIs at **build
@@ -85,14 +87,17 @@ write-up. Entries without one get removed.
 | Field      | Required | Notes                                                                     |
 | ---------- | -------- | ------------------------------------------------------------------------- |
 | `name`     | yes      | How your team is normally written.                                        |
-| `category` | yes      | One of the six categories below.                                          |
+| `category` | yes      | One of the nine sectors below.                                            |
 | `context`  | yes      | One sentence, ending in a period, on what Vale does for you.              |
 | `url`      | yes      | `https://` link to the public proof.                                      |
 | `icon`     | no       | A [Simple Icons](https://simpleicons.org) slug, e.g. `elastic`, `gitlab`. |
 | `github`   | no       | GitHub org login, e.g. `aiven`. Used when there's no icon.                |
 
-Categories: `Cloud & infrastructure`, `Community & services`,
-`Data & observability`, `Developer tools`, `Enterprise`, `Open source`.
+Sectors: `AI & machine learning`, `Cloud & infrastructure`,
+`Data & observability`, `Developer tools`, `Enterprise software`,
+`Hardware & semiconductors`, `Open source & communities`,
+`Academia & public sector`, `Web3 & blockchain`. Pick the one a reader would
+file the team under, not the one the linted repo happens to be about.
 
 Set **either** `icon` or `github`, not both. Simple Icons doesn't carry every
 brand — Microsoft and AWS, for example — so `github` falls back to your org's

@@ -24,12 +24,15 @@ const AVATAR_DIR = 'static/users/avatars';
 const LOGO_DIR = 'static/users';
 
 const CATEGORIES = [
+	'AI & machine learning',
 	'Cloud & infrastructure',
-	'Community & services',
 	'Data & observability',
 	'Developer tools',
-	'Enterprise',
-	'Open source'
+	'Enterprise software',
+	'Hardware & semiconductors',
+	'Open source & communities',
+	'Academia & public sector',
+	'Web3 & blockchain'
 ];
 
 const PRESS_TYPES = ['book', 'paper', 'talk', 'article', 'video', 'newsletter'];
@@ -76,7 +79,8 @@ for (const [i, a] of adopters.entries()) {
 	if (a.url && !a.url.startsWith('https://')) fail(where, 'url must be https');
 
 	if (a.name) {
-		if (seenNames.has(a.name)) fail(where, `duplicate name (also at index ${seenNames.get(a.name)})`);
+		if (seenNames.has(a.name))
+			fail(where, `duplicate name (also at index ${seenNames.get(a.name)})`);
 		seenNames.set(a.name, i);
 	}
 	if (a.url) {
@@ -96,6 +100,28 @@ for (const [i, a] of adopters.entries()) {
 	if (a.logo && !existsSync(join(LOGO_DIR, a.logo.replace('/users/', '')))) {
 		fail(where, `logo file not found: static${a.logo}`);
 	}
+}
+
+// ----------------------------------------------------------------- sectors
+
+/*
+	The directory's overview names teams by hand in src/lib/data/sectors.ts.
+	A name that drifts from adopters.json drops out of the page without a
+	trace, so it is checked here: every recognizable name must be an adopter,
+	and the sector list must match CATEGORIES exactly.
+*/
+const SECTORS = 'src/lib/data/sectors.ts';
+const sectorsSrc = readFileSync(SECTORS, 'utf8');
+const quoted = (block) => Array.from(block.matchAll(/'((?:[^'\\]|\\.)*)'/g), (m) => m[1]);
+
+const sectorNames = Array.from(sectorsSrc.matchAll(/^\t\tname: '([^']+)'/gm), (m) => m[1]);
+if (sectorNames.join('|') !== CATEGORIES.join('|')) {
+	fail(SECTORS, `sector names differ from CATEGORIES: ${sectorNames.join(', ')}`);
+}
+
+const recognizableBlock = /export const recognizable = \[([^\]]*)\]/.exec(sectorsSrc)?.[1] ?? '';
+for (const name of quoted(recognizableBlock)) {
+	if (!seenNames.has(name)) fail(SECTORS, `recognizable "${name}" is not in ${ADOPTERS}`);
 }
 
 // ------------------------------------------------------------------- press
@@ -118,7 +144,8 @@ for (const [i, p] of press.entries()) {
 	if (p.year !== undefined && !Number.isInteger(p.year)) fail(where, 'year must be an integer');
 	if (p.url && !p.url.startsWith('https://')) fail(where, 'url must be https');
 	if (p.url) {
-		if (seenPressUrls.has(p.url)) fail(where, `duplicate url (also at index ${seenPressUrls.get(p.url)})`);
+		if (seenPressUrls.has(p.url))
+			fail(where, `duplicate url (also at index ${seenPressUrls.get(p.url)})`);
 		seenPressUrls.set(p.url, i);
 	}
 	if (p.url && seenUrls.has(p.url)) {

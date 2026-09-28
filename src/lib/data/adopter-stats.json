@@ -1,0 +1,1445 @@
+{
+	"generated": "2026-09-28",
+	"teams": 150,
+	"checked": 128,
+	"unchecked": 22,
+	"ci": 92,
+	"preCommit": 5,
+	"stars": 836507,
+	"active30": 110,
+	"active90": 115,
+	"touched90": 29,
+	"touchable": 114,
+	"configs": {
+		"sampled": 105,
+		"house": 87,
+		"registryOnly": 13,
+		"vocab": 59
+	},
+	"bySector": {
+		"Data & observability": {
+			"teams": 30,
+			"checked": 25,
+			"ci": 17,
+			"house": 15,
+			"stars": 113232,
+			"active30": 20
+		},
+		"Web3 & blockchain": {
+			"teams": 7,
+			"checked": 6,
+			"ci": 4,
+			"house": 3,
+			"stars": 8490,
+			"active30": 6
+		},
+		"Cloud & infrastructure": {
+			"teams": 23,
+			"checked": 21,
+			"ci": 17,
+			"house": 18,
+			"stars": 100773,
+			"active30": 17
+		},
+		"Hardware & semiconductors": {
+			"teams": 8,
+			"checked": 8,
+			"ci": 6,
+			"house": 5,
+			"stars": 21875,
+			"active30": 7
+		},
+		"Developer tools": {
+			"teams": 33,
+			"checked": 28,
+			"ci": 18,
+			"house": 19,
+			"stars": 298453,
+			"active30": 27
+		},
+		"Enterprise software": {
+			"teams": 10,
+			"checked": 8,
+			"ci": 5,
+			"house": 7,
+			"stars": 646,
+			"active30": 6
+		},
+		"Open source & communities": {
+			"teams": 23,
+			"checked": 19,
+			"ci": 15,
+			"house": 9,
+			"stars": 187906,
+			"active30": 14
+		},
+		"AI & machine learning": {
+			"teams": 7,
+			"checked": 6,
+			"ci": 4,
+			"house": 6,
+			"stars": 102110,
+			"active30": 6
+		},
+		"Academia & public sector": {
+			"teams": 9,
+			"checked": 7,
+			"ci": 6,
+			"house": 5,
+			"stars": 3022,
+			"active30": 7
+		}
+	},
+	"perAdopter": {
+		"Airbyte": {
+			"repo": "airbytehq/airbyte",
+			"ci": true,
+			"preCommit": false,
+			"stars": 22142,
+			"pushed": "2026-09-27",
+			"touched": null,
+			"house": null
+		},
+		"Aiven": {
+			"repo": "aiven/devportal",
+			"ci": true,
+			"preCommit": false,
+			"stars": 59,
+			"pushed": "2024-01-29",
+			"touched": "2022-05-04",
+			"house": true
+		},
+		"Alchemy": {
+			"repo": "alchemyplatform/aa-sdk",
+			"ci": true,
+			"preCommit": false,
+			"stars": 321,
+			"pushed": "2026-09-23",
+			"touched": "2025-09-11",
+			"house": true
+		},
+		"Amazon Web Services": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"AMD": {
+			"repo": "ROCm/rocm-docs-style",
+			"ci": true,
+			"preCommit": false,
+			"stars": 0,
+			"pushed": "2026-09-10",
+			"touched": null,
+			"house": null
+		},
+		"Analog Devices": {
+			"repo": "analogdevicesinc/libiio",
+			"ci": true,
+			"preCommit": false,
+			"stars": 638,
+			"pushed": "2026-09-25",
+			"touched": "2026-06-03",
+			"house": true
+		},
+		"Ansys": {
+			"repo": "ansys/pymapdl",
+			"ci": true,
+			"preCommit": false,
+			"stars": 519,
+			"pushed": "2026-09-27",
+			"touched": "2026-01-07",
+			"house": false
+		},
+		"Apify": {
+			"repo": "apify/apify-docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 80,
+			"pushed": "2026-09-26",
+			"touched": "2026-09-15",
+			"house": true
+		},
+		"Atlantis": {
+			"repo": "runatlantis/atlantis",
+			"ci": true,
+			"preCommit": false,
+			"stars": 9305,
+			"pushed": "2026-09-28",
+			"touched": "2026-03-10",
+			"house": true
+		},
+		"Atuin": {
+			"repo": "atuinsh/atuin",
+			"ci": true,
+			"preCommit": false,
+			"stars": 31829,
+			"pushed": "2026-09-27",
+			"touched": "2026-07-27",
+			"house": false
+		},
+		"Auth0": {
+			"repo": "auth0/docs-v2",
+			"ci": true,
+			"preCommit": false,
+			"stars": 26,
+			"pushed": "2026-09-25",
+			"touched": null,
+			"house": null
+		},
+		"AWS Deadline Cloud": {
+			"repo": "aws-deadline/deadline-cloud-samples",
+			"ci": true,
+			"preCommit": false,
+			"stars": 42,
+			"pushed": "2026-09-25",
+			"touched": "2026-07-23",
+			"house": true
+		},
+		"Buildkite": {
+			"repo": "buildkite/docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 59,
+			"pushed": "2026-09-27",
+			"touched": "2026-02-19",
+			"house": true
+		},
+		"Camunda": {
+			"repo": "camunda/camunda-docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 69,
+			"pushed": "2026-09-28",
+			"touched": "2026-06-05",
+			"house": true
+		},
+		"Canonical": {
+			"repo": "canonical/documentation-style-guide",
+			"ci": true,
+			"preCommit": false,
+			"stars": 23,
+			"pushed": "2026-09-14",
+			"touched": null,
+			"house": null
+		},
+		"CircleCI": {
+			"repo": "circleci/circleci-docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 851,
+			"pushed": "2026-09-27",
+			"touched": "2026-09-25",
+			"house": null
+		},
+		"ClickHouse": {
+			"repo": "clickhouse/clickhouse-docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 213,
+			"pushed": "2026-08-12",
+			"touched": "2025-11-20",
+			"house": true
+		},
+		"CloudQuery": {
+			"repo": "cloudquery/cloudquery",
+			"ci": false,
+			"preCommit": false,
+			"stars": 6528,
+			"pushed": "2026-09-28",
+			"touched": "2022-10-04",
+			"house": false
+		},
+		"CockroachDB": {
+			"repo": "cockroachdb/docs",
+			"ci": false,
+			"preCommit": false,
+			"stars": 212,
+			"pushed": "2026-09-24",
+			"touched": "2023-07-12",
+			"house": true
+		},
+		"Coder": {
+			"repo": "coder/coder",
+			"ci": true,
+			"preCommit": false,
+			"stars": 16728,
+			"pushed": "2026-09-28",
+			"touched": "2026-08-31",
+			"house": true
+		},
+		"commercetools": {
+			"repo": "commercetools/commercetools-docs-kit",
+			"ci": false,
+			"preCommit": false,
+			"stars": 18,
+			"pushed": "2025-03-24",
+			"touched": "2022-11-21",
+			"house": true
+		},
+		"Consensys": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"Contentsquare": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"Couchbase": {
+			"repo": "couchbaselabs/docs-style-guide",
+			"ci": true,
+			"preCommit": false,
+			"stars": 4,
+			"pushed": "2026-06-18",
+			"touched": null,
+			"house": null
+		},
+		"CrateDB": {
+			"repo": "crate/crate",
+			"ci": true,
+			"preCommit": false,
+			"stars": 4440,
+			"pushed": "2026-09-27",
+			"touched": "2023-12-08",
+			"house": true
+		},
+		"D2iQ": {
+			"repo": "mesosphere/dcos-docs-site",
+			"ci": true,
+			"preCommit": false,
+			"stars": 52,
+			"pushed": "2023-10-26",
+			"touched": "2021-12-09",
+			"house": true
+		},
+		"Dagster": {
+			"repo": "dagster-io/dagster",
+			"ci": false,
+			"preCommit": false,
+			"stars": 16207,
+			"pushed": "2026-09-25",
+			"touched": "2024-09-04",
+			"house": true
+		},
+		"Datadog": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"dbt Labs": {
+			"repo": "dbt-labs/docs.getdbt.com",
+			"ci": true,
+			"preCommit": false,
+			"stars": 217,
+			"pushed": "2026-09-26",
+			"touched": "2026-09-08",
+			"house": true
+		},
+		"Determinate Systems": {
+			"repo": "DeterminateSystems/zero-to-nix",
+			"ci": false,
+			"preCommit": false,
+			"stars": 1286,
+			"pushed": "2026-09-18",
+			"touched": "2024-07-26",
+			"house": true
+		},
+		"DigitalOcean": {
+			"repo": "digitalocean/vale-package",
+			"ci": true,
+			"preCommit": false,
+			"stars": 3,
+			"pushed": "2026-09-03",
+			"touched": null,
+			"house": null
+		},
+		"Discord": {
+			"repo": "discord/discord-api-docs",
+			"ci": false,
+			"preCommit": false,
+			"stars": 6507,
+			"pushed": "2026-09-25",
+			"touched": "2026-02-10",
+			"house": false
+		},
+		"Docker": {
+			"repo": "docker/docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 4660,
+			"pushed": "2026-09-27",
+			"touched": "2026-09-11",
+			"house": true
+		},
+		"DocsGPT": {
+			"repo": "arc53/DocsGPT",
+			"ci": true,
+			"preCommit": false,
+			"stars": 18292,
+			"pushed": "2026-09-27",
+			"touched": "2026-04-11",
+			"house": true
+		},
+		"DuckDB": {
+			"repo": "duckdb/duckdb-web",
+			"ci": true,
+			"preCommit": false,
+			"stars": 302,
+			"pushed": "2026-09-28",
+			"touched": "2025-12-15",
+			"house": false
+		},
+		"Eclipse Che": {
+			"repo": "eclipse-che/che-docs-vale-style",
+			"ci": true,
+			"preCommit": false,
+			"stars": 2,
+			"pushed": "2026-09-16",
+			"touched": null,
+			"house": null
+		},
+		"Elastic": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"Epic Games": {
+			"repo": "EpicGames/lore",
+			"ci": false,
+			"preCommit": true,
+			"stars": 8827,
+			"pushed": "2026-09-26",
+			"touched": "2026-06-05",
+			"house": true
+		},
+		"Espressif": {
+			"repo": "espressif/esp-idf",
+			"ci": false,
+			"preCommit": false,
+			"stars": 19104,
+			"pushed": "2026-09-25",
+			"touched": "2023-10-10",
+			"house": true
+		},
+		"Expo": {
+			"repo": "expo/expo",
+			"ci": true,
+			"preCommit": false,
+			"stars": 52467,
+			"pushed": "2026-09-27",
+			"touched": "2026-09-25",
+			"house": true
+		},
+		"Fedora Linux": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"Fern": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"Fluent Bit": {
+			"repo": "fluent/fluent-bit-docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 150,
+			"pushed": "2026-09-27",
+			"touched": "2026-02-27",
+			"house": true
+		},
+		"Fly.io": {
+			"repo": "superfly/docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 128,
+			"pushed": "2026-09-25",
+			"touched": "2026-07-17",
+			"house": true
+		},
+		"Flyway": {
+			"repo": "flyway/flyway",
+			"ci": false,
+			"preCommit": false,
+			"stars": 10110,
+			"pushed": "2026-09-24",
+			"touched": "2025-07-03",
+			"house": null
+		},
+		"Foundries.io": {
+			"repo": "foundriesio/fio-style",
+			"ci": false,
+			"preCommit": false,
+			"stars": 1,
+			"pushed": "2026-08-24",
+			"touched": "2024-05-24",
+			"house": null
+		},
+		"FreeBSD": {
+			"repo": "freebsd/freebsd-doc",
+			"ci": false,
+			"preCommit": false,
+			"stars": 387,
+			"pushed": "2026-09-27",
+			"touched": "2023-08-01",
+			"house": true
+		},
+		"GitHub": {
+			"repo": "github/codeql",
+			"ci": false,
+			"preCommit": false,
+			"stars": 10131,
+			"pushed": "2026-09-25",
+			"touched": "2020-11-12",
+			"house": true
+		},
+		"GitLab": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"GOV.UK": {
+			"repo": "alphagov/tech-docs-linter",
+			"ci": true,
+			"preCommit": false,
+			"stars": 12,
+			"pushed": "2026-09-21",
+			"touched": null,
+			"house": null
+		},
+		"GOV.UK One Login": {
+			"repo": "govuk-one-login/tech-docs",
+			"ci": false,
+			"preCommit": false,
+			"stars": 16,
+			"pushed": "2026-09-25",
+			"touched": "2024-02-29",
+			"house": true
+		},
+		"Grafana Labs": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"Graphile": {
+			"repo": "graphile/crystal",
+			"ci": true,
+			"preCommit": false,
+			"stars": 12936,
+			"pushed": "2026-09-25",
+			"touched": "2026-05-03",
+			"house": true
+		},
+		"Harness": {
+			"repo": "harness/developer-hub",
+			"ci": false,
+			"preCommit": false,
+			"stars": 82,
+			"pushed": "2026-09-17",
+			"touched": "2023-07-20",
+			"house": false
+		},
+		"Homebrew": {
+			"repo": "Homebrew/brew",
+			"ci": true,
+			"preCommit": false,
+			"stars": 49796,
+			"pushed": "2026-09-28",
+			"touched": "2026-07-20",
+			"house": null
+		},
+		"Infisical": {
+			"repo": "Infisical/infisical",
+			"ci": true,
+			"preCommit": false,
+			"stars": 29468,
+			"pushed": "2026-09-28",
+			"touched": "2026-08-20",
+			"house": true
+		},
+		"InfluxData": {
+			"repo": "influxdata/docs-v2",
+			"ci": true,
+			"preCommit": false,
+			"stars": 82,
+			"pushed": "2026-09-26",
+			"touched": "2026-05-22",
+			"house": true
+		},
+		"Infrahub": {
+			"repo": "opsmill/infrahub",
+			"ci": true,
+			"preCommit": false,
+			"stars": 526,
+			"pushed": "2026-09-27",
+			"touched": "2026-09-07",
+			"house": true
+		},
+		"ING": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"InSpec": {
+			"repo": "inspec/inspec",
+			"ci": false,
+			"preCommit": false,
+			"stars": 3093,
+			"pushed": "2026-09-24",
+			"touched": null,
+			"house": null
+		},
+		"IPFS": {
+			"repo": "ipfs/ipfs-docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 332,
+			"pushed": "2026-09-27",
+			"touched": "2024-07-24",
+			"house": true
+		},
+		"JuMP": {
+			"repo": "jump-dev/JuMP.jl",
+			"ci": true,
+			"preCommit": false,
+			"stars": 2480,
+			"pushed": "2026-09-27",
+			"touched": "2026-08-18",
+			"house": false
+		},
+		"Kedro": {
+			"repo": "kedro-org/kedro",
+			"ci": true,
+			"preCommit": false,
+			"stars": 11010,
+			"pushed": "2026-09-25",
+			"touched": "2026-04-29",
+			"house": true
+		},
+		"Kong": {
+			"repo": "Kong/developer.konghq.com",
+			"ci": true,
+			"preCommit": false,
+			"stars": 28,
+			"pushed": "2026-09-28",
+			"touched": "2025-05-14",
+			"house": true
+		},
+		"LangChain": {
+			"repo": "langchain-ai/docs",
+			"ci": true,
+			"preCommit": true,
+			"stars": 420,
+			"pushed": "2026-09-27",
+			"touched": "2026-09-10",
+			"house": true
+		},
+		"Lean": {
+			"repo": "leanprover/reference-manual",
+			"ci": true,
+			"preCommit": false,
+			"stars": 131,
+			"pushed": "2026-09-28",
+			"touched": "2025-02-19",
+			"house": true
+		},
+		"Linode": {
+			"repo": "linode/docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 1395,
+			"pushed": "2026-08-25",
+			"touched": "2024-05-21",
+			"house": true
+		},
+		"Linux Foundation": {
+			"repo": "linuxfoundation/lfx-architecture-decisions",
+			"ci": false,
+			"preCommit": false,
+			"stars": 2,
+			"pushed": "2026-05-19",
+			"touched": "2025-08-28",
+			"house": false
+		},
+		"Mastra": {
+			"repo": "mastra-ai/mastra",
+			"ci": true,
+			"preCommit": false,
+			"stars": 28377,
+			"pushed": "2026-09-28",
+			"touched": "2026-09-09",
+			"house": true
+		},
+		"Mattermost": {
+			"repo": "mattermost/mattermost",
+			"ci": false,
+			"preCommit": false,
+			"stars": 39201,
+			"pushed": "2026-09-28",
+			"touched": "2026-07-02",
+			"house": true
+		},
+		"Mautic": {
+			"repo": "mautic/mautic-documentation",
+			"ci": true,
+			"preCommit": false,
+			"stars": 22,
+			"pushed": "2023-11-19",
+			"touched": "2022-10-10",
+			"house": true
+		},
+		"McKinsey": {
+			"repo": "mckinsey/vizro",
+			"ci": false,
+			"preCommit": false,
+			"stars": 3798,
+			"pushed": "2026-09-27",
+			"touched": "2024-04-16",
+			"house": false
+		},
+		"Medusa": {
+			"repo": "medusajs/medusa",
+			"ci": true,
+			"preCommit": false,
+			"stars": 36493,
+			"pushed": "2026-09-25",
+			"touched": "2024-03-18",
+			"house": true
+		},
+		"Meilisearch": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"Mendix": {
+			"repo": "mendix/docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 184,
+			"pushed": "2026-09-25",
+			"touched": "2026-06-08",
+			"house": true
+		},
+		"MetaMask": {
+			"repo": "MetaMask/metamask-docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 864,
+			"pushed": "2026-09-24",
+			"touched": "2026-07-02",
+			"house": null
+		},
+		"Microsoft": {
+			"repo": "microsoft/Documentarian",
+			"ci": true,
+			"preCommit": false,
+			"stars": 50,
+			"pushed": "2026-09-12",
+			"touched": null,
+			"house": null
+		},
+		"Mintlify": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"mirrord": {
+			"repo": "metalbear-co/mirrord",
+			"ci": true,
+			"preCommit": false,
+			"stars": 5340,
+			"pushed": "2026-09-28",
+			"touched": "2026-03-12",
+			"house": true
+		},
+		"Mistral AI": {
+			"repo": "mistralai/platform-docs-public",
+			"ci": false,
+			"preCommit": false,
+			"stars": 73,
+			"pushed": "2026-09-24",
+			"touched": "2026-04-17",
+			"house": true
+		},
+		"MongoDB": {
+			"repo": "mongodb/docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 777,
+			"pushed": "2026-09-25",
+			"touched": "2026-05-11",
+			"house": null
+		},
+		"MUI": {
+			"repo": "mui/material-ui",
+			"ci": true,
+			"preCommit": false,
+			"stars": 99100,
+			"pushed": "2026-09-27",
+			"touched": "2026-04-29",
+			"house": true
+		},
+		"n8n": {
+			"repo": "n8n-io/n8n-docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 1798,
+			"pushed": "2026-09-25",
+			"touched": "2026-09-24",
+			"house": true
+		},
+		"Neo4j": {
+			"repo": "neo4j/docs-tools",
+			"ci": true,
+			"preCommit": false,
+			"stars": 0,
+			"pushed": "2026-09-25",
+			"touched": "2024-01-19",
+			"house": true
+		},
+		"Neon": {
+			"repo": "neondatabase/website",
+			"ci": false,
+			"preCommit": false,
+			"stars": 324,
+			"pushed": "2026-09-27",
+			"touched": "2026-05-09",
+			"house": true
+		},
+		"Netlify": {
+			"repo": "netlify/cli",
+			"ci": true,
+			"preCommit": false,
+			"stars": 1919,
+			"pushed": "2026-09-27",
+			"touched": "2021-05-04",
+			"house": true
+		},
+		"New Relic": {
+			"repo": "newrelic/docs-website",
+			"ci": true,
+			"preCommit": false,
+			"stars": 197,
+			"pushed": "2026-09-27",
+			"touched": "2023-01-19",
+			"house": null
+		},
+		"nf-core": {
+			"repo": "nf-core/website",
+			"ci": true,
+			"preCommit": false,
+			"stars": 98,
+			"pushed": "2026-09-27",
+			"touched": "2024-02-09",
+			"house": true
+		},
+		"ngrok": {
+			"repo": "ngrok/ngrok-docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 163,
+			"pushed": "2026-09-27",
+			"touched": "2026-06-24",
+			"house": true
+		},
+		"Nix": {
+			"repo": "nixos/nix.dev",
+			"ci": true,
+			"preCommit": false,
+			"stars": 3981,
+			"pushed": "2026-09-24",
+			"touched": "2023-11-13",
+			"house": true
+		},
+		"NMSU HPC": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"Nordic Semiconductor": {
+			"repo": "nrfconnect/sdk-nrf",
+			"ci": true,
+			"preCommit": false,
+			"stars": 1431,
+			"pushed": "2026-09-25",
+			"touched": "2025-06-24",
+			"house": true
+		},
+		"Novu": {
+			"repo": "novuhq/docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 53,
+			"pushed": "2026-06-24",
+			"touched": "2026-04-22",
+			"house": true
+		},
+		"NVIDIA": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"Open Policy Agent": {
+			"repo": "open-policy-agent/opa",
+			"ci": true,
+			"preCommit": false,
+			"stars": 12280,
+			"pushed": "2026-09-26",
+			"touched": "2026-07-16",
+			"house": true
+		},
+		"OpenSAFELY": {
+			"repo": "opensafely/documentation",
+			"ci": true,
+			"preCommit": false,
+			"stars": 48,
+			"pushed": "2026-09-25",
+			"touched": "2023-08-10",
+			"house": true
+		},
+		"OpenSearch": {
+			"repo": "opensearch-project/documentation-website",
+			"ci": true,
+			"preCommit": false,
+			"stars": 114,
+			"pushed": "2026-09-25",
+			"touched": "2026-07-16",
+			"house": true
+		},
+		"OpenShift": {
+			"repo": "openshift-pipelines/pipelines-as-code",
+			"ci": false,
+			"preCommit": true,
+			"stars": 217,
+			"pushed": "2026-09-26",
+			"touched": "2026-09-03",
+			"house": true
+		},
+		"openSUSE": {
+			"repo": "openSUSE/suse-vale-styleguide",
+			"ci": false,
+			"preCommit": false,
+			"stars": 27,
+			"pushed": "2026-03-13",
+			"touched": null,
+			"house": null
+		},
+		"Optimism": {
+			"repo": "ethereum-optimism/optimism",
+			"ci": false,
+			"preCommit": false,
+			"stars": 6473,
+			"pushed": "2026-09-28",
+			"touched": "2026-03-19",
+			"house": false
+		},
+		"OutSystems": {
+			"repo": "OutSystems/docs-product",
+			"ci": false,
+			"preCommit": false,
+			"stars": 54,
+			"pushed": "2026-09-27",
+			"touched": "2026-06-22",
+			"house": true
+		},
+		"Pelican": {
+			"repo": "getpelican/pelican",
+			"ci": false,
+			"preCommit": false,
+			"stars": 13340,
+			"pushed": "2026-04-20",
+			"touched": "2024-07-30",
+			"house": false
+		},
+		"PingCAP": {
+			"repo": "pingcap/docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 617,
+			"pushed": "2026-09-28",
+			"touched": "2022-06-17",
+			"house": true
+		},
+		"Platform.sh": {
+			"repo": "platformsh/platformsh-docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 114,
+			"pushed": "2026-09-26",
+			"touched": "2024-04-03",
+			"house": true
+		},
+		"Plone": {
+			"repo": "plone/volto",
+			"ci": true,
+			"preCommit": false,
+			"stars": 604,
+			"pushed": "2026-09-27",
+			"touched": "2023-11-05",
+			"house": false
+		},
+		"Polkadot": {
+			"repo": "w3f/polkadot-wiki",
+			"ci": false,
+			"preCommit": false,
+			"stars": 435,
+			"pushed": "2026-09-15",
+			"touched": "2025-10-07",
+			"house": true
+		},
+		"PostHog": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"PowerShell Docs": {
+			"repo": "MicrosoftDocs/PowerShell-Docs",
+			"ci": false,
+			"preCommit": false,
+			"stars": 2555,
+			"pushed": "2026-09-24",
+			"touched": "2023-03-21",
+			"house": true
+		},
+		"Prefect": {
+			"repo": "prefecthq/prefect",
+			"ci": false,
+			"preCommit": false,
+			"stars": 23936,
+			"pushed": "2026-09-27",
+			"touched": "2025-07-31",
+			"house": true
+		},
+		"Progress Chef": {
+			"repo": "chef/chef-web-docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 143,
+			"pushed": "2026-09-25",
+			"touched": null,
+			"house": null
+		},
+		"Pulumi": {
+			"repo": "pulumi/docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 179,
+			"pushed": "2026-09-28",
+			"touched": "2026-09-17",
+			"house": true
+		},
+		"Qiskit": {
+			"repo": "Qiskit/qiskit-ibm-runtime",
+			"ci": true,
+			"preCommit": false,
+			"stars": 237,
+			"pushed": "2026-09-25",
+			"touched": "2023-10-27",
+			"house": true
+		},
+		"Qt": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"Quarkus": {
+			"repo": "quarkusio/quarkus",
+			"ci": true,
+			"preCommit": false,
+			"stars": 15906,
+			"pushed": "2026-09-28",
+			"touched": "2023-01-30",
+			"house": true
+		},
+		"Rackspace": {
+			"repo": "rackerlabs/technical-blog",
+			"ci": true,
+			"preCommit": false,
+			"stars": 10,
+			"pushed": "2024-07-02",
+			"touched": "2020-09-15",
+			"house": true
+		},
+		"Rancher": {
+			"repo": "rancher/rancher-docs",
+			"ci": false,
+			"preCommit": false,
+			"stars": 78,
+			"pushed": "2026-07-20",
+			"touched": "2024-08-02",
+			"house": true
+		},
+		"Ray": {
+			"repo": "ray-project/ray",
+			"ci": false,
+			"preCommit": true,
+			"stars": 43938,
+			"pushed": "2026-09-27",
+			"touched": "2026-09-18",
+			"house": true
+		},
+		"Read the Docs": {
+			"repo": "readthedocs/readthedocs.org",
+			"ci": false,
+			"preCommit": false,
+			"stars": 8391,
+			"pushed": "2026-09-27",
+			"touched": "2025-06-23",
+			"house": false
+		},
+		"Red Hat": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"Redocly": {
+			"repo": "Redocly/redoc",
+			"ci": true,
+			"preCommit": false,
+			"stars": 25930,
+			"pushed": "2026-09-24",
+			"touched": "2023-07-11",
+			"house": true
+		},
+		"RISC-V": {
+			"repo": "riscv/docs-dev-guide",
+			"ci": true,
+			"preCommit": false,
+			"stars": 142,
+			"pushed": "2026-09-11",
+			"touched": "2026-09-10",
+			"house": true
+		},
+		"Rocky Linux": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"Rubin Observatory": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"Safe": {
+			"repo": "safe-global/safe-docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 65,
+			"pushed": "2026-09-21",
+			"touched": "2024-04-25",
+			"house": false
+		},
+		"SAP": {
+			"repo": "SAP/cloud-sdk",
+			"ci": true,
+			"preCommit": false,
+			"stars": 52,
+			"pushed": "2026-09-27",
+			"touched": "2025-03-03",
+			"house": true
+		},
+		"Semrush": {
+			"repo": "semrush/intergalactic",
+			"ci": true,
+			"preCommit": false,
+			"stars": 185,
+			"pushed": "2026-09-25",
+			"touched": "2024-07-03",
+			"house": true
+		},
+		"Shopify": {
+			"repo": "Shopify/shopify-vale",
+			"ci": false,
+			"preCommit": false,
+			"stars": 3,
+			"pushed": "2026-01-26",
+			"touched": null,
+			"house": null
+		},
+		"SixLabors": {
+			"repo": "SixLabors/docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 12,
+			"pushed": "2026-08-12",
+			"touched": "2022-03-16",
+			"house": null
+		},
+		"Spectro Cloud": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"Splunk": {
+			"repo": "splunk/vale-splunk-style-guide",
+			"ci": false,
+			"preCommit": false,
+			"stars": 21,
+			"pushed": "2026-01-09",
+			"touched": null,
+			"house": null
+		},
+		"Spotify": {
+			"repo": "spotify/backstage",
+			"ci": true,
+			"preCommit": false,
+			"stars": 34512,
+			"pushed": "2026-09-26",
+			"touched": "2022-12-22",
+			"house": false
+		},
+		"StarRocks": {
+			"repo": "StarRocks/starrocks",
+			"ci": true,
+			"preCommit": false,
+			"stars": 12147,
+			"pushed": "2026-09-27",
+			"touched": "2026-07-17",
+			"house": true
+		},
+		"Stoplight": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"Stream": {
+			"repo": null,
+			"ci": null,
+			"preCommit": null,
+			"stars": null,
+			"pushed": null,
+			"touched": null,
+			"house": null
+		},
+		"Teleport": {
+			"repo": "gravitational/teleport",
+			"ci": true,
+			"preCommit": false,
+			"stars": 20950,
+			"pushed": "2026-09-17",
+			"touched": "2025-10-29",
+			"house": true
+		},
+		"Telepresence": {
+			"repo": "telepresenceio/telepresence",
+			"ci": false,
+			"preCommit": false,
+			"stars": 7309,
+			"pushed": "2026-09-27",
+			"touched": "2026-07-11",
+			"house": true
+		},
+		"Temporal": {
+			"repo": "temporalio/documentation",
+			"ci": true,
+			"preCommit": false,
+			"stars": 174,
+			"pushed": "2026-09-24",
+			"touched": "2026-09-10",
+			"house": true
+		},
+		"Texas Instruments": {
+			"repo": "TexasInstruments/processor-sdk-doc",
+			"ci": true,
+			"preCommit": false,
+			"stars": 40,
+			"pushed": "2026-09-24",
+			"touched": "2026-09-09",
+			"house": true
+		},
+		"Tigera": {
+			"repo": "tigera/docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 20,
+			"pushed": "2026-09-25",
+			"touched": "2026-09-08",
+			"house": true
+		},
+		"Timescale": {
+			"repo": "timescale/docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 71,
+			"pushed": "2026-04-20",
+			"touched": "2022-06-29",
+			"house": false
+		},
+		"TrussWorks": {
+			"repo": "trussworks/Engineering-Playbook",
+			"ci": true,
+			"preCommit": false,
+			"stars": 144,
+			"pushed": "2026-09-10",
+			"touched": "2022-03-01",
+			"house": true
+		},
+		"Tyk": {
+			"repo": "TykTechnologies/tyk",
+			"ci": false,
+			"preCommit": false,
+			"stars": 10838,
+			"pushed": "2026-09-25",
+			"touched": "2024-11-02",
+			"house": true
+		},
+		"Umbraco": {
+			"repo": "umbraco/UmbracoDocs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 292,
+			"pushed": "2026-09-25",
+			"touched": "2026-04-14",
+			"house": true
+		},
+		"VSHN": {
+			"repo": "vshn/application-catalog-docs",
+			"ci": false,
+			"preCommit": false,
+			"stars": 0,
+			"pushed": "2026-09-23",
+			"touched": "2025-01-17",
+			"house": false
+		},
+		"webpack": {
+			"repo": "webpack/webpack.js.org",
+			"ci": true,
+			"preCommit": false,
+			"stars": 2269,
+			"pushed": "2026-09-22",
+			"touched": "2026-02-25",
+			"house": true
+		},
+		"WordPress": {
+			"repo": "WordPress/openverse",
+			"ci": true,
+			"preCommit": true,
+			"stars": 379,
+			"pushed": "2026-09-25",
+			"touched": "2024-09-09",
+			"house": true
+		},
+		"Write the Docs": {
+			"repo": "writethedocs/www",
+			"ci": true,
+			"preCommit": false,
+			"stars": 1368,
+			"pushed": "2026-09-26",
+			"touched": "2024-05-14",
+			"house": null
+		},
+		"WSO2": {
+			"repo": "wso2/docs-is",
+			"ci": true,
+			"preCommit": false,
+			"stars": 81,
+			"pushed": "2026-09-27",
+			"touched": "2026-02-18",
+			"house": true
+		},
+		"Yii": {
+			"repo": "yiisoft/docs",
+			"ci": true,
+			"preCommit": false,
+			"stars": 252,
+			"pushed": "2026-09-25",
+			"touched": "2023-03-04",
+			"house": false
+		},
+		"YugabyteDB": {
+			"repo": "yugabyte/yugabyte-db",
+			"ci": true,
+			"preCommit": false,
+			"stars": 10564,
+			"pushed": "2026-09-27",
+			"touched": "2021-11-17",
+			"house": true
+		}
+	}
+}

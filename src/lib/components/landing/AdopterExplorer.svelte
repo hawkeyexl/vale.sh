@@ -1,5 +1,6 @@
 <script lang="ts">
 	import adopters from '$lib/data/adopters.json';
+	import { sectors } from '$lib/data/sectors';
 	import BrandIcon from './BrandIcon.svelte';
 	import ArrowUpRight from 'lucide-svelte/icons/arrow-up-right';
 	import Search from 'lucide-svelte/icons/search';
@@ -22,24 +23,19 @@
 
 	const all = adopters as Adopter[];
 
+	/*
+		The sector is bindable so the overview above the directory can narrow
+		it: a tile there sets the category and the anchor scrolls here. It opens
+		on every sector, a few teams each, because the preview cap below keeps
+		that from being a wall and the overview has already shown the shape.
+	*/
+	let { activeCategory = $bindable('All') }: { activeCategory?: string } = $props();
+
 	let query = $state('');
 	let input: HTMLInputElement | undefined = $state();
 
-	/*
-		Open on a real category rather than on all ninety. The largest one is
-		chosen from the data, so this keeps working as the list grows instead of
-		hardcoding a name that may stop being the biggest.
-	*/
-	const largestCategory = Object.entries(
-		all.reduce<Record<string, number>>((acc, a) => {
-			acc[a.category] = (acc[a.category] ?? 0) + 1;
-			return acc;
-		}, {})
-	).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0][0];
-
-	let activeCategory = $state(largestCategory);
-
-	const categories = $derived(['All', ...Array.from(new Set(all.map((a) => a.category))).sort()]);
+	// The order sectors.ts gives them, so the chips match the overview tiles.
+	const categories = $derived(['All', ...sectors.map((s) => s.name)]);
 
 	const countFor = (category: string) =>
 		category === 'All' ? all.length : all.filter((a) => a.category === category).length;
@@ -60,11 +56,11 @@
 	);
 
 	/*
-		Ninety cards in one alphabetical run is a wall. Grouping them by category
-		gives the eye somewhere to stop, and only a few of each show until someone
-		asks for the rest -- capped per category rather than overall, so every
-		category still appears on arrival. Filtering or searching is already a
-		deliberate act, so those show everything they match.
+		A hundred and fifty cards in one alphabetical run is a wall. Grouping
+		them by sector gives the eye somewhere to stop, and only a few of each
+		show until someone asks for the rest -- capped per sector rather than
+		overall, so every sector still appears on arrival. Filtering or searching
+		is already a deliberate act, so those show everything they match.
 
 		Headings and cards share a single keyed list rather than sitting in one
 		list per category, so `animate:flip` can move every surviving element to
@@ -123,7 +119,7 @@
 	>, style package, or write-up.
 {/snippet}
 
-<Section id="adopters" eyebrow="Adopters" title="Teams running Vale" lede={adopterLede}>
+<Section id="adopters" eyebrow="Directory" title="Every team, by sector" lede={adopterLede}>
 	<!-- Search -->
 	<div class="relative mx-auto max-w-md">
 		<Search
