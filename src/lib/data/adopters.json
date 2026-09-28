@@ -548,6 +548,14 @@
 		"icon": "linuxfoundation"
 	},
 	{
+		"name": "Manticore Games",
+		"category": "Developer tools",
+		"context": "Lints the Core platform's API docs and tutorials with Google's style and a Manticore vocabulary.",
+		"url": "https://github.com/ManticoreGamesInc/platform-documentation/blob/HEAD/.vale.ini",
+		"github": "ManticoreGamesInc",
+		"avatar": "/users/avatars/ManticoreGamesInc.png"
+	},
+	{
 		"name": "Mastra",
 		"category": "AI & machine learning",
 		"context": "Runs write-good and ai-tells over the docs for its TypeScript agent framework.",
@@ -785,8 +793,8 @@
 	{
 		"name": "OpenShift",
 		"category": "Cloud & infrastructure",
-		"context": "Pipelines as Code, the Tekton-based CI project.",
-		"url": "https://github.com/openshift-pipelines/pipelines-as-code/blob/main/.vale.ini",
+		"context": "Lints the OpenShift docs with the RedHat, AsciiDoc, and OpenShiftAsciiDoc packages and an OpenShiftDocs vocabulary.",
+		"url": "https://github.com/openshift/openshift-docs/blob/HEAD/.vale.ini",
 		"github": "openshift",
 		"avatar": "/users/avatars/openshift.png"
 	},
@@ -987,6 +995,14 @@
 		"icon": "rockylinux"
 	},
 	{
+		"name": "rOpenSci",
+		"category": "Academia & public sector",
+		"context": "Runs proselint, write-good, and alex over its website and blog.",
+		"url": "https://github.com/ropensci/roweb3/blob/HEAD/.vale.ini",
+		"github": "ropensci",
+		"avatar": "/users/avatars/ropensci.png"
+	},
+	{
 		"name": "Rubin Observatory",
 		"category": "Academia & public sector",
 		"context": "Lints the Rubin Science Platform docs against the Google style package plus house RSP rules, advisory on every pull request.",
@@ -1164,6 +1180,14 @@
 		"context": "The official Umbraco documentation.",
 		"url": "https://github.com/umbraco/UmbracoDocs/blob/main/.vale.ini",
 		"icon": "umbraco"
+	},
+	{
+		"name": "Uniswap",
+		"category": "Web3 & blockchain",
+		"context": "Lints the docs for its AI tools, skills, and agents with a Uniswap vocabulary.",
+		"url": "https://github.com/Uniswap/uniswap-ai/blob/HEAD/.vale.ini",
+		"github": "Uniswap",
+		"avatar": "/users/avatars/Uniswap.png"
 	},
 	{
 		"name": "VSHN",

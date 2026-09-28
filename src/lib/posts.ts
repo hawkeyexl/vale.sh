@@ -67,6 +67,11 @@ export const TAGS: Record<string, Tag> = {
 		slug: 'formats',
 		label: 'Formats',
 		description: 'Linting a file that is not Markdown.'
+	},
+	adopters: {
+		slug: 'adopters',
+		label: 'Adopters',
+		description: 'How teams run Vale, read from their own configs.'
 	}
 };
 

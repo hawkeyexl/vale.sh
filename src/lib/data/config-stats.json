@@ -1,14 +1,15 @@
 {
-	"sampleSize": 115,
-	"adopterCount": 159,
+	"sampleSize": 118,
+	"adopterCount": 162,
 	"styles": {
-		"write-good": 18,
-		"Google": 15,
+		"write-good": 19,
+		"Google": 16,
 		"Microsoft": 15,
-		"proselint": 12,
-		"alex": 4,
+		"proselint": 13,
+		"alex": 5,
 		"docs": 3,
 		"ai-tells": 2,
+		"AsciiDoc": 2,
 		"base": 2,
 		"Readability": 2,
 		"RedHat": 2,
@@ -19,7 +20,6 @@
 		"all": 1,
 		"Apify": 1,
 		"ApifyDocs": 1,
-		"AsciiDoc": 1,
 		"Atlantis": 1,
 		"Buildkite": 1,
 		"CalicoStyle": 1,
@@ -81,9 +81,9 @@
 		"OPA": 1,
 		"OpenSAFELY": 1,
 		"OpenSearch": 1,
+		"OpenShiftAsciiDoc": 1,
 		"Openverse": 1,
 		"OutSystems": 1,
-		"PaaC": 1,
 		"package-guide-test": 1,
 		"PingCAP": 1,
 		"Platform": 1,
@@ -96,6 +96,7 @@
 		"Ray": 1,
 		"riscv": 1,
 		"RLlib": 1,
+		"rOpenSci": 1,
 		"Rules": 1,
 		"SAP": 1,
 		"Semmle": 1,
@@ -119,23 +120,25 @@
 		"Yugabyte": 1
 	},
 	"packages": {
-		"write-good": 14,
+		"write-good": 15,
 		"Google": 13,
 		"Microsoft": 11,
-		"proselint": 9,
-		"alex": 4,
+		"proselint": 10,
+		"alex": 5,
 		"RedHat": 3,
 		"ai-tells": 2,
+		"AsciiDoc": 2,
 		"MDX": 2,
 		"Readability": 2,
 		"ApifyStyleGuide": 1,
-		"AsciiDoc": 1,
+		"AsciiDocDITA": 1,
 		"config": 1,
 		"Docker": 1,
 		"Espressif-latest": 1,
 		"Hugo": 1,
 		"Joblint": 1,
 		"nf-core": 1,
+		"OpenShiftAsciiDoc": 1,
 		"PowerShell-Docs": 1,
 		"riscv": 1,
 		"Std": 1,
@@ -143,12 +146,13 @@
 		"vale": 1
 	},
 	"formats": {
-		"md": 90,
+		"md": 92,
 		"mdx": 25,
 		"rst": 14,
-		"adoc": 5,
+		"adoc": 6,
 		"docs": 2,
 		"html": 2,
+		"qmd": 2,
 		"txt": 2,
 		"csv": 1,
 		"en": 1,
@@ -160,27 +164,27 @@
 		"ja": 1,
 		"jl": 1,
 		"org": 1,
-		"qmd": 1,
 		"rb": 1,
+		"rmd": 1,
 		"rs": 1,
 		"zh": 1
 	},
 	"minAlertLevels": {
-		"suggestion": 64,
+		"suggestion": 68,
 		"warning": 28,
-		"error": 12,
+		"error": 11,
 		"suggestions": 1
 	},
 	"keys": {
-		"BasedOnStyles": 113,
-		"StylesPath": 112,
-		"MinAlertLevel": 105,
-		"Vocab": 62,
-		"Packages": 43,
+		"BasedOnStyles": 116,
+		"StylesPath": 115,
+		"MinAlertLevel": 108,
+		"Vocab": 66,
+		"Packages": 44,
 		"TokenIgnores": 39,
-		"IgnoredScopes": 25,
-		"BlockIgnores": 24,
-		"SkippedScopes": 19,
+		"BlockIgnores": 25,
+		"IgnoredScopes": 24,
+		"SkippedScopes": 18,
 		"CommentDelimiters": 6,
 		"IgnoredClasses": 3,
 		"WordTemplate": 3,
@@ -193,7 +197,7 @@
 		"Vale": 1,
 		"View": 1
 	},
-	"pathScoped": 37,
+	"pathScoped": 38,
 	"pairedWith": {
 		"Aiven": {},
 		"SmartWallets": {},
@@ -229,11 +233,11 @@
 			"write-good": 1
 		},
 		"write-good": {
+			"proselint": 7,
 			"Google": 6,
-			"proselint": 6,
 			"Microsoft": 5,
+			"alex": 3,
 			"ai-tells": 2,
-			"alex": 2,
 			"Readability": 2,
 			"ai-tells-overrides": 1,
 			"Apify": 1,
@@ -249,6 +253,7 @@
 			"Metalbear": 1,
 			"Novu": 1,
 			"Pulumi": 1,
+			"rOpenSci": 1,
 			"signs-of-ai-writing": 1,
 			"ttd-light": 1,
 			"Tyk": 1,
@@ -269,8 +274,8 @@
 		},
 		"Atlantis": {},
 		"proselint": {
-			"write-good": 6,
-			"alex": 3,
+			"write-good": 7,
+			"alex": 4,
 			"Microsoft": 2,
 			"Readability": 2,
 			"Fly": 1,
@@ -279,17 +284,19 @@
 			"LangChain": 1,
 			"Lean": 1,
 			"Openverse": 1,
+			"rOpenSci": 1,
 			"Speciesism": 1,
 			"ttd-light": 1,
 			"vale": 1
 		},
 		"alex": {
-			"proselint": 3,
-			"write-good": 2,
+			"proselint": 4,
+			"write-good": 3,
 			"Joblint": 1,
 			"Microsoft": 1,
 			"OutSystems": 1,
-			"Readability": 1
+			"Readability": 1,
+			"rOpenSci": 1
 		},
 		"ai-tells": {
 			"write-good": 2,
@@ -459,10 +466,17 @@
 		"OpenSAFELY": {},
 		"OpenSearch": {},
 		"RedHat": {
-			"PaaC": 1,
+			"AsciiDoc": 1,
+			"OpenShiftAsciiDoc": 1,
 			"PSDK": 1
 		},
-		"PaaC": {
+		"AsciiDoc": {
+			"OpenShiftAsciiDoc": 1,
+			"RedHat": 1,
+			"riscv": 1
+		},
+		"OpenShiftAsciiDoc": {
+			"AsciiDoc": 1,
 			"RedHat": 1
 		},
 		"OutSystems": {
@@ -508,8 +522,10 @@
 		"riscv": {
 			"AsciiDoc": 1
 		},
-		"AsciiDoc": {
-			"riscv": 1
+		"rOpenSci": {
+			"alex": 1,
+			"proselint": 1,
+			"write-good": 1
 		},
 		"SAP": {},
 		"DevDocs": {},
@@ -1059,6 +1075,14 @@
 			"minAlertLevel": "suggestion"
 		},
 		{
+			"name": "Manticore Games",
+			"url": "https://github.com/ManticoreGamesInc/platform-documentation/blob/HEAD/.vale.ini",
+			"styles": ["Google"],
+			"formats": ["md"],
+			"keys": ["StylesPath", "Vocab", "MinAlertLevel", "BasedOnStyles"],
+			"minAlertLevel": "suggestion"
+		},
+		{
 			"name": "Mastra",
 			"url": "https://github.com/mastra-ai/mastra/blob/HEAD/docs/.vale.ini",
 			"styles": ["write-good", "Mastra", "signs-of-ai-writing", "ai-tells", "ai-tells-overrides"],
@@ -1292,19 +1316,11 @@
 		},
 		{
 			"name": "OpenShift",
-			"url": "https://github.com/openshift-pipelines/pipelines-as-code/blob/main/.vale.ini",
-			"styles": ["RedHat", "PaaC"],
-			"formats": ["md"],
-			"keys": [
-				"StylesPath",
-				"Packages",
-				"MinAlertLevel",
-				"IgnoredScopes",
-				"SkippedScopes",
-				"BasedOnStyles",
-				"TokenIgnores"
-			],
-			"minAlertLevel": "error"
+			"url": "https://github.com/openshift/openshift-docs/blob/HEAD/.vale.ini",
+			"styles": ["RedHat", "AsciiDoc", "OpenShiftAsciiDoc"],
+			"formats": ["adoc"],
+			"keys": ["StylesPath", "MinAlertLevel", "Packages", "Vocab", "BasedOnStyles"],
+			"minAlertLevel": "suggestion"
 		},
 		{
 			"name": "Optimism",
@@ -1545,6 +1561,14 @@
 			"minAlertLevel": "suggestion"
 		},
 		{
+			"name": "rOpenSci",
+			"url": "https://github.com/ropensci/roweb3/blob/HEAD/.vale.ini",
+			"styles": ["proselint", "write-good", "alex", "rOpenSci"],
+			"formats": ["md", "qmd", "rmd"],
+			"keys": ["StylesPath", "MinAlertLevel", "Packages", "Vocab", "BasedOnStyles", "BlockIgnores"],
+			"minAlertLevel": "suggestion"
+		},
+		{
 			"name": "Safe",
 			"url": "https://github.com/safe-global/safe-docs/blob/HEAD/.vale.ini",
 			"styles": ["Microsoft", "write-good"],
@@ -1679,6 +1703,14 @@
 			"formats": ["md"],
 			"keys": ["StylesPath", "BasedOnStyles", "TokenIgnores"],
 			"minAlertLevel": null
+		},
+		{
+			"name": "Uniswap",
+			"url": "https://github.com/Uniswap/uniswap-ai/blob/HEAD/.vale.ini",
+			"styles": [],
+			"formats": ["md"],
+			"keys": ["StylesPath", "MinAlertLevel", "Vocab", "BasedOnStyles", "TokenIgnores"],
+			"minAlertLevel": "suggestion"
 		},
 		{
 			"name": "VSHN",
