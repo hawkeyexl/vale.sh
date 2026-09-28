@@ -271,6 +271,13 @@
 		"avatar": "/users/avatars/discord.png"
 	},
 	{
+		"name": "Doc Detective",
+		"category": "Developer tools",
+		"context": "Lints its docs with Google's style, alex, Joblint, a DocDetective style, and the Moose house voice.",
+		"url": "https://github.com/doc-detective/doc-detective/blob/main/docs/.vale.ini",
+		"github": "doc-detective"
+	},
+	{
 		"name": "Docker",
 		"category": "Developer tools",
 		"context": "Enforces style standards across the Docker product docs.",
@@ -926,6 +933,14 @@
 		"context": "The source for docs published on docs.chef.io.",
 		"url": "https://github.com/chef/chef-web-docs/tree/master/tools/vale",
 		"icon": "chef"
+	},
+	{
+		"name": "Promptless",
+		"category": "Developer tools",
+		"context": "Publishes its house voice as a Vale package and lints its own docs with it in CI.",
+		"url": "https://github.com/Promptless/promptless.ai/blob/main/.vale.ini",
+		"github": "Promptless",
+		"avatar": "/users/avatars/Promptless.png"
 	},
 	{
 		"name": "Pulumi",
