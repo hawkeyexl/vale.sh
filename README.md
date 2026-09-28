@@ -35,6 +35,7 @@ pnpm run dev -- --open
 | `pnpm run validate` | Check `adopters.json`, `press.json`, and `events.json`         |
 | `make configs`      | Re-read the adopters' public configs into `config-stats.json`  |
 | `make stats`        | Count CI use, house rules, and stars into `adopter-stats.json` |
+| `make og-adopters`  | Re-render the `/adopters` social card from the data            |
 | `pnpm run check`    | Type-check with `svelte-check`                                 |
 | `pnpm run lint`     | Prettier and ESLint                                            |
 

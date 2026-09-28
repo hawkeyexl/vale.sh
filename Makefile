@@ -43,6 +43,11 @@ configs:
 stats:
 	GITHUB_TOKEN=$${GITHUB_TOKEN:-$$(gh auth token)} node script/adopters-stats.mjs
 
+# Re-render the /adopters social card from the current data. Run it after
+# `stats`; the PNG is committed.
+og-adopters:
+	node script/build-og-adopters.mjs
+
 # Rebuild /explorer alone, without the rest of a build. `build` runs this too,
 # so the page follows the package library on its own; this is for checking that
 # step by itself.

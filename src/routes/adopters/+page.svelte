@@ -98,10 +98,10 @@
 		description,
 		images: [
 			{
-				url: '/media/mac.png',
-				width: 800,
-				height: 600,
-				alt: 'Example Vale output'
+				url: 'https://vale.sh/media/adopters-og.png',
+				width: 1200,
+				height: 630,
+				alt: `${total} teams run Vale`
 			}
 		]
 	}}
